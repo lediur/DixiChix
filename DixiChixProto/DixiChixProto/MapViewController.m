@@ -70,7 +70,7 @@
 - (void)pinDropped:(UITapGestureRecognizer*)tap {
     if(tapCount == MAX_COUNT) {
         tap.cancelsTouchesInView = YES;
-        popExplanation.text = @"Cannot add more than 10";
+        popExplanation.text = @"Cannot add more than 5";
         [self.view bringSubviewToFront:popExplanation];
         popExplanation.alpha = 1;
         [UIView animateWithDuration:1 delay:.5 options:0 animations:^{
