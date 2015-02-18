@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B4866EC-E36B-4B20-B8A0-9C9C48AAB3F7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DixiChixProto2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</key>
+		<string>https://github.com/tfallon5/dixichix.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DixiChixProto2/DixiChixProto2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tfallon5/dixichix.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>dixichix</string>
+		</dict>
+	</array>
+</dict>
+</plist>
