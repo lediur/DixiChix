@@ -25,7 +25,7 @@
         
         map = [[UIImageView alloc] initWithFrame:frame];
         map.userInteractionEnabled = YES;
-        map.image = [UIImage imageNamed:@"BrnoTrackMap.png"];
+        map.image = [UIImage imageNamed:@"StanfordRoute.png"];
         map.alpha = .2;
         [self.view addSubview:map];
 

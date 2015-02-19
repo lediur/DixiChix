@@ -25,7 +25,7 @@
         
         map = [[UIImageView alloc] initWithFrame:frame];
         map.userInteractionEnabled = YES;
-        map.image = [UIImage imageNamed:@"BrnoTrackMap.png"];
+        map.image = [UIImage imageNamed:@"StanfordRoute.png"];
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pinDropped:)];
         [map addGestureRecognizer:tapGesture];
         

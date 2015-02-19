@@ -13,6 +13,7 @@
 		2F01E6941A9449B200C1984B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01E6931A9449B200C1984B /* MapViewController.m */; };
 		2F01E6A81A9449B200C1984B /* DixiChixProtoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F01E6A71A9449B200C1984B /* DixiChixProtoTests.m */; };
 		2F01E6B21A9451D800C1984B /* BrnoTrackMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F01E6B11A9451D800C1984B /* BrnoTrackMap.png */; };
+		2F99F7B21A969C16001BA6FA /* StanfordRoute.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F99F7B11A969C16001BA6FA /* StanfordRoute.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		2F01E6A61A9449B200C1984B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F01E6A71A9449B200C1984B /* DixiChixProtoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DixiChixProtoTests.m; sourceTree = "<group>"; };
 		2F01E6B11A9451D800C1984B /* BrnoTrackMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BrnoTrackMap.png; sourceTree = "<group>"; };
+		2F99F7B11A969C16001BA6FA /* StanfordRoute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StanfordRoute.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				2F01E6921A9449B200C1984B /* MapViewController.h */,
 				2F01E6931A9449B200C1984B /* MapViewController.m */,
 				2F01E68F1A9449B200C1984B /* DixiChixProto.xcdatamodeld */,
+				2F99F7B11A969C16001BA6FA /* StanfordRoute.png */,
 				2F01E6B11A9451D800C1984B /* BrnoTrackMap.png */,
 				2F01E6881A9449B100C1984B /* Supporting Files */,
 			);
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F99F7B21A969C16001BA6FA /* StanfordRoute.png in Resources */,
 				2F01E6B21A9451D800C1984B /* BrnoTrackMap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,6 +393,7 @@
 				2F01E6AD1A9449B200C1984B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F01E6AE1A9449B200C1984B /* Build configuration list for PBXNativeTarget "DixiChixProtoTests" */ = {
 			isa = XCConfigurationList;
@@ -397,6 +402,7 @@
 				2F01E6B01A9449B200C1984B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
