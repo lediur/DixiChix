@@ -1,6 +1,14 @@
 <?php
 require './PHPMailer-master/PHPMailerAutoload.php';
 // Here we get all the information from the fields sent over by the form.
+$name = $_POST['name'];
+ 
+$to = 'ospreydronecompany@gmail.com';
+$subject = $name . ' wants to be a test user for Osprey Drones';
+$message = $name . ' wants to be a test user for Osprey Drones';
+$headers = 'From: Osprey Drone Company <ospreydronecompany@gmail.com>' . "\r\n";
+$headers .= 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
 $mail = new PHPMailer;
 $mail->isSMTP();                                      // Set mailer to use SMTP
