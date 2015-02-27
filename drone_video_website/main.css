@@ -1,0 +1,90 @@
+html, body {
+  color: white;
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 5em;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2em;
+}
+
+video#bgvid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transition: 1s opacity;
+}
+
+.clear-background {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
+.stopfade {
+  opacity: .75;
+}
+
+.vid-controls {
+  list-style: none;
+  margin: 5px 0 0 5px;
+  padding: 0;
+  display: block;
+}
+
+.vid-controls li {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.vid-controls li span {
+  padding: 2px 4px;
+}
+
+#next-page-glyph {
+  font-size: 2em;
+  padding: 0.5em 0.55em 0.5em 0.45em;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+#next-page-glyph:hover {
+  opacity: 0.7;
+}
+
+#footer {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
+  color: black;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  background: #282b34 url('overlay.png');
+  color: rgba(255,255,255,0.7);
+}
+
+#footer form input[type="email"] {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#footer form label {
+  font-size: 2em;
+}
+
+#footer div .alert {
+  margin-top: 2.5em;
+  display: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Osprey Drones</title>
+  </head>
+
+  <body>
+    <video autoplay loop id="bgvid" muted="true">
+      <source src="DroneRecording.mp4" type="video/mp4">
+    </video>
+    <ul class="vid-controls">
+      <li id="vid-pause-play-button">
+        <span class="glyphicon glyphicon-pause" id="vid-pause-play-button-glyph"></span>
+      </li>
+      <li id="vid-mute-button">
+        <span class="glyphicon glyphicon-volume-off" id="vid-mute-button-glyph"></span>
+      </li>
+    </ul>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <div id="header-text">
+            <h1>Osprey Drones</h1>
+            <p>Autonomous drone recording.</p>
+            <!-- <p>Your automobile.</p> -->
+            <p>Capture your driving experience.</p>
+            <p>Share the thrill!</p>
+          </div>
+
+          <span class="glyphicon glyphicon-chevron-down" id="next-page-glyph"></span>
+        </div><!-- end col-md-10 col-md-offset-1 text-center -->
+      </div><!-- end row -->
+    </div><!-- end container -->
+
+    <div class="container text-center" id="footer">
+      <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+          <form>
+            <div class="form-group">
+              <label for="emailInput">Be a Test User</label>
+              <input type="email" class="form-control input-lg" id="emailInput" placeholder="E-mail">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" id="sign-up-button">Submit</button>
+          </form>
+          <div class="alert alert-success" role="alert" id="sign-up-alert-success">Thanks! We'll get back to you ASAP.</div>
+          <div class="alert alert-danger" role="alert" id="sign-up-alert-fail">Please enter a valid e-mail address.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Fonts support for Source Sans Pro -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+
+    <!-- Main custom CSS to style the page -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- Main custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
