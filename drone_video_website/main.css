@@ -54,16 +54,29 @@ video#bgvid {
   padding: 2px 4px;
 }
 
-#next-page-glyph {
+#scroll-glyph {
   font-size: 2em;
-  padding: 0.5em 0.55em 0.5em 0.45em;
   border: 1px solid white;
   border-radius: 50%;
 }
 
-#next-page-glyph:hover {
+#scroll-glyph:hover {
   opacity: 0.7;
 }
+
+/* Because of differences in chevron shape, the padding for the down button
+   needs to be slightly different than the padding for the up button. */
+.padding-for-down-glyph {
+  padding: 0.55em 0.52em 0.45em 0.48em;
+}
+
+/* Because of differences in chevron shape, the padding for the up button
+   needs to be slightly different than the padding for the down button. */
+.padding-for-up-glyph {
+  padding: 0.5em 0.45em 0.5em 0.55em;
+}
+
+
 
 #footer {
   font-family: 'Source Sans Pro', sans-serif;

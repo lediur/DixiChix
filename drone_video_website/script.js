@@ -22,7 +22,7 @@ function resizeWindowElements() {
 
     // Position the chevron down span glyph to navigate to the next page on the
     // bottom of the current visible window.
-    $("#next-page-glyph").css({
+    $("#scroll-glyph").css({
       "margin-top": (0.4 * headerTextMargin) + "px"
     });
   } else {
@@ -44,14 +44,14 @@ function resizeWindowElements() {
 
     // Position the chevron down span glyph to navigate to the next page on the
     // bottom of the current visible window.
-    $("#next-page-glyph").css({
+    $("#scroll-glyph").css({
       "margin-top": headerTextMargin + "px"
     });
   }
 
   // Position the footer just out of sight of the current visible window.
   $("#footer").css({
-    "margin-top": 0.55 * $("#next-page-glyph").height() + "px"
+    "margin-top": 0.55 * $("#scroll-glyph").height() + "px"
   });
 }
 
@@ -72,13 +72,101 @@ function scrollToBottom() {
   body.animate({scrollTop: $(window).height()}, '750', 'swing');
 }
 
+// Code to animate scrolling to the top of the page.
+function scrollToTop() {
+  var body = $("html, body");
+  body.animate({scrollTop: 0}, '500', 'swing');
+}
+
 // Code to give chevron-down glyph button proper functionality. It
 // should just scroll the user to the bottom of the page to let them sign up.
-var goToBottomButton = document.getElementById("next-page-glyph");
+var goToBottomButton = document.getElementById("scroll-glyph");
 goToBottomButton.addEventListener("click", function() {
   scrollToBottom();
 });
 
+// To get the document height and make it work on all browsers.
+// Stolen from http://james.padolsey.com/javascript/get-document-height-cross-browser/
+function getDocHeight() {
+  var D = document;
+  return Math.max(
+      D.body.scrollHeight, D.documentElement.scrollHeight,
+      D.body.offsetHeight, D.documentElement.offsetHeight,
+      D.body.clientHeight, D.documentElement.clientHeight
+  );
+}
+
+// Enum to keep track of the state of where the user is currently in the page
+// S/he can either be near the bottom, or anywhere else (considered "top").
+// current_orientation will initially be set to OrientationEnum.UNSET
+var ORIENTATION_ENUM = {
+  NEAR_BOTTOM: 0,
+  TOP: 1,
+  UNSET: 2
+};
+var orientation = ORIENTATION_ENUM.UNSET;
+
+// When the page is first loaded, determine whether to show the chevron-down
+// glyph button to let the user scroll down, or the chevron-up button to
+// let the user scroll up.
+function showProperScrollingButton() {
+  var scrollButton = $("#scroll-glyph");
+  var userNearBottom = $(window).scrollTop() + $(window).height() >= getDocHeight() - 25;
+
+  // If the user was previously NEAR BOTTOM, and is still NEAR BOTTOM, no need to change anything.
+  // Likewise for if the user was previously TOP, and is still TOP.
+  var current_orientation = (userNearBottom) ? ORIENTATION_ENUM.NEAR_BOTTOM : ORIENTATION_ENUM.TOP;
+  if (current_orientation != orientation) {
+
+    // If the orientation has not already been set (this is the first time the
+    // user has loaded the page) and the user is not NEAR BOTTOM, then leave
+    // the button the way it is by default -- the chevron down button
+    if (!(orientation == ORIENTATION_ENUM.UNSET && !userNearBottom)) {
+      scrollButton.animate({
+        opacity: 0.0
+      }, 200, "swing", function() {
+        if (userNearBottom) {
+          scrollButton.removeClass("glyphicon-chevron-down");
+          scrollButton.addClass("glyphicon-chevron-up");
+          scrollButton.removeClass("padding-for-down-glyph");
+          scrollButton.addClass("padding-for-up-glyph");
+          scrollButton.unbind("click");
+          scrollButton.click(function() {
+            scrollToTop();
+          });
+        } else {
+          scrollButton.removeClass("glyphicon-chevron-up");
+          scrollButton.addClass("glyphicon-chevron-down");
+          scrollButton.removeClass("padding-for-up-glyph");
+          scrollButton.addClass("padding-for-down-glyph");
+          scrollButton.unbind("click");
+          scrollButton.click(function() {
+            scrollToBottom();
+          });
+        }
+
+        scrollButton.animate({
+          opacity: 1.0
+        }, 200);
+
+        scrollButton.mouseenter(function() {
+          scrollButton.css("opacity", "0.7");
+        }).mouseleave(function() {
+          scrollButton.css("opacity", "1.0");
+        });
+      });
+    }
+
+    orientation = current_orientation; // Save for next time.
+  }
+}
+
+// Go ahead and set the proper scrolling button as soon as the page loads.
+showProperScrollingButton();
+// Then, make sure to reset it when necessary.
+$(window).scroll(function() {
+  showProperScrollingButton();
+});
 
 /**********************************
  * Code for video playback/muting *
