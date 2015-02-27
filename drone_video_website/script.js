@@ -232,17 +232,7 @@ submitButton.addEventListener("click", function() {
 
   if (validateEmail(emailInput.value)) {
     console.log(emailInput.value);
-    console.log($("#emailInput").serialize());
-    // $.post("email.php", emailInput.value,  function(data) {   });
-    $.ajax({
-      url: "email.php",
-      type: "POST",
-      dataType:'json',
-      data: {name: emailInput.value},
-      success: function(data){
-          console.log(data);
-      }
-    });
+    
     setTimeout(function() {
       submitAlertSuccessDiv.style.display = "block";
       scrollToBottom();
