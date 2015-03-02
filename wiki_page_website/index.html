@@ -59,10 +59,11 @@
 					<br />
 
 					<!-- Demonstration Video -->
-					<div class="12u">
-					    <video autoplay loop id="bgvid" muted="true">
-					      <source src="DroneRecordingCompressed.mp4" type="video/mp4">
-					    </video>
+					<div class="12u" id="main-vid-container">
+						<iframe src="just_video.html" width="100%" height="100%" style="display: block"></iframe>
+						<script>
+							console.log($("#main-vid-container").height($("#main-vid-container").width()/1.777));
+						</script>
 					</div>
 				</section>
 			</div>
