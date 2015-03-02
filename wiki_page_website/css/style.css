@@ -9,10 +9,6 @@
 */
 
 video#bgvid {
-/*  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;*/
   width: 100%;
   z-index: -100;
   transition: 1s opacity;
