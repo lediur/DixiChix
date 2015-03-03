@@ -1,0 +1,81 @@
+%color=#ff69b4%%center% [++Dixi Chix++]\\
+\\
+%center%%width=250px%http://s23.postimg.org/idup7xggr/dixichix_Logo.png\\
+\\
+
+[++Team Members++]\\
+\\
+
+%lfloat width=100px% http://cs210net.stanford.edu/pmwiki/uploads/BMW2015-3/Raymond_Chan_Photo_Cropped.jpg
+[+Raymond Chan+] \\
+rchan2@stanford.edu\\
+916-239-8430 \\\\\\
+
+%lfloat width=100px% http://cs210net.stanford.edu/pmwiki/uploads/BMW2015-3/Seth.jpg
+[+Seth Hildick-Smith+] \\
+sethjhs@stanford.edu\\
+781-325-3790 \\\\\\
+
+%lfloat width=100px% http://s12.postimg.org/ib4hcjbbh/Dixi_Chix_Photo.jpg
+[+Aditya Sarkar+] \\
+sarkar@stanford.edu\\
+650-842-0985 \\\\\\
+
+%lfloat width=100px% http://cs210net.stanford.edu/pmwiki/uploads/BMW2015-3/Tyler.jpg
+[+Tyler Fallon+] \\
+tfallon5@stanford.edu\\
+516-426-3763 \\\\\\
+
+%lfloat width=100px% http://cs210net.stanford.edu/pmwiki/uploads/BMW2015-3/Sean.png
+[+Sean Kemper+] \\
+srkemper@stanford.edu\\
+858-922-8125 \\\\\\
+
+\\
+[[<<]]
+[++Project Synopsis++]\\
+
+* Develop use cases together with a team of BMW engineers and UAV experts.
+* Learn to interface with a drone and control it.
+* Build a software platform that is able to launch the drone from a car, navigate around it, collect data and send it back.
+* Integrate the solution into a demonstration car.\\\
+
+
+[++Team Skills Matrix++]\\
+[[https://docs.google.com/a/stanford.edu/document/d/173QF5mBc3XFPbcmYeorHdeM5CBB9-oNUYY_GO52HnIc/edit | Skills Matrix Google Doc]]
+[[<<]][[<<]][[<<]]
+
+[++Documentation: Pre Liaison Meeting++]\\
+[[https://drive.google.com/a/stanford.edu/folderview?id=0B1-sH_HukYQ1VGd6RUFhWUlYRlE&usp=drive_web | Documentation Google Drive Folder]]
+[[<<]][[<<]][[<<]]
+
+[++Documentation: VC Meeting++]\\
+[[https://drive.google.com/a/stanford.edu/?usp=folder#folders/0B1-sH_HukYQ1ZWFYNWU3MGJHLVk | Documentation Google Drive Folder]]
+[[<<]][[<<]][[<<]]
+
+
+[++Documentation: MVP++]\\
+[[https://drive.google.com/a/stanford.edu/?usp=folder#folders/0B1-sH_HukYQ1OEp0b2tDV0Jaazg | Documentation Google Drive Folder]]
+[[<<]][[<<]][[<<]]
+
+[++Documentation: SGM 2/10 Notes++]\\
+[[https://drive.google.com/a/stanford.edu/?usp=folder#folders/0B1-sH_HukYQ1UXlfUWR2N1NpTkE | Documentation Google Drive Folder]]
+[[<<]][[<<]][[<<]]
+
+
+[++Documentation: SGM 2/17 Notes++]\\
+[[https://drive.google.com/a/stanford.edu/?usp=folder#folders/0B1-sH_HukYQ1WEF1ajdHbHJoTjQ | Documentation Google Drive Folder]]
+[[<<]][[<<]][[<<]]
+
+
+[++Documentation: Github Repository++]\\
+[[https://github.com/cs210/DixiChix | Dixi Chix Github Repository]]
+[[<<]][[<<]][[<<]]
+
+[++Documentation: Trello++]\\
+[[https://trello.com/b/7hd2BhoF/dixi-chix | Dixi Chix Trello]]
+[[<<]][[<<]][[<<]]
+Kespry (Drone company) contacts:
+\\
+Parker Clark   parker@kespry.com
+Paul Doersch   paul@kespry.com
