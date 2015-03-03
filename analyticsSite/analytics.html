@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimal-ui">
+
+<script type="text/javascript" charset="utf-8">
+	document.addEventListener('DOMContentLoaded', function () {
+		var menuCapture = document.getElementById("navhidden").innerHTML;
+		document.getElementById("nav").innerHTML = document.getElementById("navhidden").innerHTML;
+	});
+</script>
+
+</head>
+
+<body class='splash-page  wsite-theme-dark'>
+    <div class="page-container">
+			
+	<div class="page-sidebar-wrapper">
+    	<div class="page-sidebar">
+				<div id="close-nav"><label for="nav-trigger"></label></div>
+				<div id="navhidden" class="nav">{menu}</div>
+				<div id="nav" class="nav"></div>
+				<div class="social">{social}</div>
+		</div>
+    </div><!-- end page-sidebar-wrapper -->
+		<div class="page-content-wrapper wsite-background">
+    	<div class="page-content">
+			<div id="splash-header-wrapper">
+				<div id="header-banner">
+					<div id="header-banner-wrap">
+						<div id="header-wrap">
+							<div class="container-box">
+								<table id="header">
+									<tr>
+										<td id="logo">{logo}</td>
+										
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="splash-content-wrapper">
+				<div id="splash-wrap" class="banner-wrap">
+					<div id="main-wrap" class="splash-content banner">
+						<div class="container-box banner-content">
+							{content}
+						</div>
+					</div>
+				</div>
+				<div id="footer-wrap"><div class="container-box">{footer}</div></div>
+			</div>
+       </div>
+    </div><!-- end page-content-wrapper -->
+</div><!-- end page-container -->
+
+
+<!-- JavaScript -->
+<script type="text/javascript" src="/files/theme/jquery.jqtransform.js" ></script>
+<script type="text/javascript" src="/files/theme/custom.js"></script>
+<script type="text/javascript" src="/files/theme/mobile.js"></script>
+
+	
+</body>
+
+</html>
