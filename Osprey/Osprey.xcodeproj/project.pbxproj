@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F9E38791AA92DA400ADA3CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38781AA92DA400ADA3CD /* main.m */; };
+		2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */; };
+		2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */; };
+		2F9E38871AA92DA400ADA3CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E38861AA92DA400ADA3CD /* Images.xcassets */; };
+		2F9E38961AA92DA400ADA3CD /* OspreyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38951AA92DA400ADA3CD /* OspreyTests.m */; };
+		2F9E38A11AA92E7000ADA3CD /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38A01AA92E7000ADA3CD /* MapViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F9E38901AA92DA400ADA3CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F9E386B1AA92DA300ADA3CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F9E38721AA92DA400ADA3CD;
+			remoteInfo = Osprey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F9E38731AA92DA400ADA3CD /* Osprey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osprey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9E38771AA92DA400ADA3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F9E38781AA92DA400ADA3CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F9E387A1AA92DA400ADA3CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2F9E387E1AA92DA400ADA3CD /* Osprey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Osprey.xcdatamodel; sourceTree = "<group>"; };
+		2F9E38861AA92DA400ADA3CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F9E388F1AA92DA400ADA3CD /* OspreyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OspreyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9E38941AA92DA400ADA3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F9E38951AA92DA400ADA3CD /* OspreyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OspreyTests.m; sourceTree = "<group>"; };
+		2F9E389F1AA92E7000ADA3CD /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		2F9E38A01AA92E7000ADA3CD /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F9E38701AA92DA400ADA3CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9E388C1AA92DA400ADA3CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F9E386A1AA92DA300ADA3CD = {
+			isa = PBXGroup;
+			children = (
+				2F9E38751AA92DA400ADA3CD /* Osprey */,
+				2F9E38921AA92DA400ADA3CD /* OspreyTests */,
+				2F9E38741AA92DA400ADA3CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F9E38741AA92DA400ADA3CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E38731AA92DA400ADA3CD /* Osprey.app */,
+				2F9E388F1AA92DA400ADA3CD /* OspreyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F9E38751AA92DA400ADA3CD /* Osprey */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E387A1AA92DA400ADA3CD /* AppDelegate.h */,
+				2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */,
+				2F9E389F1AA92E7000ADA3CD /* MapViewController.h */,
+				2F9E38A01AA92E7000ADA3CD /* MapViewController.m */,
+				2F9E38861AA92DA400ADA3CD /* Images.xcassets */,
+				2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */,
+				2F9E38761AA92DA400ADA3CD /* Supporting Files */,
+			);
+			path = Osprey;
+			sourceTree = "<group>";
+		};
+		2F9E38761AA92DA400ADA3CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E38771AA92DA400ADA3CD /* Info.plist */,
+				2F9E38781AA92DA400ADA3CD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F9E38921AA92DA400ADA3CD /* OspreyTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E38951AA92DA400ADA3CD /* OspreyTests.m */,
+				2F9E38931AA92DA400ADA3CD /* Supporting Files */,
+			);
+			path = OspreyTests;
+			sourceTree = "<group>";
+		};
+		2F9E38931AA92DA400ADA3CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F9E38941AA92DA400ADA3CD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F9E38721AA92DA400ADA3CD /* Osprey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9E38991AA92DA400ADA3CD /* Build configuration list for PBXNativeTarget "Osprey" */;
+			buildPhases = (
+				2F9E386F1AA92DA400ADA3CD /* Sources */,
+				2F9E38701AA92DA400ADA3CD /* Frameworks */,
+				2F9E38711AA92DA400ADA3CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Osprey;
+			productName = Osprey;
+			productReference = 2F9E38731AA92DA400ADA3CD /* Osprey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F9E388E1AA92DA400ADA3CD /* OspreyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9E389C1AA92DA400ADA3CD /* Build configuration list for PBXNativeTarget "OspreyTests" */;
+			buildPhases = (
+				2F9E388B1AA92DA400ADA3CD /* Sources */,
+				2F9E388C1AA92DA400ADA3CD /* Frameworks */,
+				2F9E388D1AA92DA400ADA3CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F9E38911AA92DA400ADA3CD /* PBXTargetDependency */,
+			);
+			name = OspreyTests;
+			productName = OspreyTests;
+			productReference = 2F9E388F1AA92DA400ADA3CD /* OspreyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F9E386B1AA92DA300ADA3CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Dixi Chix";
+				TargetAttributes = {
+					2F9E38721AA92DA400ADA3CD = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					2F9E388E1AA92DA400ADA3CD = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 2F9E38721AA92DA400ADA3CD;
+					};
+				};
+			};
+			buildConfigurationList = 2F9E386E1AA92DA300ADA3CD /* Build configuration list for PBXProject "Osprey" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F9E386A1AA92DA300ADA3CD;
+			productRefGroup = 2F9E38741AA92DA400ADA3CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F9E38721AA92DA400ADA3CD /* Osprey */,
+				2F9E388E1AA92DA400ADA3CD /* OspreyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F9E38711AA92DA400ADA3CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9E38871AA92DA400ADA3CD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9E388D1AA92DA400ADA3CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F9E386F1AA92DA400ADA3CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */,
+				2F9E38791AA92DA400ADA3CD /* main.m in Sources */,
+				2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */,
+				2F9E38A11AA92E7000ADA3CD /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9E388B1AA92DA400ADA3CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9E38961AA92DA400ADA3CD /* OspreyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F9E38911AA92DA400ADA3CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F9E38721AA92DA400ADA3CD /* Osprey */;
+			targetProxy = 2F9E38901AA92DA400ADA3CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2F9E38971AA92DA400ADA3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2F9E38981AA92DA400ADA3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F9E389A1AA92DA400ADA3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Osprey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2F9E389B1AA92DA400ADA3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Osprey/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2F9E389D1AA92DA400ADA3CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OspreyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Osprey.app/Osprey";
+			};
+			name = Debug;
+		};
+		2F9E389E1AA92DA400ADA3CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = OspreyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Osprey.app/Osprey";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F9E386E1AA92DA300ADA3CD /* Build configuration list for PBXProject "Osprey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9E38971AA92DA400ADA3CD /* Debug */,
+				2F9E38981AA92DA400ADA3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F9E38991AA92DA400ADA3CD /* Build configuration list for PBXNativeTarget "Osprey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9E389A1AA92DA400ADA3CD /* Debug */,
+				2F9E389B1AA92DA400ADA3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2F9E389C1AA92DA400ADA3CD /* Build configuration list for PBXNativeTarget "OspreyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9E389D1AA92DA400ADA3CD /* Debug */,
+				2F9E389E1AA92DA400ADA3CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2F9E387E1AA92DA400ADA3CD /* Osprey.xcdatamodel */,
+			);
+			currentVersion = 2F9E387E1AA92DA400ADA3CD /* Osprey.xcdatamodel */;
+			path = Osprey.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2F9E386B1AA92DA300ADA3CD /* Project object */;
+}
