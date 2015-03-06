@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface MapViewController : UIViewController {
     int tapCount;
-    UIImageView *map;
+    //UIImageView *map;
     UILabel *popExplanation;
+    
+    GMSMapView *map;
 }
 
 - (id)initWithFrame:(CGRect)frame;

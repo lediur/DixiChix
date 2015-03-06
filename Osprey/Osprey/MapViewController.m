@@ -23,10 +23,12 @@
         pindrops = [[NSMutableArray alloc] initWithCapacity:MAX_COUNT];
         tapCount = 0;
         
-        map = [[UIImageView alloc] initWithFrame:frame];
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: -33.86 longitude:151.20 zoom:6];
+        
+        map = [GMSMapView mapWithFrame:frame camera:camera];
+        map.myLocationEnabled = YES;
         map.userInteractionEnabled = YES;
-        //map.image = [UIImage imageNamed:@"StanfordRoute.png"];
-        map.backgroundColor = [UIColor whiteColor];
+
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pinDropped:)];
         [map addGestureRecognizer:tapGesture];
         

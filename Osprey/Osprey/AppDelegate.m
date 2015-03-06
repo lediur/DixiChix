@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    [GMSServices provideAPIKey:@"AIzaSyDUumCOy81TT1oP26UD58NiYgk3GIEEJd4"];
     
     mapVC = [[MapViewController alloc] initWithFrame:self.window.frame];
     
