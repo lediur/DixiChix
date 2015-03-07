@@ -9,14 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ShareViewController.h"
 
-@interface MapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate> {
-    int tapCount;
-    //UIImageView *map;
-    UILabel *popExplanation;
-    
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate> {    
     GMSMapView *map;
     CLLocationManager *locationManager;
+    ShareViewController *shareVC;
 }
 
 - (id)initWithFrame:(CGRect)frame;

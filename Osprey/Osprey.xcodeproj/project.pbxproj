@@ -27,6 +27,14 @@
 		2F9E38B91AA9362E00ADA3CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9E38B81AA9362E00ADA3CD /* QuartzCore.framework */; };
 		2F9E38BB1AA9363400ADA3CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9E38BA1AA9363400ADA3CD /* SystemConfiguration.framework */; };
 		2F9E38BE1AA9443800ADA3CD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E38BD1AA9443800ADA3CD /* GoogleMaps.bundle */; };
+		2FE4D4221AABAC2B00574542 /* sick_aerial_car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */; };
+		2FE4D4251AABACC800574542 /* sharing_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D4241AABACC800574542 /* sharing_icon.png */; };
+		2FE4D4281AABB14500574542 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4D4271AABB14500574542 /* ShareViewController.m */; };
+		2FE4D42B1AABB3A400574542 /* ShareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4D42A1AABB3A400574542 /* ShareViewCell.m */; };
+		2FE4D42D1AABBD1800574542 /* compass_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D42C1AABBD1800574542 /* compass_icon.jpg */; };
+		2FE4D4311AABC01700574542 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D42E1AABC01700574542 /* Bolts.framework */; };
+		2FE4D4321AABC01700574542 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D42F1AABC01700574542 /* FacebookSDK.framework */; };
+		2FE4D4331AABC01700574542 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D4301AABC01700574542 /* FBAudienceNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +74,16 @@
 		2F9E38B81AA9362E00ADA3CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2F9E38BA1AA9363400ADA3CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2F9E38BD1AA9443800ADA3CD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sick_aerial_car.jpg; sourceTree = "<group>"; };
+		2FE4D4241AABACC800574542 /* sharing_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharing_icon.png; sourceTree = "<group>"; };
+		2FE4D4261AABB14500574542 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
+		2FE4D4271AABB14500574542 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
+		2FE4D4291AABB3A400574542 /* ShareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewCell.h; sourceTree = "<group>"; };
+		2FE4D42A1AABB3A400574542 /* ShareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewCell.m; sourceTree = "<group>"; };
+		2FE4D42C1AABBD1800574542 /* compass_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compass_icon.jpg; sourceTree = "<group>"; };
+		2FE4D42E1AABC01700574542 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2FE4D42F1AABC01700574542 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		2FE4D4301AABC01700574542 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +98,15 @@
 				2F9E38B31AA935FE00ADA3CD /* libicucore.dylib in Frameworks */,
 				2F9E38B11AA935F500ADA3CD /* libc++.dylib in Frameworks */,
 				2F9E38AF1AA935E400ADA3CD /* ImageIO.framework in Frameworks */,
+				2FE4D4331AABC01700574542 /* FBAudienceNetwork.framework in Frameworks */,
 				2F9E38AD1AA935D800ADA3CD /* GLKit.framework in Frameworks */,
 				2F9E38AB1AA935CD00ADA3CD /* CoreLocation.framework in Frameworks */,
 				2F9E38A91AA935C400ADA3CD /* CoreText.framework in Frameworks */,
 				2F9E38A71AA935BD00ADA3CD /* CoreData.framework in Frameworks */,
+				2FE4D4321AABC01700574542 /* FacebookSDK.framework in Frameworks */,
 				2F9E38A51AA935B600ADA3CD /* AVFoundation.framework in Frameworks */,
 				2F9E38A31AA9300300ADA3CD /* GoogleMaps.framework in Frameworks */,
+				2FE4D4311AABC01700574542 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +146,13 @@
 				2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */,
 				2F9E389F1AA92E7000ADA3CD /* MapViewController.h */,
 				2F9E38A01AA92E7000ADA3CD /* MapViewController.m */,
+				2FE4D4291AABB3A400574542 /* ShareViewCell.h */,
+				2FE4D42A1AABB3A400574542 /* ShareViewCell.m */,
+				2FE4D4261AABB14500574542 /* ShareViewController.h */,
+				2FE4D4271AABB14500574542 /* ShareViewController.m */,
 				2F9E38861AA92DA400ADA3CD /* Images.xcassets */,
 				2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */,
+				2FE4D4231AABAC4800574542 /* Images */,
 				2F9E38761AA92DA400ADA3CD /* Supporting Files */,
 			);
 			path = Osprey;
@@ -161,6 +187,9 @@
 		2F9E38BC1AA9365000ADA3CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2FE4D42E1AABC01700574542 /* Bolts.framework */,
+				2FE4D42F1AABC01700574542 /* FacebookSDK.framework */,
+				2FE4D4301AABC01700574542 /* FBAudienceNetwork.framework */,
 				2F9E38BD1AA9443800ADA3CD /* GoogleMaps.bundle */,
 				2F9E38A21AA9300300ADA3CD /* GoogleMaps.framework */,
 				2F9E38BA1AA9363400ADA3CD /* SystemConfiguration.framework */,
@@ -177,6 +206,16 @@
 				2F9E38A41AA935B600ADA3CD /* AVFoundation.framework */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		2FE4D4231AABAC4800574542 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2FE4D42C1AABBD1800574542 /* compass_icon.jpg */,
+				2FE4D4241AABACC800574542 /* sharing_icon.png */,
+				2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE4D42D1AABBD1800574542 /* compass_icon.jpg in Resources */,
+				2FE4D4221AABAC2B00574542 /* sick_aerial_car.jpg in Resources */,
 				2F9E38871AA92DA400ADA3CD /* Images.xcassets in Resources */,
 				2F9E38BE1AA9443800ADA3CD /* GoogleMaps.bundle in Resources */,
+				2FE4D4251AABACC800574542 /* sharing_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,9 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE4D42B1AABB3A400574542 /* ShareViewCell.m in Sources */,
 				2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */,
 				2F9E38791AA92DA400ADA3CD /* main.m in Sources */,
 				2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */,
+				2FE4D4281AABB14500574542 /* ShareViewController.m in Sources */,
 				2F9E38A11AA92E7000ADA3CD /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,6 +507,7 @@
 				2F9E389B1AA92DA400ADA3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F9E389C1AA92DA400ADA3CD /* Build configuration list for PBXNativeTarget "OspreyTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +516,7 @@
 				2F9E389E1AA92DA400ADA3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

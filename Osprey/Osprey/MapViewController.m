@@ -21,7 +21,8 @@
 - (id)initWithFrame:(CGRect)frame {
     if(self = [super init]) {
         pindrops = [[NSMutableArray alloc] initWithCapacity:MAX_COUNT];
-        tapCount = 0;
+        
+        shareVC = [[ShareViewController alloc] initWithFrame:frame];
 
 //Note: Simulator can't use CoreLocation, so we mimic it for now. Uncomment these lines before testing on phone
 //        CLLocation *startLocation = map.myLocation;
@@ -39,10 +40,11 @@
         locationManager.distanceFilter = 50; //50 meters
         [locationManager startUpdatingLocation];
         
-        popExplanation = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height/2 - frame.size.width/2, frame.size.width, frame.size.width/2)];
-        popExplanation.backgroundColor = [UIColor redColor];
-        popExplanation.alpha = 0;
-        [map addSubview:popExplanation];
+        int buttonLength = frame.size.width/12;
+        UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-3*buttonLength/2, buttonLength/2, buttonLength, 4*buttonLength/5)];
+        [shareButton setImage:[UIImage imageNamed:@"sharing_icon.png"] forState:UIControlStateNormal];
+        [shareButton addTarget:self action:@selector(sharePage) forControlEvents:UIControlEventTouchUpInside];
+        [map addSubview:shareButton];
         
         [self.view addSubview:map];
     }
@@ -72,17 +74,17 @@
 
 - (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
     if ([pindrops count] == MAX_COUNT) {
-        popExplanation.text = @"Cannot add pin here!";
-        [self.view bringSubviewToFront:popExplanation];
-        popExplanation.alpha = 1;
-        [UIView animateWithDuration:1 delay:.5 options:0 animations:^{
-            popExplanation.alpha = 0;
-        } completion:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot add pin!" message:@"The drone can't get to this location." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
+        
         return;
     }
     
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = coordinate;
+    marker.draggable = YES;
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+    marker.flat = YES;
     marker.map = map;
     [pindrops addObject:marker];
 }
@@ -91,6 +93,12 @@
     [pindrops removeObject:marker];
     marker.map = nil;
     return YES;
+}
+
+#pragma Share Button
+
+- (void)sharePage {
+    [self presentViewController:shareVC animated:YES completion:nil];
 }
 
 @end
