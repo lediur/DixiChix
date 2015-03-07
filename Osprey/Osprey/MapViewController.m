@@ -22,15 +22,22 @@
     if(self = [super init]) {
         pindrops = [[NSMutableArray alloc] initWithCapacity:MAX_COUNT];
         tapCount = 0;
+
+//Note: Simulator can't use CoreLocation, so we mimic it for now. Uncomment these lines before testing on phone
+//        CLLocation *startLocation = map.myLocation;
+//        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: startLocation.coordinate.latitude longitude:startLocation.coordinate.longitude zoom:9];
         
-        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: -33.86 longitude:151.20 zoom:6];
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude: 37.424 longitude:-122.165 zoom:13];
         
         map = [GMSMapView mapWithFrame:frame camera:camera];
+        map.delegate = self;
         map.myLocationEnabled = YES;
         map.userInteractionEnabled = YES;
-
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pinDropped:)];
-        [map addGestureRecognizer:tapGesture];
+        
+        locationManager = [[CLLocationManager alloc] init];
+        locationManager.delegate = self;
+        locationManager.distanceFilter = 50; //50 meters
+        [locationManager startUpdatingLocation];
         
         popExplanation = [[UILabel alloc] initWithFrame:CGRectMake(0, frame.size.height/2 - frame.size.width/2, frame.size.width, frame.size.width/2)];
         popExplanation.backgroundColor = [UIColor redColor];
@@ -53,54 +60,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)tooClose:(CGPoint) touchPoint{
-    for (int i=0; i<tapCount; i++) {
-        if(fabsf((([(NSValue*)[pindrops objectAtIndex:i] CGPointValue]).x - touchPoint.x)) < 10
-           && fabsf((([(NSValue*)[pindrops objectAtIndex:i] CGPointValue]).y - touchPoint.y)) < 10) {
-            return YES;
-        }
-    }
-    return NO;
+#pragma CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation* location = [locations lastObject];
+    GMSCameraPosition *update = [GMSCameraPosition cameraWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude zoom:6];
+    [map setCamera:update];
 }
 
-- (void)addPin:(CGPoint) touchPoint {
-    UILabel *pin = [[UILabel alloc] initWithFrame:CGRectMake(touchPoint.x-10, touchPoint.y-10, 20, 20)];
-    pin.text = [NSString stringWithFormat:@"%i", tapCount];
-    
-    [map addSubview:pin];
-}
+#pragma GMSMapViewDelegate
 
-- (void)pinDropped:(UITapGestureRecognizer*)tap {
-    if(tapCount == MAX_COUNT) {
-        tap.cancelsTouchesInView = YES;
-        popExplanation.text = @"Cannot add more than 5";
+- (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    if ([pindrops count] == MAX_COUNT) {
+        popExplanation.text = @"Cannot add pin here!";
         [self.view bringSubviewToFront:popExplanation];
         popExplanation.alpha = 1;
         [UIView animateWithDuration:1 delay:.5 options:0 animations:^{
             popExplanation.alpha = 0;
-        } completion:^(BOOL finished) {
-            
-        }];
+        } completion:nil];
         return;
     }
     
-    CGPoint touchPoint = [tap locationInView:self.view];
-    if ([self tooClose:touchPoint]) {
-        tap.cancelsTouchesInView = YES;
-        popExplanation.text = @"Too close to other point";
-        [self.view bringSubviewToFront:popExplanation];
-        popExplanation.alpha = 1;
-        [UIView animateWithDuration:1 delay:.5 options:0 animations:^{
-            popExplanation.alpha = 0;
-        } completion:^(BOOL finished) {
-            
-        }];
-        return;
-    }
-    
-    tapCount++;
-    [pindrops addObject:[NSValue valueWithCGPoint:touchPoint]];
-    [self addPin:touchPoint];
+    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker.position = coordinate;
+    marker.map = map;
+    [pindrops addObject:marker];
+}
+
+- (BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker {
+    [pindrops removeObject:marker];
+    marker.map = nil;
+    return YES;
 }
 
 @end

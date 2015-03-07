@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <GoogleMaps/GoogleMaps.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MapViewController : UIViewController {
+@interface MapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate> {
     int tapCount;
     //UIImageView *map;
     UILabel *popExplanation;
     
     GMSMapView *map;
+    CLLocationManager *locationManager;
 }
 
 - (id)initWithFrame:(CGRect)frame;
