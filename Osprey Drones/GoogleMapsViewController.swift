@@ -20,6 +20,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
 	let markerOuterCircleColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
     let markerTitleText = "Tap To Delete!"
     
+    var drawnPath: GMSPolyline = GMSPolyline()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,6 +83,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         marker.map = mapView
         
         allMarkers.append(marker)
+        
+        drawPathBetweenMarkers()
     }
 
     /* When the user taps on the info window, remove the marker that was tapped, and refresh
@@ -92,6 +96,23 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     }
     
     // MARK: Maps Helper functions
+    
+    /* Function to draw a path that goes step-by-step across the markers on screen. */
+    func drawPathBetweenMarkers() {
+        // Refresh the GMS Path
+        var path = GMSMutablePath()
+        for marker in allMarkers {
+            path.addCoordinate(marker.position)
+        }
+        
+        // Destroy the previously drawn path
+        drawnPath.map = nil
+        
+        // Create a new one
+        drawnPath = GMSPolyline(path: path)
+        drawnPath.strokeWidth = 2.0
+        drawnPath.map = mapView
+    }
 
     /* Refreshes the markers so that they are appropriately numbered. Called after
      * markers are removed from the array. */
@@ -100,6 +121,9 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             var label = "\(index + 1)"
             marker.icon = createCircleImageWithLabel(label)
         }
+        
+        // We will need to re drawn the path to account for the removed markers.
+        drawPathBetweenMarkers()
     }
     
     // MARK: Custom Maps Marker Drawing functions
