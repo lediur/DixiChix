@@ -8,28 +8,39 @@
 
 import Foundation
 
-class VideoResultsViewController: UITableViewController, UITableViewDelegate {
+class VideoResultsViewController: UIViewController, UITableViewDelegate {
     
     let cellReuseIdentifier = "VideoResultCell"
-    let cellPictures = ["BMW_Car_1.jpg", "BMW_Car_2.jpg", "BMW_Car_3.jpg", "BMW_Car_4.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    // TODO: Remove these hardcoded cell images. Thumbnails for actual videos, maybe?
+    // ================================================================================================================================================ TODO ========================================================================================================================
+    let todoRemoveThisImages = ["BMW_Car_1.jpg", "BMW_Car_2.jpg", "BMW_Car_3.jpg", "BMW_Car_4.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg"]
+    let todoRemoveThisLabels = ["Indianapolis Motor Speedway", "Nürburgring", "Circuit De Monaco", "Daytona International Speedway", "Las Vegas Motor Speedway", "Drag Race"]
+    let cellImageHeight = 200.0
+    
+    
+    // Note that this is a View Controller that contains a table view. The reason for this is that
+    // if we use the default table view controller, there are conflicts with the status bar.
+    // Putting the table view in another view controller allows us to use autolayout to avoid
+    // this problem.
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    // MARK: UITableViewDelegate methods
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoRemoveThisImages.count
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cellPictures.count
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier, forIndexPath: indexPath) as VideoResultCell
         
-		cell.title!.text = "MERP"
+		cell.title!.text = todoRemoveThisLabels[indexPath.row]
 	
-        if let thumbnailImage = UIImage(named: cellPictures[indexPath.row]) {
+        if let thumbnailImage = UIImage(named: todoRemoveThisImages[indexPath.row]) {
+			// Preserve the width/height ratio when scaling, so calculate the appropriate scaled CGSize
             let size = thumbnailImage.size
-            let scaledHeight = 200.0
+            let scaledHeight = cellImageHeight
             let scaledWidth = scaledHeight * Double(size.height) / Double(size.width)
             let scaledSize = CGSizeMake(CGFloat(scaledHeight), CGFloat(scaledWidth))
             
@@ -39,6 +50,9 @@ class VideoResultsViewController: UITableViewController, UITableViewDelegate {
         return cell
     }
     
+    // MARK: Generic Helpers
+    
+    /* Helper function to resize an image to fit the passed in 'sizeChange' CGSize */
     func imageResize(image: UIImage, sizeChange: CGSize) -> UIImage {
         let hasAlpha = true
         let scale: CGFloat = 0.0
@@ -51,5 +65,4 @@ class VideoResultsViewController: UITableViewController, UITableViewDelegate {
         UIGraphicsEndImageContext()
         return scaledImage
     }
-    
 }
