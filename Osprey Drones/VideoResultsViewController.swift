@@ -26,6 +26,10 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     // this problem.
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     
     // MARK: UITableViewDelegate methods
     

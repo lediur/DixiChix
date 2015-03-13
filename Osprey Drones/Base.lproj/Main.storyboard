@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="714"/>
+            <point key="canvasLocation" x="725" y="720"/>
         </scene>
         <!--Google Maps View Controller-->
         <scene sceneID="dQk-my-9wP">
@@ -113,7 +113,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="720"/>
+            <point key="canvasLocation" x="1554" y="720"/>
         </scene>
         <!--Video Results View Controller-->
         <scene sceneID="msL-hQ-4zB">
@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="S2k-jz-drn">
-                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoResultCell" id="NH5-rv-ixi" customClass="VideoResultCell" customModule="Osprey_Drones" customModuleProvider="target">
@@ -179,14 +179,35 @@
                                     <outlet property="delegate" destination="BS4-Tc-pTP" id="bs9-dL-1Xv"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-3Y-xkf">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Recorded Videos" id="XFI-EG-bbx">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Z5W-rE-Ohf">
+                                            <connections>
+                                                <segue destination="vj6-kr-2bR" kind="show" id="XH9-0i-ZXD"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2FU-3Y-xkf" firstAttribute="leading" secondItem="v3k-cd-8U0" secondAttribute="leadingMargin" constant="-16" id="77M-tL-edf"/>
+                            <constraint firstItem="S2k-jz-drn" firstAttribute="top" secondItem="2FU-3Y-xkf" secondAttribute="bottom" id="9BS-VB-L82"/>
                             <constraint firstItem="S2k-jz-drn" firstAttribute="top" secondItem="Rnt-B1-Vgp" secondAttribute="bottom" constant="8" id="DSM-fE-Mr1"/>
+                            <constraint firstItem="2FU-3Y-xkf" firstAttribute="top" secondItem="Rnt-B1-Vgp" secondAttribute="bottom" constant="8" id="Tbn-rx-x90"/>
                             <constraint firstItem="S2k-jz-drn" firstAttribute="leading" secondItem="v3k-cd-8U0" secondAttribute="leadingMargin" constant="-16" id="UrI-Of-sof"/>
                             <constraint firstAttribute="bottomMargin" secondItem="S2k-jz-drn" secondAttribute="bottom" id="dg4-xy-dN3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S2k-jz-drn" secondAttribute="trailing" constant="-16" id="sPG-4I-7PS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2FU-3Y-xkf" secondAttribute="trailing" constant="-16" id="z2b-D0-t6R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DSM-fE-Mr1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="S2k-jz-drn" id="ZMS-ut-IQs"/>
@@ -195,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cP-qH-haw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2294" y="720"/>
+            <point key="canvasLocation" x="2342" y="720"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="Hjn-MJ-gzY">
@@ -222,12 +243,23 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xRb-bA-y9g">
+                                <rect key="frame" x="282" y="365" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BS4-Tc-pTP" kind="show" id="AWF-DT-MpL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="2Pn-DY-Qa9" secondAttribute="centerX" id="2g4-8e-AXh"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" constant="8" id="Ehj-qG-guE"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" id="EmB-OL-vy3"/>
+                            <constraint firstItem="xRb-bA-y9g" firstAttribute="top" secondItem="2Pn-DY-Qa9" secondAttribute="bottom" constant="8" id="RUw-tv-pqY"/>
+                            <constraint firstAttribute="centerX" secondItem="xRb-bA-y9g" secondAttribute="centerX" id="b7p-A3-E36"/>
                             <constraint firstItem="2Pn-DY-Qa9" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" constant="8" id="hM4-69-G83"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e5y-UB-wky" secondAttribute="trailing" constant="-16" id="pTs-Fo-ZJd"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="yFB-hR-qZv"/>
@@ -245,7 +277,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqM-HL-qAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1602" y="-3"/>
+            <point key="canvasLocation" x="3107" y="720"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="XH9-0i-ZXD"/>
+        <segue reference="siK-pv-jjD"/>
+    </inferredMetricsTieBreakers>
 </document>
