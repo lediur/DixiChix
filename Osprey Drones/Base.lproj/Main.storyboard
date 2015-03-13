@@ -75,7 +75,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="pdq-yt-x5y"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PeB-05-Vwe"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="PeB-05-Vwe">
+                                            <connections>
+                                                <segue destination="5Ao-GQ-YY5" kind="show" id="9Vo-sx-QBA"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -110,6 +114,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1596" y="720"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="Hjn-MJ-gzY">
+            <objects>
+                <viewController id="5Ao-GQ-YY5" customClass="VideoPlayerViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Doj-DB-Qe0"/>
+                        <viewControllerLayoutGuide type="bottom" id="324-V9-zSZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SbF-AQ-C23">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-UB-wky" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" constant="8" id="Ehj-qG-guE"/>
+                            <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" id="EmB-OL-vy3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e5y-UB-wky" secondAttribute="trailing" constant="-16" id="pTs-Fo-ZJd"/>
+                            <constraint firstItem="e5y-UB-wky" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="yFB-hR-qZv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="videoPlayerView" destination="e5y-UB-wky" id="ay8-bY-U80"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqM-HL-qAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1602" y="-3"/>
         </scene>
     </scenes>
 </document>
