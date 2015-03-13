@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B91CFB701AB2692200731961 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB6F1AB2692200731961 /* GoogleMaps.framework */; };
-		B91CFB721AB26A2C00731961 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B91CFB711AB26A2C00731961 /* GoogleMaps.bundle */; };
 		B91CFB7B1AB26AA800731961 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB731AB26AA800731961 /* AVFoundation.framework */; };
 		B91CFB7C1AB26AA800731961 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB741AB26AA800731961 /* CoreData.framework */; };
 		B91CFB7D1AB26AA800731961 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB751AB26AA800731961 /* CoreLocation.framework */; };
@@ -39,6 +37,8 @@
 		B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBE1AB2632A00BE88DE /* Images.xcassets */; };
 		B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BC01AB2632A00BE88DE /* LaunchScreen.xib */; };
 		B9FD8BCE1AB2632A00BE88DE /* Osprey_DronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BCD1AB2632A00BE88DE /* Osprey_DronesTests.swift */; };
+		D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */; };
+		D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16882F21AB376A10085FCB1 /* GoogleMaps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B91CFB6F1AB2692200731961 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = "../../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework"; sourceTree = "<group>"; };
-		B91CFB711AB26A2C00731961 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../Downloads/GoogleMaps-iOS-1.9.2/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
 		B91CFB731AB26AA800731961 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B91CFB741AB26AA800731961 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B91CFB751AB26AA800731961 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -90,6 +88,8 @@
 		B9FD8BC71AB2632A00BE88DE /* Osprey DronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Osprey DronesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BCC1AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BCD1AB2632A00BE88DE /* Osprey_DronesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Osprey_DronesTests.swift; sourceTree = "<group>"; };
+		D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		D16882F21AB376A10085FCB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +106,10 @@
 				B91CFB7D1AB26AA800731961 /* CoreLocation.framework in Frameworks */,
 				B91CFB7E1AB26AA800731961 /* CoreText.framework in Frameworks */,
 				B91CFB7F1AB26AA800731961 /* GLKit.framework in Frameworks */,
+				D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */,
 				B91CFB801AB26AA800731961 /* ImageIO.framework in Frameworks */,
 				B91CFB811AB26AA800731961 /* libc++.dylib in Frameworks */,
 				B91CFB821AB26AA800731961 /* libicucore.dylib in Frameworks */,
-				B91CFB701AB2692200731961 /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +126,8 @@
 		B91CFB8B1AB26AED00731961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D16882F21AB376A10085FCB1 /* GoogleMaps.framework */,
+				D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */,
 				B91CFB841AB26ACF00731961 /* OpenGLES.framework */,
 				B91CFB851AB26ACF00731961 /* QuartzCore.framework */,
 				B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */,
@@ -137,8 +139,6 @@
 				B91CFB781AB26AA800731961 /* ImageIO.framework */,
 				B91CFB791AB26AA800731961 /* libc++.dylib */,
 				B91CFB7A1AB26AA800731961 /* libicucore.dylib */,
-				B91CFB711AB26A2C00731961 /* GoogleMaps.bundle */,
-				B91CFB6F1AB2692200731961 /* GoogleMaps.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D040D61AB2B45000BE2B5F /* BMW_Car_2.jpg in Resources */,
+				D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */,
 				B9D040D71AB2B45000BE2B5F /* BMW_Car_3.jpg in Resources */,
 				B9D040C91AB2AAB900BE2B5F /* Assets in Resources */,
 				B9D040D51AB2B45000BE2B5F /* BMW_Car_1.jpg in Resources */,
@@ -313,7 +314,6 @@
 				B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */,
 				B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */,
 				B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */,
-				B91CFB721AB26A2C00731961 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +466,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/raymondchan1994/Downloads/GoogleMaps-iOS-1.9.2",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Osprey Drones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -484,6 +485,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/raymondchan1994/Downloads/GoogleMaps-iOS-1.9.2",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Osprey Drones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
