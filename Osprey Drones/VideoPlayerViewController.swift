@@ -12,10 +12,16 @@ import UIKit
 class VideoPlayerViewController: UIViewController {
     @IBOutlet weak var videoPlayerView: YTPlayerView!
     
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var titleToDisplay = ""
+    var videoIDToDisplay = "uDP7Pty8Qnw"
+
     override func viewDidLoad() {
         super.viewDidLoad()
 	
-        videoPlayerView.loadWithVideoId("uDP7Pty8Qnw")
+        titleLabel.text = titleToDisplay
+        videoPlayerView.loadWithVideoId(videoIDToDisplay)
     }
     
     

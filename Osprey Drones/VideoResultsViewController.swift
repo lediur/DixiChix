@@ -16,6 +16,7 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     // ================================================================================================================================================ TODO ========================================================================================================================
     let todoRemoveThisImages = ["BMW_Car_1.jpg", "BMW_Car_2.jpg", "BMW_Car_3.jpg", "BMW_Car_4.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg"]
     let todoRemoveThisLabels = ["Indianapolis Motor Speedway", "Nürburgring", "Circuit De Monaco", "Daytona International Speedway", "Las Vegas Motor Speedway", "Drag Race"]
+    let todoRemoveThisVideoIDsToDisplay = ["AFtUpMTs4vI", "7k7bg2RDATk", "Te0V71sGoxA", "VYpOFimB7ZA", "DvKSQXsDHcI", "iRsV6YpLsKA"]
     let cellImageHeight = 200.0
     
     
@@ -47,7 +48,29 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
             cell.thumbnail!.image = imageResize(thumbnailImage, sizeChange: scaledSize)
         }
         
+        // Add a disclosure indicator to the table view cells to show that they can be selected!
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        // TODO: Actually not sure if this is acceptable style or not... it makes it easier to identify what videoID/title to pass, though.
+        self.performSegueWithIdentifier("toVideoPlayerViewController", sender: indexPath)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        // This segue is called when the user clicks on a table row. The sender is the index path of the selected row.
+        if segue.identifier == "toVideoPlayerViewController" {
+            if let indexPathOfSender = sender as? NSIndexPath {
+                var destinationVC = segue.destinationViewController as VideoPlayerViewController
+                destinationVC.titleToDisplay = todoRemoveThisLabels[indexPathOfSender.row]
+                destinationVC.videoIDToDisplay = todoRemoveThisVideoIDsToDisplay[indexPathOfSender.row]
+            }
+        }
     }
     
     // MARK: Generic Helpers
