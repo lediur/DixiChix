@@ -25,6 +25,14 @@
 		B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */; };
 		B9D040C51AB2A82E00BE2B5F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */; };
 		B9D040C91AB2AAB900BE2B5F /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = B9D040C81AB2AAB900BE2B5F /* Assets */; };
+		B9D040CB1AB2AC3200BE2B5F /* VideoResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D040CA1AB2AC3200BE2B5F /* VideoResultsViewController.swift */; };
+		B9D040CD1AB2AE2F00BE2B5F /* VideoResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D040CC1AB2AE2F00BE2B5F /* VideoResultCell.swift */; };
+		B9D040D51AB2B45000BE2B5F /* BMW_Car_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040CF1AB2B45000BE2B5F /* BMW_Car_1.jpg */; };
+		B9D040D61AB2B45000BE2B5F /* BMW_Car_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D01AB2B45000BE2B5F /* BMW_Car_2.jpg */; };
+		B9D040D71AB2B45000BE2B5F /* BMW_Car_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D11AB2B45000BE2B5F /* BMW_Car_3.jpg */; };
+		B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D21AB2B45000BE2B5F /* BMW_Car_4.jpg */; };
+		B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D31AB2B45000BE2B5F /* BMW_Car_5.jpg */; };
+		B9D040DA1AB2B45000BE2B5F /* BMW_Car_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D41AB2B45000BE2B5F /* BMW_Car_6.jpg */; };
 		B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */; };
 		B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB91AB2632A00BE88DE /* ViewController.swift */; };
 		B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */; };
@@ -64,6 +72,14 @@
 		B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		B9D040C81AB2AAB900BE2B5F /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		B9D040CA1AB2AC3200BE2B5F /* VideoResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultsViewController.swift; sourceTree = "<group>"; };
+		B9D040CC1AB2AE2F00BE2B5F /* VideoResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoResultCell.swift; sourceTree = "<group>"; };
+		B9D040CF1AB2B45000BE2B5F /* BMW_Car_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_1.jpg; sourceTree = "<group>"; };
+		B9D040D01AB2B45000BE2B5F /* BMW_Car_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_2.jpg; sourceTree = "<group>"; };
+		B9D040D11AB2B45000BE2B5F /* BMW_Car_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_3.jpg; sourceTree = "<group>"; };
+		B9D040D21AB2B45000BE2B5F /* BMW_Car_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_4.jpg; sourceTree = "<group>"; };
+		B9D040D31AB2B45000BE2B5F /* BMW_Car_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_5.jpg; sourceTree = "<group>"; };
+		B9D040D41AB2B45000BE2B5F /* BMW_Car_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_6.jpg; sourceTree = "<group>"; };
 		B9FD8BB21AB2632A00BE88DE /* Osprey Drones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Osprey Drones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BB61AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +143,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B9D040DB1AB2B45700BE2B5F /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				B9D040CF1AB2B45000BE2B5F /* BMW_Car_1.jpg */,
+				B9D040D01AB2B45000BE2B5F /* BMW_Car_2.jpg */,
+				B9D040D11AB2B45000BE2B5F /* BMW_Car_3.jpg */,
+				B9D040D21AB2B45000BE2B5F /* BMW_Car_4.jpg */,
+				B9D040D31AB2B45000BE2B5F /* BMW_Car_5.jpg */,
+				B9D040D41AB2B45000BE2B5F /* BMW_Car_6.jpg */,
+			);
+			name = Pictures;
+			sourceTree = "<group>";
+		};
 		B9FD8BA91AB2632A00BE88DE = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +167,7 @@
 				B91CFB8C1AB26B4F00731961 /* Osprey Drones-Bridging-Header.h */,
 				B9D040C11AB2A7B100BE2B5F /* YTPlayerView.h */,
 				B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */,
+				B9D040DB1AB2B45700BE2B5F /* Pictures */,
 				B9D040C81AB2AAB900BE2B5F /* Assets */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +188,8 @@
 				B9FD8BB91AB2632A00BE88DE /* ViewController.swift */,
 				B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */,
 				B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */,
+				B9D040CC1AB2AE2F00BE2B5F /* VideoResultCell.swift */,
+				B9D040CA1AB2AC3200BE2B5F /* VideoResultsViewController.swift */,
 				B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */,
 				B9FD8BBE1AB2632A00BE88DE /* Images.xcassets */,
 				B9FD8BC01AB2632A00BE88DE /* LaunchScreen.xib */,
@@ -271,10 +303,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D040D61AB2B45000BE2B5F /* BMW_Car_2.jpg in Resources */,
+				B9D040D71AB2B45000BE2B5F /* BMW_Car_3.jpg in Resources */,
 				B9D040C91AB2AAB900BE2B5F /* Assets in Resources */,
+				B9D040D51AB2B45000BE2B5F /* BMW_Car_1.jpg in Resources */,
 				B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */,
+				B9D040DA1AB2B45000BE2B5F /* BMW_Car_6.jpg in Resources */,
+				B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */,
 				B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */,
 				B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */,
+				B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */,
 				B91CFB721AB26A2C00731961 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D040CD1AB2AE2F00BE2B5F /* VideoResultCell.swift in Sources */,
 				B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */,
 				B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */,
+				B9D040CB1AB2AC3200BE2B5F /* VideoResultsViewController.swift in Sources */,
 				B9D040C51AB2A82E00BE2B5F /* VideoPlayerViewController.swift in Sources */,
 				B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */,
 				B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */,
