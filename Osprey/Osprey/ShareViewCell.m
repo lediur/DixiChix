@@ -10,7 +10,7 @@
 
 @implementation ShareViewCell
 
-@synthesize image, date, location;
+@synthesize image, date, location, shareButton, tapGesture;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -35,6 +35,17 @@
         location.numberOfLines = 1;
         location.adjustsFontSizeToFitWidth = NO;
         [self addSubview:location];
+        
+        int buttonSize = frame.size.width/8;
+        shareButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-3*buttonSize/2, (frame.size.height-buttonSize)/2, buttonSize, buttonSize)];
+        shareButton.backgroundColor = [UIColor blueColor];
+        [shareButton setTitle: @"Share" forState:UIControlStateNormal];
+        shareButton.titleLabel.font = [UIFont systemFontOfSize:12];
+        
+        CALayer *buttonLayer = shareButton.layer;
+        [buttonLayer setCornerRadius:buttonSize/2];
+        
+        [self addSubview:shareButton];
     }
     
     return self;

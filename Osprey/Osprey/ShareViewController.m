@@ -22,6 +22,8 @@
     if (self = [super init]) {
         self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         
+        alreadyUploaded = [[NSMutableSet alloc] init];
+        
         NSDictionary *placeholderImage = @{@"Date": @"March 7th, 2015", @"Location":@"Laguna Seca", @"Image":@"sick_aerial_car.jpg"};
         images = [[NSMutableArray alloc] initWithObjects:placeholderImage, placeholderImage, placeholderImage, placeholderImage, placeholderImage, nil];
         
@@ -85,6 +87,9 @@
     shareCell.image.image = [UIImage imageNamed:imageInfo[@"Image"]];
     shareCell.location.text = imageInfo[@"Location"];
     shareCell.date.text = imageInfo[@"Date"];
+    shareCell.shareButton.tag = indexPath.row;
+    if (!shareCell.tapGesture)
+        [shareCell.shareButton addTarget:self action:@selector(shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return shareCell;
 }
@@ -93,6 +98,44 @@
 
 - (void)backToMap {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma Share Button
+
+- (void)shareButtonPressed:(UIButton *)shareButton{
+    if ([alreadyUploaded containsObject:[NSNumber numberWithInt:(int)shareButton.tag]]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Already Uploaded!" message:@"You already uploaded this to Facebook." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
+    if (!FBSession.activeSession.isOpen) {
+        [FBSession openActiveSessionWithPublishPermissions:@[@"publish_actions"] defaultAudience:FBSessionDefaultAudienceFriends allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+            if (error)
+                NSLog(@"Login failed");
+            else {
+                [FBSession setActiveSession:session];
+                [self shareContent:(int)shareButton.tag];
+            }
+        }];
+    } else {
+        [self shareContent:(int)shareButton.tag];
+    }
+}
+
+- (void)shareContent:(int)index {
+    NSDictionary *imageInfo = [images objectAtIndex:index];
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:[NSString stringWithFormat:@"%@, %@", imageInfo[@"Date"], imageInfo[@"Location"]] forKey:@"message"];
+    [params setObject:UIImagePNGRepresentation([UIImage imageNamed:imageInfo[@"Image"]]) forKey:@"source"];
+    
+    [FBRequestConnection startWithGraphPath:@"me/photos" parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            [alreadyUploaded addObject:[NSNumber numberWithInt:index]];
+        } else
+            NSLog(@"Upload failed");
+    }];
 }
 
 @end

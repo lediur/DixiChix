@@ -10,6 +10,7 @@
 
 @interface ShareViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
     UICollectionView *shareCollection;
+    NSMutableSet *alreadyUploaded;
 }
 
 - (id)initWithFrame:(CGRect)frame;
