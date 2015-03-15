@@ -24,8 +24,9 @@
         
         alreadyUploaded = [[NSMutableSet alloc] init];
         
-        NSDictionary *placeholderImage = @{@"Date": @"March 7th, 2015", @"Location":@"Laguna Seca", @"Image":@"sick_aerial_car.jpg"};
-        images = [[NSMutableArray alloc] initWithObjects:placeholderImage, placeholderImage, placeholderImage, placeholderImage, placeholderImage, nil];
+        NSMutableDictionary *placeholderImage = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"March 7th, 2015", @"Date", @"Laguna Seca", @"Location", @"sick_aerial_car.jpg", @"Image", nil];
+        NSMutableDictionary *placeholderVideo = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"March 7th, 2015", @"Date", @"Laguna Seca", @"Location", [[NSBundle mainBundle] pathForResource:@"DroneRecordingCompressed" ofType:@"mp4"], @"Video", nil];
+        images = [[NSMutableArray alloc] initWithObjects:[placeholderImage mutableCopy], [placeholderVideo mutableCopy], [placeholderImage mutableCopy], [placeholderVideo mutableCopy], [placeholderImage mutableCopy], nil];
         
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
@@ -82,14 +83,40 @@
 {
     ShareViewCell *shareCell = (ShareViewCell *)[shareCollection dequeueReusableCellWithReuseIdentifier:@"ShareViewCell" forIndexPath:indexPath];
     
-    NSDictionary *imageInfo = [images objectAtIndex:indexPath.row];
+    NSMutableDictionary *imageInfo = [images objectAtIndex:indexPath.row];
     
-    shareCell.image.image = [UIImage imageNamed:imageInfo[@"Image"]];
+    if ([imageInfo objectForKey:@"Image"])
+        shareCell.image.image = [UIImage imageNamed:imageInfo[@"Image"]];
+    else if ([imageInfo objectForKey:@"Thumbnail"])
+        shareCell.image.image = [imageInfo objectForKey:@"Thumbnail"];
+    else {
+        NSURL *contentUrl = [[NSURL alloc] initFileURLWithPath:imageInfo[@"Video"]];
+        
+        MPMoviePlayerController *videoController = [[MPMoviePlayerController alloc] initWithContentURL:contentUrl];
+        [videoController setShouldAutoplay:NO];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleThumbnail:) name:MPMoviePlayerThumbnailImageRequestDidFinishNotification object:videoController];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDone:) name:MPMoviePlayerDidExitFullscreenNotification object:videoController];
+        
+        [videoController requestThumbnailImagesAtTimes:@[@1.0f] timeOption:MPMovieTimeOptionNearestKeyFrame];
+        
+        [imageInfo setObject:videoController forKey:@"VideoController"];
+    }
+        
     shareCell.location.text = imageInfo[@"Location"];
     shareCell.date.text = imageInfo[@"Date"];
+    
     shareCell.shareButton.tag = indexPath.row;
-    if (!shareCell.tapGesture)
+    if (!shareCell.shareTapGesture)
         [shareCell.shareButton addTarget:self action:@selector(shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    shareCell.image.tag = indexPath.row;
+    if (!shareCell.contentTapGesture) {
+        shareCell.image.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewContent:)];
+        [shareCell.image addGestureRecognizer:tap];
+        shareCell.contentTapGesture = tap;
+    }
     
     return shareCell;
 }
@@ -136,6 +163,51 @@
         } else
             NSLog(@"Upload failed");
     }];
+}
+
+#pragma Content Button
+
+- (void)viewContent:(UITapGestureRecognizer *)tapGesture {
+    int index = (int)tapGesture.view.tag;
+    NSDictionary *imageInfo = [images objectAtIndex:index];
+    
+    if (imageInfo[@"Image"]) {
+        //expand image
+    } else {
+        MPMoviePlayerController *videoController = imageInfo[@"VideoController"];
+        [videoController prepareToPlay];
+        
+        if (![[self.view subviews] containsObject:videoController.view]) {
+            [videoController.view setFrame:self.view.frame];
+            [self.view addSubview:videoController.view];
+        } else
+            videoController.view.alpha = 1;
+        
+        [videoController setFullscreen:YES animated:YES];
+        [videoController play];
+    }
+}
+
+- (void)handleThumbnail:(NSNotification *)notification {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSDictionary *imageInfo;
+        for (int i = 0; i < [images count]; i++) {
+            imageInfo = [images objectAtIndex:i];
+            if (imageInfo[@"VideoController"] == notification.object) {
+                UIImage *thumbnail = [notification.userInfo objectForKey:MPMoviePlayerThumbnailImageKey];
+                [imageInfo setValue:thumbnail forKey:@"Thumbnail"];
+                [shareCollection reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]];
+                break;
+            }
+        }
+    });
+}
+
+- (void)handleDone:(NSNotification *)notification {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ((MPMoviePlayerController*)(notification.object)).view.alpha = 0;
+        [((MPMoviePlayerController*)(notification.object)) stop];
+    });
 }
 
 @end

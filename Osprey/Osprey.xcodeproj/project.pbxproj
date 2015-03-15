@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7AA0FD1AB64A7600E7ABFA /* DroneRecordingCompressed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */; };
 		2F9E38791AA92DA400ADA3CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38781AA92DA400ADA3CD /* main.m */; };
 		2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */; };
 		2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroneRecordingCompressed.mp4; sourceTree = "<group>"; };
 		2F9E38731AA92DA400ADA3CD /* Osprey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osprey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9E38771AA92DA400ADA3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9E38781AA92DA400ADA3CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		2FE4D4231AABAC4800574542 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */,
 				2FE4D42C1AABBD1800574542 /* compass_icon.jpg */,
 				2FE4D4241AABACC800574542 /* sharing_icon.png */,
 				2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */,
@@ -303,6 +306,7 @@
 				2F9E38871AA92DA400ADA3CD /* Images.xcassets in Resources */,
 				2F9E38BE1AA9443800ADA3CD /* GoogleMaps.bundle in Resources */,
 				2FE4D4251AABACC800574542 /* sharing_icon.png in Resources */,
+				2F7AA0FD1AB64A7600E7ABFA /* DroneRecordingCompressed.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,8 @@
 @property (nonatomic, strong) UILabel *location;
 @property (nonatomic, strong) UIImageView *image;
 @property (nonatomic, strong) UIButton *shareButton;
-@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
+@property (nonatomic, strong) UITapGestureRecognizer *shareTapGesture;
+@property (nonatomic, strong) UITapGestureRecognizer *contentTapGesture;
+
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation ShareViewCell
 
-@synthesize image, date, location, shareButton, tapGesture;
+@synthesize image, date, location, shareButton, shareTapGesture, contentTapGesture;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
