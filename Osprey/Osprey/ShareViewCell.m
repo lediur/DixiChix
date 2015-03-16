@@ -18,6 +18,8 @@
         int labelWidth = frame.size.width/3;
         
         image = [[UIImageView alloc] initWithFrame:CGRectMake(imageSize/2, imageSize/12, imageSize, 2*imageSize/3)];
+        [image.layer setBorderColor:[[UIColor blackColor] CGColor]];
+        [image.layer setBorderWidth:1.0];
         [self addSubview:image];
         
         date = [[UILabel alloc] initWithFrame:CGRectMake(labelWidth/2, image.frame.origin.y + image.frame.size.height, labelWidth, labelWidth/4)];

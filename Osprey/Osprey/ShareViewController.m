@@ -9,6 +9,7 @@
 #import "ShareViewController.h"
 #import "ShareViewCell.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface ShareViewController ()
 
@@ -95,10 +96,18 @@
         MPMoviePlayerController *videoController = [[MPMoviePlayerController alloc] initWithContentURL:contentUrl];
         [videoController setShouldAutoplay:NO];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleThumbnail:) name:MPMoviePlayerThumbnailImageRequestDidFinishNotification object:videoController];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDone:) name:MPMoviePlayerDidExitFullscreenNotification object:videoController];
         
-//        [videoController requestThumbnailImagesAtTimes:@[@1.0f] timeOption:MPMovieTimeOptionNearestKeyFrame];
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:contentUrl options:nil];
+        AVAssetImageGenerator *generateImg = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+        NSError *error = NULL;
+        CMTime time = CMTimeMake(10, 1);
+        CGImageRef refImg = [generateImg copyCGImageAtTime:time actualTime:NULL error:&error];
+        
+        if (error == nil) {
+            UIImage *frameImage= [[UIImage alloc] initWithCGImage:refImg];
+            [shareCell.image setImage:frameImage];
+        }
         
         [imageInfo setObject:videoController forKey:@"VideoController"];
     }
@@ -198,20 +207,20 @@
     }
 }
 
-- (void)handleThumbnail:(NSNotification *)notification {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSDictionary *imageInfo;
-        for (int i = 0; i < [images count]; i++) {
-            imageInfo = [images objectAtIndex:i];
-            if (imageInfo[@"VideoController"] == notification.object) {
-                UIImage *thumbnail = [notification.userInfo objectForKey:MPMoviePlayerThumbnailImageKey];
-                [imageInfo setValue:thumbnail forKey:@"Thumbnail"];
-                [shareCollection reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]];
-                break;
-            }
-        }
-    });
-}
+//- (void)handleThumbnail:(NSNotification *)notification {
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSDictionary *imageInfo;
+//        for (int i = 0; i < [images count]; i++) {
+//            imageInfo = [images objectAtIndex:i];
+//            if (imageInfo[@"VideoController"] == notification.object) {
+//                UIImage *thumbnail = [notification.userInfo objectForKey:MPMoviePlayerThumbnailImageKey];
+//                [imageInfo setValue:thumbnail forKey:@"Thumbnail"];
+//                [shareCollection reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]];
+//                break;
+//            }
+//        }
+//    });
+//}
 
 - (void)handleDone:(NSNotification *)notification {
     dispatch_async(dispatch_get_main_queue(), ^{
