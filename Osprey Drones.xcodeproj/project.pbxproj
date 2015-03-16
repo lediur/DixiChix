@@ -40,6 +40,8 @@
 		D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */; };
 		D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16882F21AB376A10085FCB1 /* GoogleMaps.framework */; };
 		D1C5BB951AB77C07001264DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */; };
+		D1C5BB9B1AB79568001264DC /* facebook_circle_color-512.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C5BB9A1AB79568001264DC /* facebook_circle_color-512.png */; };
+		D1C5BB9D1AB79629001264DC /* twitter_circle_color-512.png in Resources */ = {isa = PBXBuildFile; fileRef = D1C5BB9C1AB79629001264DC /* twitter_circle_color-512.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		D16882F21AB376A10085FCB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D1C5BB9A1AB79568001264DC /* facebook_circle_color-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook_circle_color-512.png"; sourceTree = "<group>"; };
+		D1C5BB9C1AB79629001264DC /* twitter_circle_color-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter_circle_color-512.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		B9D040DB1AB2B45700BE2B5F /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				D1C5BB9C1AB79629001264DC /* twitter_circle_color-512.png */,
+				D1C5BB9A1AB79568001264DC /* facebook_circle_color-512.png */,
 				B9D040CF1AB2B45000BE2B5F /* BMW_Car_1.jpg */,
 				B9D040D01AB2B45000BE2B5F /* BMW_Car_2.jpg */,
 				B9D040D11AB2B45000BE2B5F /* BMW_Car_3.jpg */,
@@ -316,8 +322,10 @@
 				B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */,
 				B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */,
 				B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */,
+				D1C5BB9D1AB79629001264DC /* twitter_circle_color-512.png in Resources */,
 				D1C5BB951AB77C07001264DC /* OpenSans-Regular.ttf in Resources */,
 				B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */,
+				D1C5BB9B1AB79568001264DC /* facebook_circle_color-512.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
