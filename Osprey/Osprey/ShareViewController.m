@@ -98,7 +98,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleThumbnail:) name:MPMoviePlayerThumbnailImageRequestDidFinishNotification object:videoController];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDone:) name:MPMoviePlayerDidExitFullscreenNotification object:videoController];
         
-        [videoController requestThumbnailImagesAtTimes:@[@1.0f] timeOption:MPMovieTimeOptionNearestKeyFrame];
+//        [videoController requestThumbnailImagesAtTimes:@[@1.0f] timeOption:MPMovieTimeOptionNearestKeyFrame];
         
         [imageInfo setObject:videoController forKey:@"VideoController"];
     }
@@ -154,10 +154,20 @@
     NSDictionary *imageInfo = [images objectAtIndex:index];
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setObject:[NSString stringWithFormat:@"%@, %@", imageInfo[@"Date"], imageInfo[@"Location"]] forKey:@"message"];
-    [params setObject:UIImagePNGRepresentation([UIImage imageNamed:imageInfo[@"Image"]]) forKey:@"source"];
+    NSString *graphPath;
+    if (imageInfo[@"Image"]) {
+        graphPath = @"me/photos";
+        [params setObject:[NSString stringWithFormat:@"%@, %@", imageInfo[@"Date"], imageInfo[@"Location"]] forKey:@"message"];
+        [params setObject:UIImagePNGRepresentation([UIImage imageNamed:imageInfo[@"Image"]]) forKey:@"source"];
+    } else {
+        graphPath = @"me/videos";
+        [params setObject:[NSString stringWithFormat:@"%@, %@", imageInfo[@"Date"], imageInfo[@"Location"]] forKey:@"description"];
+        [params setObject:[NSData dataWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:imageInfo[@"Video"]]] forKey:@"DroneRecordingCompressed.mp4"];
+    }
     
-    [FBRequestConnection startWithGraphPath:@"me/photos" parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    
+    
+    [FBRequestConnection startWithGraphPath:graphPath parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             [alreadyUploaded addObject:[NSNumber numberWithInt:index]];
         } else
