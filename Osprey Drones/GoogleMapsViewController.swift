@@ -21,10 +21,10 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     let markerTitleText = "Tap To Delete!"
     
     var drawnPath: GMSPolyline = GMSPolyline()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()

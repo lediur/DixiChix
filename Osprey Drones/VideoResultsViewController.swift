@@ -17,7 +17,7 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     let todoRemoveThisImages = ["BMW_Car_1.jpg", "BMW_Car_2.jpg", "BMW_Car_3.jpg", "BMW_Car_4.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg"]
     let todoRemoveThisLabels = ["Indianapolis Motor Speedway", "Nürburgring", "Circuit De Monaco", "Daytona International Speedway", "Las Vegas Motor Speedway", "Drag Race"]
     let todoRemoveThisVideoIDsToDisplay = ["AFtUpMTs4vI", "7k7bg2RDATk", "Te0V71sGoxA", "VYpOFimB7ZA", "DvKSQXsDHcI", "iRsV6YpLsKA"]
-    let cellImageHeight = 200.0
+    let cellImageHeight = 175.0
     
     
     // Note that this is a View Controller that contains a table view. The reason for this is that
@@ -37,6 +37,11 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
         return todoRemoveThisImages.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return CGFloat(cellImageHeight)
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier, forIndexPath: indexPath) as VideoResultCell
         
@@ -53,7 +58,7 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
         }
         
         // Add a disclosure indicator to the table view cells to show that they can be selected!
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+//        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
     }
