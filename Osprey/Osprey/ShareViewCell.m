@@ -10,7 +10,7 @@
 
 @implementation ShareViewCell
 
-@synthesize image, date, location, shareButton, shareTapGesture, contentTapGesture;
+@synthesize image, date, location, shareButton, shareTapGesture, contentTapGesture, playButton;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -48,6 +48,13 @@
         [buttonLayer setCornerRadius:buttonSize/2];
         
         [self addSubview:shareButton];
+        
+        playButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width/2 - buttonSize/2, frame.size.height/2 - buttonSize/2, buttonSize, buttonSize)];
+        [playButton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
+        playButton.alpha = 0;
+        CALayer *playLayer = playButton.layer;
+        [playLayer setCornerRadius:buttonSize/2];
+        [self addSubview:playButton];
     }
     
     return self;
