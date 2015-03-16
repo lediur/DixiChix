@@ -258,6 +258,12 @@
                                     <constraint firstAttribute="height" constant="250" id="IXh-O9-A0z"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-DY-Qa9">
+                                <rect key="frame" x="259" y="299" width="83" height="49"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2x-Db-uYX">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -283,20 +289,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
+                                <rect key="frame" x="190" y="323" width="220" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="rCa-xG-hjX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-O2-WC8">
-                                <rect key="frame" x="275" y="425" width="50" height="24"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-DY-Qa9">
-                                <rect key="frame" x="259" y="299" width="83" height="49"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A race for the ages!" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
-                                <rect key="frame" x="224" y="348" width="153" height="24"/>
+                                <rect key="frame" x="275" y="435" width="50" height="24"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -305,7 +308,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Ri3-ll-7Nd" secondAttribute="centerX" constant="31" id="0Mq-KH-srU"/>
-                            <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="fAP-O2-WC8" secondAttribute="bottom" constant="18" id="1tA-zW-fpu"/>
+                            <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="fAP-O2-WC8" secondAttribute="bottom" constant="8" id="1tA-zW-fpu"/>
                             <constraint firstAttribute="centerX" secondItem="2Pn-DY-Qa9" secondAttribute="centerX" id="2g4-8e-AXh"/>
                             <constraint firstItem="i2x-Db-uYX" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="7y1-yH-1E0"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="Ri3-ll-7Nd" secondAttribute="bottom" constant="83" id="8uk-Y4-Tzz"/>
@@ -314,7 +317,7 @@
                             <constraint firstAttribute="centerX" secondItem="Ri3-ll-7Nd" secondAttribute="centerX" constant="31" id="Hkr-63-wpb"/>
                             <constraint firstAttribute="centerX" secondItem="WmM-58-0yI" secondAttribute="centerX" id="J0c-cF-SdM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i2x-Db-uYX" secondAttribute="trailing" constant="-16" id="Tvc-Y1-x2N"/>
-                            <constraint firstItem="WmM-58-0yI" firstAttribute="top" secondItem="2Pn-DY-Qa9" secondAttribute="bottom" id="a1b-pm-zkH"/>
+                            <constraint firstItem="WmM-58-0yI" firstAttribute="top" secondItem="2Pn-DY-Qa9" secondAttribute="bottom" constant="-25" id="a1b-pm-zkH"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="i2x-Db-uYX" secondAttribute="bottom" id="cac-lJ-JUz"/>
                             <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="2Pn-DY-Qa9" secondAttribute="bottom" constant="119" id="dRi-Dn-zbi"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="XrE-ya-Cnx" secondAttribute="bottom" constant="83" id="giL-qN-iVe"/>
@@ -339,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqM-HL-qAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3107" y="720"/>
+            <point key="canvasLocation" x="3107" y="717"/>
         </scene>
     </scenes>
     <resources>
