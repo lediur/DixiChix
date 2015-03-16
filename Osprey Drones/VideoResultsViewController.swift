@@ -14,10 +14,10 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     
     // TODO: Remove these hardcoded cell images. Thumbnails for actual videos, maybe?
     // ================================================================================================================================================ TODO ========================================================================================================================
-    let todoRemoveThisImages = ["BMW_Car_1.jpg", "BMW_Car_2.jpg", "BMW_Car_3.jpg", "BMW_Car_4.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg"]
+    let todoRemoveThisImages = ["BMW_Car_1.jpg", "BMW_Car_4.jpg", "BMW_Car_3.jpg", "BMW_Car_5.jpg", "BMW_Car_6.jpg", "BMW_Car_2.jpg"]
     let todoRemoveThisLabels = ["Indianapolis Motor Speedway", "Nürburgring", "Circuit De Monaco", "Daytona International Speedway", "Las Vegas Motor Speedway", "Drag Race"]
     let todoRemoveThisVideoIDsToDisplay = ["AFtUpMTs4vI", "7k7bg2RDATk", "Te0V71sGoxA", "VYpOFimB7ZA", "DvKSQXsDHcI", "iRsV6YpLsKA"]
-    let cellImageHeight = 175.0
+    let cellImageHeight = 225.0
     
     
     // Note that this is a View Controller that contains a table view. The reason for this is that
@@ -25,6 +25,12 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     // Putting the table view in another view controller allows us to use autolayout to avoid
     // this problem.
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.backgroundColor = UIColor.grayColor()
+    }
     
     override func viewWillAppear(animated: Bool) {
         tableView.reloadData()
