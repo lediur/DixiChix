@@ -121,33 +121,16 @@
         [shareCell.shareButton addTarget:self action:@selector(shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     shareCell.image.tag = indexPath.row;
+    shareCell.playButton.tag = indexPath.row;
     if (!shareCell.contentTapGesture) {
-        shareCell.image.userInteractionEnabled = YES;
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewContent:)];
-        [shareCell.image addGestureRecognizer:tap];
-        UITapGestureRecognizer *playTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playTap:)];
+        UITapGestureRecognizer *imageTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewContent:)];
+        [shareCell.image addGestureRecognizer:imageTap];
+        UITapGestureRecognizer *playTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewContent:)];
         [shareCell.playButton addGestureRecognizer:playTap];
-        shareCell.playButton.tag = indexPath.row;
-        shareCell.contentTapGesture = tap;
+        shareCell.contentTapGesture = YES;
     }
     
     return shareCell;
-}
-
-- (void)playTap:(UITapGestureRecognizer *)tapped {
-    int index = (int)tapped.view.tag;
-    NSDictionary *imageInfo = [images objectAtIndex:index];
-    MPMoviePlayerController *videoController = imageInfo[@"VideoController"];
-    [videoController prepareToPlay];
-    
-    if (![[self.view subviews] containsObject:videoController.view]) {
-        [videoController.view setFrame:self.view.frame];
-        [self.view addSubview:videoController.view];
-    } else
-        videoController.view.alpha = 1;
-    
-    [videoController setFullscreen:YES animated:YES];
-    [videoController play];
 }
 
 #pragma Compass Button
@@ -226,21 +209,6 @@
         [videoController play];
     }
 }
-
-//- (void)handleThumbnail:(NSNotification *)notification {
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        NSDictionary *imageInfo;
-//        for (int i = 0; i < [images count]; i++) {
-//            imageInfo = [images objectAtIndex:i];
-//            if (imageInfo[@"VideoController"] == notification.object) {
-//                UIImage *thumbnail = [notification.userInfo objectForKey:MPMoviePlayerThumbnailImageKey];
-//                [imageInfo setValue:thumbnail forKey:@"Thumbnail"];
-//                [shareCollection reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:i inSection:0]]];
-//                break;
-//            }
-//        }
-//    });
-//}
 
 - (void)handleDone:(NSNotification *)notification {
     dispatch_async(dispatch_get_main_queue(), ^{

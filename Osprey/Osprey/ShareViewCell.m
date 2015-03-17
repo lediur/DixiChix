@@ -14,12 +14,24 @@
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        shareTapGesture = contentTapGesture = NO;
+        
         int imageSize = frame.size.width/2;
         int labelWidth = frame.size.width/3;
+        int buttonSize = frame.size.width/8;
         
         image = [[UIImageView alloc] initWithFrame:CGRectMake(imageSize/2, imageSize/12, imageSize, 2*imageSize/3)];
         [image.layer setBorderColor:[[UIColor blackColor] CGColor]];
         [image.layer setBorderWidth:1.0];
+        image.userInteractionEnabled = YES;
+        
+        playButton = [[UIButton alloc] initWithFrame:CGRectMake(imageSize/2 - buttonSize/2, imageSize/3 - buttonSize/2, buttonSize, buttonSize)];
+        [playButton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
+        playButton.alpha = 0;
+        CALayer *playLayer = playButton.layer;
+        [playLayer setCornerRadius:buttonSize/2];
+        [image addSubview:playButton];
+        
         [self addSubview:image];
         
         date = [[UILabel alloc] initWithFrame:CGRectMake(labelWidth/2, image.frame.origin.y + image.frame.size.height, labelWidth, labelWidth/4)];
@@ -38,7 +50,6 @@
         location.adjustsFontSizeToFitWidth = NO;
         [self addSubview:location];
         
-        int buttonSize = frame.size.width/8;
         shareButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-3*buttonSize/2, (frame.size.height-buttonSize)/2, buttonSize, buttonSize)];
         shareButton.backgroundColor = [UIColor blueColor];
         [shareButton setTitle: @"Share" forState:UIControlStateNormal];
@@ -48,13 +59,6 @@
         [buttonLayer setCornerRadius:buttonSize/2];
         
         [self addSubview:shareButton];
-        
-        playButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width/2 - buttonSize/2, frame.size.height/2 - buttonSize/2, buttonSize, buttonSize)];
-        [playButton setImage:[UIImage imageNamed:@"play.png"] forState:UIControlStateNormal];
-        playButton.alpha = 0;
-        CALayer *playLayer = playButton.layer;
-        [playLayer setCornerRadius:buttonSize/2];
-        [self addSubview:playButton];
     }
     
     return self;
