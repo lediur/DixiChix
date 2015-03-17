@@ -7,8 +7,14 @@
     <customFonts key="customFonts">
         <mutableArray key="BOLDfinger.ttf">
             <string>BOLDfinger</string>
+            <string>BOLDfinger</string>
+            <string>BOLDfinger</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -49,6 +55,9 @@
                                     <color key="titleColor" red="0.51764705882352946" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
                                 <rect key="frame" x="259" y="456" width="83" height="53"/>
@@ -57,6 +66,9 @@
                                     <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Skc-zK-dTU" kind="show" id="Je8-hI-ADD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
                                 <rect key="frame" x="135" y="170" width="330" height="95"/>
@@ -142,6 +154,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1554" y="720"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fHh-fI-8Oh">
+            <objects>
+                <viewController id="Skc-zK-dTU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gc1-t8-A9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="4fZ-oc-iAJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MVZ-rv-ZYz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-df-CyQ">
+                                <rect key="frame" x="135" y="170" width="330" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="5wp-bd-7ze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BOLDfinger" family="BOLDfinger" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CGG-H1-9dP">
+                                <rect key="frame" x="140" y="231" width="320" height="255"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="255" id="7ON-gO-8le"/>
+                                    <constraint firstAttribute="width" constant="320" id="fF7-mj-ocL"/>
+                                </constraints>
+                                <string key="text">Osprey Drones is an app developed by Dixi Chix for Stanford's CS 210 class.
+
+This app will ultimately allow you to autonomously film your driving using a drone. You can choose what you want to do with that film afterwards. We make it easy for you to share your video via social media.
+
+We are a team of five Stanford students: Raymond Chan, Aditya Sarkar, Seth Hildick-Smith, Tyler Fallon, and Sean Kemper.
+
+Check out our work at www.dixichix.herokuapp.com to learn more about our process!
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-cB-hYi">
+                                <rect key="frame" x="202" y="506" width="196" height="53"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Back to Home">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="QnX-wA-SGb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kjn-df-CyQ" firstAttribute="top" secondItem="gc1-t8-A9J" secondAttribute="bottom" constant="150" id="1Qr-TG-MQr"/>
+                            <constraint firstAttribute="centerX" secondItem="Kjn-df-CyQ" secondAttribute="centerX" id="2Hw-WC-QcD"/>
+                            <constraint firstAttribute="centerX" secondItem="CGG-H1-9dP" secondAttribute="centerX" id="9YN-dl-wBY"/>
+                            <constraint firstItem="Mem-cB-hYi" firstAttribute="top" secondItem="CGG-H1-9dP" secondAttribute="bottom" constant="20" id="WPs-O1-ZSZ"/>
+                            <constraint firstItem="CGG-H1-9dP" firstAttribute="top" secondItem="Kjn-df-CyQ" secondAttribute="bottom" constant="20" id="fBw-GN-chd"/>
+                            <constraint firstAttribute="centerX" secondItem="Mem-cB-hYi" secondAttribute="centerX" id="hfF-To-bL2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVJ-6G-VaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="1571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MN5-cA-IG2">
+            <objects>
+                <viewController id="XPf-sE-iqX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wfr-KB-oBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="kJs-Pf-3Vr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4MM-EP-OWy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-q6-WTH">
+                                <rect key="frame" x="135" y="150" width="330" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="VgD-GV-RFX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BOLDfinger" family="BOLDfinger" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D68-9o-j1l">
+                                <rect key="frame" x="196" y="291" width="209" height="41"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
+                                <rect key="frame" x="202" y="381" width="196" height="53"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Back to Home">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="oO4-OG-vDy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vn0-q6-WTH" firstAttribute="top" secondItem="4MM-EP-OWy" secondAttribute="topMargin" constant="150" id="2yD-m7-1ru"/>
+                            <constraint firstAttribute="centerX" secondItem="Zan-7o-Wp7" secondAttribute="centerX" id="7fd-hp-b88"/>
+                            <constraint firstAttribute="centerX" secondItem="vn0-q6-WTH" secondAttribute="centerX" id="Wit-4V-d11"/>
+                            <constraint firstAttribute="centerX" secondItem="D68-9o-j1l" secondAttribute="centerX" id="aB0-Sd-NLM"/>
+                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="50" id="s9r-Oj-5xQ"/>
+                            <constraint firstItem="D68-9o-j1l" firstAttribute="top" secondItem="vn0-q6-WTH" secondAttribute="bottom" constant="100" id="vbU-tu-6if"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="od4-LK-nO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1554" y="1571"/>
         </scene>
         <!--Video Results View Controller-->
         <scene sceneID="msL-hQ-4zB">
@@ -370,6 +503,7 @@
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="QnX-wA-SGb"/>
         <segue reference="sZg-zs-zSq"/>
         <segue reference="siK-pv-jjD"/>
     </inferredMetricsTieBreakers>
