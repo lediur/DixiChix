@@ -47,6 +47,9 @@
 		D1FF74B01AB7A1070088FA16 /* blur-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74AF1AB7A1070088FA16 /* blur-wallpaper.jpg */; };
 		D1FF74B21AB7A17C0088FA16 /* mountain-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B11AB7A17C0088FA16 /* mountain-wallpaper.jpg */; };
 		D1FF74B41AB7A1BB0088FA16 /* horizon-wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B31AB7A1BB0088FA16 /* horizon-wallpaper.jpg */; };
+		D1FF74B61AB7AE5C0088FA16 /* starry-night-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B51AB7AE5C0088FA16 /* starry-night-background.jpg */; };
+		D1FF74B81AB7B08F0088FA16 /* BOLDfinger.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B71AB7B08F0088FA16 /* BOLDfinger.ttf */; };
+		D1FF74BA1AB7B3AA0088FA16 /* blue-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B91AB7B3AA0088FA16 /* blue-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		D1FF74AF1AB7A1070088FA16 /* blur-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blur-wallpaper.jpg"; sourceTree = "<group>"; };
 		D1FF74B11AB7A17C0088FA16 /* mountain-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mountain-wallpaper.jpg"; sourceTree = "<group>"; };
 		D1FF74B31AB7A1BB0088FA16 /* horizon-wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "horizon-wallpaper.jpg"; sourceTree = "<group>"; };
+		D1FF74B51AB7AE5C0088FA16 /* starry-night-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "starry-night-background.jpg"; sourceTree = "<group>"; };
+		D1FF74B71AB7B08F0088FA16 /* BOLDfinger.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOLDfinger.ttf; sourceTree = "<group>"; };
+		D1FF74B91AB7B3AA0088FA16 /* blue-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,8 @@
 		B9D040DB1AB2B45700BE2B5F /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				D1FF74B91AB7B3AA0088FA16 /* blue-background.png */,
+				D1FF74B51AB7AE5C0088FA16 /* starry-night-background.jpg */,
 				D1FF74B31AB7A1BB0088FA16 /* horizon-wallpaper.jpg */,
 				D1FF74B11AB7A17C0088FA16 /* mountain-wallpaper.jpg */,
 				D1FF74AF1AB7A1070088FA16 /* blur-wallpaper.jpg */,
@@ -207,6 +215,7 @@
 		B9FD8BB41AB2632A00BE88DE /* Osprey Drones */ = {
 			isa = PBXGroup;
 			children = (
+				D1FF74B71AB7B08F0088FA16 /* BOLDfinger.ttf */,
 				D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */,
 				B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */,
 				B9FD8BB91AB2632A00BE88DE /* ViewController.swift */,
@@ -328,8 +337,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D040D61AB2B45000BE2B5F /* BMW_Car_2.jpg in Resources */,
+				D1FF74BA1AB7B3AA0088FA16 /* blue-background.png in Resources */,
 				D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */,
 				D1FF74B01AB7A1070088FA16 /* blur-wallpaper.jpg in Resources */,
+				D1FF74B61AB7AE5C0088FA16 /* starry-night-background.jpg in Resources */,
 				B9D040D71AB2B45000BE2B5F /* BMW_Car_3.jpg in Resources */,
 				B9D040C91AB2AAB900BE2B5F /* Assets in Resources */,
 				B9D040D51AB2B45000BE2B5F /* BMW_Car_1.jpg in Resources */,
@@ -339,6 +350,7 @@
 				D1FF74B41AB7A1BB0088FA16 /* horizon-wallpaper.jpg in Resources */,
 				B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */,
 				D1C5BBA31AB79FC9001264DC /* phoenix_vector_white.png in Resources */,
+				D1FF74B81AB7B08F0088FA16 /* BOLDfinger.ttf in Resources */,
 				B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */,
 				D1C5BB9F1AB79D28001264DC /* sky-wallpaper.jpg in Resources */,
 				B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */,

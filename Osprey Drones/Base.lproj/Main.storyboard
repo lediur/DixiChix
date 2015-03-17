@@ -5,7 +5,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="BOLDfinger.ttf">
+            <string>BOLDfinger</string>
+        </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -27,54 +31,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizon-wallpaper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-86-gSL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoenix_vector_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-cd-UhZ">
-                                <rect key="frame" x="200" y="69" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="RwD-1C-TDY"/>
-                                    <constraint firstAttribute="width" constant="200" id="g0q-hg-gMx"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Osprey Drones" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
-                                <rect key="frame" x="144" y="277" width="313" height="62"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="45"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
-                                <rect key="frame" x="228" y="384" width="144" height="40"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                <state key="normal" title="Start Recording">
+                                <rect key="frame" x="268" y="295" width="65" height="53"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="start">
+                                    <color key="titleColor" red="0.51764705882352935" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="vj6-kr-2bR" kind="show" id="sZg-zs-zSq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
+                                <rect key="frame" x="245" y="368" width="110" height="53"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="settings">
+                                    <color key="titleColor" red="0.51764705882352946" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
+                                <rect key="frame" x="259" y="441" width="83" height="53"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="about">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
+                                <rect key="frame" x="135" y="170" width="330" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="5b3-iE-Cm1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BOLDfinger" family="BOLDfinger" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.21568627450980393" green="0.45882352941176469" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VaO-86-gSL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="FKO-a8-eFx"/>
+                            <constraint firstAttribute="centerX" secondItem="qWB-Qf-LD4" secondAttribute="centerX" id="AVl-Vj-wD7"/>
+                            <constraint firstItem="qWB-Qf-LD4" firstAttribute="top" secondItem="ugJ-2Q-c4b" secondAttribute="bottom" constant="20" id="AwU-WP-8mc"/>
                             <constraint firstAttribute="centerX" secondItem="N0z-wy-p2o" secondAttribute="centerX" id="HRg-G1-7ie"/>
-                            <constraint firstAttribute="centerX" secondItem="a8o-cd-UhZ" secondAttribute="centerX" id="I8c-gv-1Ll"/>
-                            <constraint firstAttribute="centerY" secondItem="9fY-JH-NG4" secondAttribute="centerY" id="NSY-wC-Xaa"/>
-                            <constraint firstItem="N0z-wy-p2o" firstAttribute="top" secondItem="a8o-cd-UhZ" secondAttribute="bottom" constant="8" id="O53-i4-3kc"/>
-                            <constraint firstItem="a8o-cd-UhZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="bTe-0o-GnI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VaO-86-gSL" secondAttribute="trailing" constant="-16" id="cAU-zJ-yQZ"/>
-                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="67" id="iFb-El-tEx"/>
+                            <constraint firstItem="ugJ-2Q-c4b" firstAttribute="top" secondItem="9fY-JH-NG4" secondAttribute="bottom" constant="20" id="bLy-bm-B6y"/>
+                            <constraint firstAttribute="centerX" secondItem="ugJ-2Q-c4b" secondAttribute="centerX" id="bmM-Zr-Ut7"/>
+                            <constraint firstItem="N0z-wy-p2o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="c8b-Hq-ZV8"/>
                             <constraint firstAttribute="centerX" secondItem="9fY-JH-NG4" secondAttribute="centerX" id="pJU-SN-q8C"/>
-                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="45" id="sRn-lp-nYj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VaO-86-gSL" secondAttribute="bottom" id="x1P-lT-RvN"/>
-                            <constraint firstItem="VaO-86-gSL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="yI9-PP-xGV"/>
+                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="30" id="sRn-lp-nYj"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="NSY-wC-Xaa"/>
-                                <exclude reference="iFb-El-tEx"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -363,12 +367,10 @@
     </scenes>
     <resources>
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
-        <image name="horizon-wallpaper.jpg" width="640" height="1136"/>
-        <image name="phoenix_vector_white.png" width="498" height="496"/>
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AWF-DT-MpL"/>
         <segue reference="sZg-zs-zSq"/>
+        <segue reference="siK-pv-jjD"/>
     </inferredMetricsTieBreakers>
 </document>
