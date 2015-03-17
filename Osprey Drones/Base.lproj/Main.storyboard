@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
-                                <rect key="frame" x="268" y="295" width="65" height="53"/>
+                                <rect key="frame" x="268" y="310" width="65" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="start">
                                     <color key="titleColor" red="0.51764705882352935" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
-                                <rect key="frame" x="245" y="368" width="110" height="53"/>
+                                <rect key="frame" x="245" y="383" width="110" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="settings">
                                     <color key="titleColor" red="0.51764705882352946" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,7 +51,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
-                                <rect key="frame" x="259" y="441" width="83" height="53"/>
+                                <rect key="frame" x="259" y="456" width="83" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="about">
                                     <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,7 +77,7 @@
                             <constraint firstAttribute="centerX" secondItem="ugJ-2Q-c4b" secondAttribute="centerX" id="bmM-Zr-Ut7"/>
                             <constraint firstItem="N0z-wy-p2o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="c8b-Hq-ZV8"/>
                             <constraint firstAttribute="centerX" secondItem="9fY-JH-NG4" secondAttribute="centerX" id="pJU-SN-q8C"/>
-                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="30" id="sRn-lp-nYj"/>
+                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="45" id="sRn-lp-nYj"/>
                         </constraints>
                     </view>
                 </viewController>
