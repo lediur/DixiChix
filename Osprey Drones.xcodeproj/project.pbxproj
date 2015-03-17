@@ -37,6 +37,7 @@
 		B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBE1AB2632A00BE88DE /* Images.xcassets */; };
 		B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BC01AB2632A00BE88DE /* LaunchScreen.xib */; };
 		B9FD8BCE1AB2632A00BE88DE /* Osprey_DronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BCD1AB2632A00BE88DE /* Osprey_DronesTests.swift */; };
+<<<<<<< HEAD
 		D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */; };
 		D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16882F21AB376A10085FCB1 /* GoogleMaps.framework */; };
 		D1C5BB951AB77C07001264DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */; };
@@ -50,6 +51,10 @@
 		D1FF74B61AB7AE5C0088FA16 /* starry-night-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B51AB7AE5C0088FA16 /* starry-night-background.jpg */; };
 		D1FF74B81AB7B08F0088FA16 /* BOLDfinger.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B71AB7B08F0088FA16 /* BOLDfinger.ttf */; };
 		D1FF74BA1AB7B3AA0088FA16 /* blue-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D1FF74B91AB7B3AA0088FA16 /* blue-background.png */; };
+=======
+		D15240651AB36D1800B3708E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D15240641AB36D1800B3708E /* GoogleMaps.bundle */; };
+		D15240671AB36D2700B3708E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15240661AB36D2700B3708E /* GoogleMaps.framework */; };
+>>>>>>> master
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
