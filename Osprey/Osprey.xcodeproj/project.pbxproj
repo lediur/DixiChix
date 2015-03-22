@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F6B936A1ABE849B00279ADC /* sick_drone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2F6B93691ABE849B00279ADC /* sick_drone.jpg */; };
 		2F7AA0FD1AB64A7600E7ABFA /* DroneRecordingCompressed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */; };
-		2F7AA0FF1AB7D68800E7ABFA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA0FE1AB7D68800E7ABFA /* play.png */; };
 		2F7AA1021ABE609200E7ABFA /* ExpandedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AA1011ABE609200E7ABFA /* ExpandedImageView.m */; };
+		2F7AA1041ABE742500E7ABFA /* compass_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA1031ABE742500E7ABFA /* compass_60.png */; };
+		2F7AA1061ABE745600E7ABFA /* logo_play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA1051ABE745600E7ABFA /* logo_play.png */; };
+		2F7AA1081ABE749100E7ABFA /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA1071ABE749100E7ABFA /* x.png */; };
+		2F7AA10B1ABE75F800E7ABFA /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AA10A1ABE75F800E7ABFA /* UIImage+Extras.m */; };
+		2F7AA10E1ABE779A00E7ABFA /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AA10D1ABE779A00E7ABFA /* UIColor+Extras.m */; };
+		2F7AA1111ABE7B4400E7ABFA /* logo_next.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA1101ABE7B4400E7ABFA /* logo_next.png */; };
 		2F9E38791AA92DA400ADA3CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38781AA92DA400ADA3CD /* main.m */; };
 		2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */; };
 		2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */; };
@@ -31,10 +37,8 @@
 		2F9E38BB1AA9363400ADA3CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9E38BA1AA9363400ADA3CD /* SystemConfiguration.framework */; };
 		2F9E38BE1AA9443800ADA3CD /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F9E38BD1AA9443800ADA3CD /* GoogleMaps.bundle */; };
 		2FE4D4221AABAC2B00574542 /* sick_aerial_car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */; };
-		2FE4D4251AABACC800574542 /* sharing_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D4241AABACC800574542 /* sharing_icon.png */; };
 		2FE4D4281AABB14500574542 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4D4271AABB14500574542 /* ShareViewController.m */; };
 		2FE4D42B1AABB3A400574542 /* ShareViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE4D42A1AABB3A400574542 /* ShareViewCell.m */; };
-		2FE4D42D1AABBD1800574542 /* compass_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2FE4D42C1AABBD1800574542 /* compass_icon.jpg */; };
 		2FE4D4311AABC01700574542 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D42E1AABC01700574542 /* Bolts.framework */; };
 		2FE4D4321AABC01700574542 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D42F1AABC01700574542 /* FacebookSDK.framework */; };
 		2FE4D4331AABC01700574542 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE4D4301AABC01700574542 /* FBAudienceNetwork.framework */; };
@@ -51,10 +55,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F6B93691ABE849B00279ADC /* sick_drone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sick_drone.jpg; sourceTree = "<group>"; };
 		2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroneRecordingCompressed.mp4; sourceTree = "<group>"; };
-		2F7AA0FE1AB7D68800E7ABFA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		2F7AA1001ABE609200E7ABFA /* ExpandedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedImageView.h; sourceTree = "<group>"; };
 		2F7AA1011ABE609200E7ABFA /* ExpandedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedImageView.m; sourceTree = "<group>"; };
+		2F7AA1031ABE742500E7ABFA /* compass_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass_60.png; sourceTree = "<group>"; };
+		2F7AA1051ABE745600E7ABFA /* logo_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_play.png; sourceTree = "<group>"; };
+		2F7AA1071ABE749100E7ABFA /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		2F7AA1091ABE75F800E7ABFA /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
+		2F7AA10A1ABE75F800E7ABFA /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
+		2F7AA10C1ABE779A00E7ABFA /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
+		2F7AA10D1ABE779A00E7ABFA /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
+		2F7AA1101ABE7B4400E7ABFA /* logo_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_next.png; sourceTree = "<group>"; };
 		2F9E38731AA92DA400ADA3CD /* Osprey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osprey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9E38771AA92DA400ADA3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9E38781AA92DA400ADA3CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,12 +94,10 @@
 		2F9E38BA1AA9363400ADA3CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2F9E38BD1AA9443800ADA3CD /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sick_aerial_car.jpg; sourceTree = "<group>"; };
-		2FE4D4241AABACC800574542 /* sharing_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sharing_icon.png; sourceTree = "<group>"; };
 		2FE4D4261AABB14500574542 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		2FE4D4271AABB14500574542 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		2FE4D4291AABB3A400574542 /* ShareViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewCell.h; sourceTree = "<group>"; };
 		2FE4D42A1AABB3A400574542 /* ShareViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewCell.m; sourceTree = "<group>"; };
-		2FE4D42C1AABBD1800574542 /* compass_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = compass_icon.jpg; sourceTree = "<group>"; };
 		2FE4D42E1AABC01700574542 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		2FE4D42F1AABC01700574542 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		2FE4D4301AABC01700574542 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
@@ -127,6 +137,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F7AA10F1ABE786A00E7ABFA /* Design Extras */ = {
+			isa = PBXGroup;
+			children = (
+				2F7AA1091ABE75F800E7ABFA /* UIImage+Extras.h */,
+				2F7AA10A1ABE75F800E7ABFA /* UIImage+Extras.m */,
+				2F7AA10C1ABE779A00E7ABFA /* UIColor+Extras.h */,
+				2F7AA10D1ABE779A00E7ABFA /* UIColor+Extras.m */,
+			);
+			name = "Design Extras";
+			sourceTree = "<group>";
+		};
 		2F9E386A1AA92DA300ADA3CD = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +180,7 @@
 				2FE4D42A1AABB3A400574542 /* ShareViewCell.m */,
 				2FE4D4261AABB14500574542 /* ShareViewController.h */,
 				2FE4D4271AABB14500574542 /* ShareViewController.m */,
+				2F7AA10F1ABE786A00E7ABFA /* Design Extras */,
 				2F9E38861AA92DA400ADA3CD /* Images.xcassets */,
 				2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */,
 				2FE4D4231AABAC4800574542 /* Images */,
@@ -220,10 +242,12 @@
 		2FE4D4231AABAC4800574542 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2F7AA0FE1AB7D68800E7ABFA /* play.png */,
+				2F6B93691ABE849B00279ADC /* sick_drone.jpg */,
+				2F7AA1101ABE7B4400E7ABFA /* logo_next.png */,
+				2F7AA1071ABE749100E7ABFA /* x.png */,
+				2F7AA1051ABE745600E7ABFA /* logo_play.png */,
+				2F7AA1031ABE742500E7ABFA /* compass_60.png */,
 				2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */,
-				2FE4D42C1AABBD1800574542 /* compass_icon.jpg */,
-				2FE4D4241AABACC800574542 /* sharing_icon.png */,
 				2FE4D4211AABAC2B00574542 /* sick_aerial_car.jpg */,
 			);
 			name = Images;
@@ -309,13 +333,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F7AA0FF1AB7D68800E7ABFA /* play.png in Resources */,
-				2FE4D42D1AABBD1800574542 /* compass_icon.jpg in Resources */,
+				2F7AA1111ABE7B4400E7ABFA /* logo_next.png in Resources */,
+				2F7AA1061ABE745600E7ABFA /* logo_play.png in Resources */,
+				2F7AA1081ABE749100E7ABFA /* x.png in Resources */,
 				2FE4D4221AABAC2B00574542 /* sick_aerial_car.jpg in Resources */,
 				2F9E38871AA92DA400ADA3CD /* Images.xcassets in Resources */,
+				2F7AA1041ABE742500E7ABFA /* compass_60.png in Resources */,
 				2F9E38BE1AA9443800ADA3CD /* GoogleMaps.bundle in Resources */,
-				2FE4D4251AABACC800574542 /* sharing_icon.png in Resources */,
 				2F7AA0FD1AB64A7600E7ABFA /* DroneRecordingCompressed.mp4 in Resources */,
+				2F6B936A1ABE849B00279ADC /* sick_drone.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +362,11 @@
 				2FE4D42B1AABB3A400574542 /* ShareViewCell.m in Sources */,
 				2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */,
 				2F9E38791AA92DA400ADA3CD /* main.m in Sources */,
+				2F7AA10E1ABE779A00E7ABFA /* UIColor+Extras.m in Sources */,
 				2F7AA1021ABE609200E7ABFA /* ExpandedImageView.m in Sources */,
 				2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */,
 				2FE4D4281AABB14500574542 /* ShareViewController.m in Sources */,
+				2F7AA10B1ABE75F800E7ABFA /* UIImage+Extras.m in Sources */,
 				2F9E38A11AA92E7000ADA3CD /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

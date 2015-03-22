@@ -10,7 +10,6 @@
 
 @interface ShareViewCell : UICollectionViewCell
 
-@property (nonatomic, strong) UILabel *date;
 @property (nonatomic, strong) UILabel *location;
 @property (nonatomic, strong) UIImageView *image;
 @property (nonatomic, strong) UIButton *shareButton;

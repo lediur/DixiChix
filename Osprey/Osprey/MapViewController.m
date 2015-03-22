@@ -7,6 +7,8 @@
 //
 
 #import "MapViewController.h"
+#import "UIImage+Extras.h"
+#import "UIColor+Extras.h"
 
 #define MAX_COUNT 5
 
@@ -41,8 +43,8 @@
         [locationManager startUpdatingLocation];
         
         int buttonLength = frame.size.width/12;
-        UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-3*buttonLength/2, buttonLength/2, buttonLength, 4*buttonLength/5)];
-        [shareButton setImage:[UIImage imageNamed:@"sharing_icon.png"] forState:UIControlStateNormal];
+        UIButton *shareButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width-3*buttonLength/2, buttonLength/2, buttonLength,buttonLength)];
+        [shareButton setImage:[[UIImage imageNamed:@"logo_next.png"] tintedImageWithColor:[UIColor dcPink]] forState:UIControlStateNormal];
         [shareButton addTarget:self action:@selector(sharePage) forControlEvents:UIControlEventTouchUpInside];
         [map addSubview:shareButton];
         
@@ -83,7 +85,7 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = coordinate;
     marker.draggable = YES;
-    marker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+    marker.icon = [GMSMarker markerImageWithColor:[UIColor dcPink]];
     marker.flat = YES;
     marker.map = map;
     [pindrops addObject:marker];
