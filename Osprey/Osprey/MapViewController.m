@@ -11,8 +11,11 @@
 #import "UIColor+Extras.h"
 
 #define MAX_COUNT 5
+#define DRONE_TIME 5
 
-@interface MapViewController ()
+@interface MapViewController () {
+    dispatch_queue_t droneDelay;
+}
 
 @end
 
@@ -49,6 +52,8 @@
         [map addSubview:shareButton];
         
         [self.view addSubview:map];
+        
+        droneDelay = dispatch_queue_create("droneDelay", nil);
     }
     return self;
 }
@@ -85,7 +90,16 @@
     GMSMarker *marker = [[GMSMarker alloc] init];
     marker.position = coordinate;
     marker.draggable = YES;
-    marker.icon = [GMSMarker markerImageWithColor:[UIColor dcPink]];
+    UIColor *markerColor;
+    
+    if ([pindrops count] == 0) {
+        markerColor = [UIColor greenColor];
+        [self callDelay];
+    } else {
+        markerColor = [UIColor yellowColor];
+    }
+    
+    marker.icon = [GMSMarker markerImageWithColor:markerColor];
     marker.flat = YES;
     marker.map = map;
     [pindrops addObject:marker];
@@ -95,6 +109,26 @@
     [pindrops removeObject:marker];
     marker.map = nil;
     return YES;
+}
+
+- (void)updateMarkers {
+    GMSMarker *marker = [pindrops objectAtIndex:0];
+    [pindrops removeObject:marker];
+    marker.map = nil;
+    
+    if ([pindrops count] > 0) {
+        ((GMSMarker *)[pindrops objectAtIndex:0]).icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+        [self callDelay];
+    }
+}
+
+- (void)callDelay {
+    dispatch_async(droneDelay, ^{
+        [NSThread sleepForTimeInterval:DRONE_TIME];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self updateMarkers];
+        });
+    });
 }
 
 #pragma Share Button
