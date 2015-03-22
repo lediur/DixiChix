@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "ExpandedImageView.h"
 
 @interface ShareViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
     UICollectionView *shareCollection;
     NSMutableSet *alreadyUploaded;
+    ExpandedImageView *expandedImage;
+    UIButton *closeButton;
 }
 
 - (id)initWithFrame:(CGRect)frame;

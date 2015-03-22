@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F7AA0FD1AB64A7600E7ABFA /* DroneRecordingCompressed.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */; };
 		2F7AA0FF1AB7D68800E7ABFA /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7AA0FE1AB7D68800E7ABFA /* play.png */; };
+		2F7AA1021ABE609200E7ABFA /* ExpandedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F7AA1011ABE609200E7ABFA /* ExpandedImageView.m */; };
 		2F9E38791AA92DA400ADA3CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E38781AA92DA400ADA3CD /* main.m */; };
 		2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */; };
 		2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		2F7AA0FC1AB5418800E7ABFA /* DroneRecordingCompressed.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroneRecordingCompressed.mp4; sourceTree = "<group>"; };
 		2F7AA0FE1AB7D68800E7ABFA /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		2F7AA1001ABE609200E7ABFA /* ExpandedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandedImageView.h; sourceTree = "<group>"; };
+		2F7AA1011ABE609200E7ABFA /* ExpandedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandedImageView.m; sourceTree = "<group>"; };
 		2F9E38731AA92DA400ADA3CD /* Osprey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Osprey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9E38771AA92DA400ADA3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9E38781AA92DA400ADA3CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				2F9E387B1AA92DA400ADA3CD /* AppDelegate.m */,
 				2F9E389F1AA92E7000ADA3CD /* MapViewController.h */,
 				2F9E38A01AA92E7000ADA3CD /* MapViewController.m */,
+				2F7AA1001ABE609200E7ABFA /* ExpandedImageView.h */,
+				2F7AA1011ABE609200E7ABFA /* ExpandedImageView.m */,
 				2FE4D4291AABB3A400574542 /* ShareViewCell.h */,
 				2FE4D42A1AABB3A400574542 /* ShareViewCell.m */,
 				2FE4D4261AABB14500574542 /* ShareViewController.h */,
@@ -331,6 +336,7 @@
 				2FE4D42B1AABB3A400574542 /* ShareViewCell.m in Sources */,
 				2F9E387C1AA92DA400ADA3CD /* AppDelegate.m in Sources */,
 				2F9E38791AA92DA400ADA3CD /* main.m in Sources */,
+				2F7AA1021ABE609200E7ABFA /* ExpandedImageView.m in Sources */,
 				2F9E387F1AA92DA400ADA3CD /* Osprey.xcdatamodeld in Sources */,
 				2FE4D4281AABB14500574542 /* ShareViewController.m in Sources */,
 				2F9E38A11AA92E7000ADA3CD /* MapViewController.m in Sources */,

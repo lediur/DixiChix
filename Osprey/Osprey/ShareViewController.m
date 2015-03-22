@@ -141,6 +141,7 @@
 
 #pragma Share Button
 
+//Login if needed, then call to share
 - (void)shareButtonPressed:(UIButton *)shareButton{
     if ([alreadyUploaded containsObject:[NSNumber numberWithInt:(int)shareButton.tag]]) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Already Uploaded!" message:@"You already uploaded this to Facebook." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
@@ -162,6 +163,7 @@
     }
 }
 
+//Share either video or images
 - (void)shareContent:(int)index {
     NSDictionary *imageInfo = [images objectAtIndex:index];
     
@@ -177,8 +179,6 @@
         [params setObject:[NSData dataWithContentsOfURL:[[NSURL alloc] initFileURLWithPath:imageInfo[@"Video"]]] forKey:@"DroneRecordingCompressed.mp4"];
     }
     
-    
-    
     [FBRequestConnection startWithGraphPath:graphPath parameters:params HTTPMethod:@"POST" completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             [alreadyUploaded addObject:[NSNumber numberWithInt:index]];
@@ -189,12 +189,36 @@
 
 #pragma Content Button
 
+//View the content clicked
 - (void)viewContent:(UITapGestureRecognizer *)tapGesture {
     int index = (int)tapGesture.view.tag;
     NSDictionary *imageInfo = [images objectAtIndex:index];
     
     if (imageInfo[@"Image"]) {
-        //expand image
+        UIImage *imageToExpand = [UIImage imageNamed:imageInfo[@"Image"]];
+        float scale = [imageToExpand size].width/self.view.frame.size.width;
+        CGRect newFrame = CGRectMake(0, 0, self.view.frame.size.width, [imageToExpand size].height / scale);
+        if (!expandedImage) {
+            expandedImage = [[ExpandedImageView alloc] initWithFrame:newFrame];
+            expandedImage.userInteractionEnabled = YES;
+            expandedImage.alpha = 0;
+            [self.view addSubview:expandedImage];
+            
+            closeButton = [[UIButton alloc] initWithFrame:CGRectMake(7*self.view.frame.size.width/8, self.view.frame.size.width/24, self.view.frame.size.width/12, self.view.frame.size.width/12)];
+            [closeButton addTarget:self action:@selector(handlePhotoClose) forControlEvents:UIControlEventAllTouchEvents];
+            //actually make this an X icon
+            closeButton.backgroundColor = [UIColor redColor];
+            closeButton.alpha = 0;
+            [self.view addSubview:closeButton];
+        } else {
+            [expandedImage setNewFrame:newFrame];
+        }
+        
+        [expandedImage setImage:imageToExpand];
+        [UIView animateWithDuration:0.5f animations:^{
+            expandedImage.alpha = 1;
+            closeButton.alpha = 1;
+        } completion:nil];
     } else {
         MPMoviePlayerController *videoController = imageInfo[@"VideoController"];
         [videoController prepareToPlay];
@@ -202,19 +226,34 @@
         if (![[self.view subviews] containsObject:videoController.view]) {
             [videoController.view setFrame:self.view.frame];
             [self.view addSubview:videoController.view];
-        } else
-            videoController.view.alpha = 1;
-        
-        [videoController setFullscreen:YES animated:YES];
-        [videoController play];
+        } else {
+            //find out why this completion block is not triggering
+            [UIView animateWithDuration:0.5f animations:^{
+                videoController.view.alpha = 1;
+            } completion:^(BOOL finished) {
+                [videoController setFullscreen:YES animated:YES];
+                [videoController play];
+            }];
+        }
     }
 }
 
+//Hide the content
 - (void)handleDone:(NSNotification *)notification {
     dispatch_async(dispatch_get_main_queue(), ^{
-        ((MPMoviePlayerController*)(notification.object)).view.alpha = 0;
         [((MPMoviePlayerController*)(notification.object)) stop];
+        
+        [UIView animateWithDuration:0.5f animations:^{
+            ((MPMoviePlayerController*)(notification.object)).view.alpha = 0;
+        } completion:nil];
     });
+}
+
+- (void)handlePhotoClose {
+    [UIView animateWithDuration:0.5f animations:^{
+        expandedImage.alpha = 0;
+        closeButton.alpha = 0;
+    } completion:nil];
 }
 
 @end
