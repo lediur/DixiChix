@@ -6,11 +6,9 @@
 //  Copyright (c) 2015 Dixi Chix. All rights reserved.
 //
 
-//ToDo
+//To Do
 //Pass play button touch to entire cell
-//Fix completion block issue on play of video
 //Add Pan gesture to send to facebook
-//Optional: add opposite pan gesture to switch between screens
 
 #import "ShareViewController.h"
 #import "ShareViewCell.h"
@@ -141,9 +139,9 @@
     shareCell.location.text = imageInfo[@"Location"];
     
     shareCell.shareButton.tag = indexPath.row;
-    if (!shareCell.shareTapGesture) {
+    if (!shareCell.shareGesture) {
         [shareCell.shareButton addTarget:self action:@selector(shareButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        shareCell.shareTapGesture = YES;
+        shareCell.shareGesture = YES;
     }
     
     return shareCell;
@@ -183,16 +181,17 @@
         
         if (![[self.view subviews] containsObject:videoController.view]) {
             [videoController.view setFrame:self.view.frame];
+            videoController.view.alpha = 0;
             [self.view addSubview:videoController.view];
-        } else {
-            //find out why this completion block is not triggering
-            [UIView animateWithDuration:0.5f animations:^{
-                videoController.view.alpha = 1;
-            } completion:^(BOOL finished) {
-                [videoController setFullscreen:YES animated:YES];
-                [videoController play];
-            }];
         }
+        
+        [UIView animateWithDuration:0.5f animations:^{
+            videoController.view.alpha = 1;
+        } completion:^(BOOL finished) {
+            [videoController setFullscreen:YES animated:YES];
+            [videoController play];
+        }];
+       
     }
 }
 

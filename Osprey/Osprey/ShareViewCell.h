@@ -14,7 +14,7 @@
 @property (nonatomic, strong) UIImageView *image;
 @property (nonatomic, strong) UIButton *shareButton;
 @property (nonatomic, strong) UIButton *playButton;
-@property BOOL shareTapGesture;
+@property BOOL shareGesture;
 @property BOOL contentTapGesture;
 
 

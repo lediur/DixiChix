@@ -10,11 +10,11 @@
 
 @implementation ShareViewCell
 
-@synthesize image, location, shareButton, shareTapGesture, contentTapGesture, playButton;
+@synthesize image, location, shareButton, shareGesture, contentTapGesture, playButton;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        shareTapGesture = contentTapGesture = NO;
+        shareGesture = contentTapGesture = NO;
         
         int labelWidth = frame.size.width/3;
         int buttonSize = frame.size.width/8;
