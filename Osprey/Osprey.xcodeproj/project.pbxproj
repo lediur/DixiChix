@@ -180,9 +180,9 @@
 				2FE4D42A1AABB3A400574542 /* ShareViewCell.m */,
 				2FE4D4261AABB14500574542 /* ShareViewController.h */,
 				2FE4D4271AABB14500574542 /* ShareViewController.m */,
-				2F7AA10F1ABE786A00E7ABFA /* Design Extras */,
 				2F9E38861AA92DA400ADA3CD /* Images.xcassets */,
 				2F9E387D1AA92DA400ADA3CD /* Osprey.xcdatamodeld */,
+				2F7AA10F1ABE786A00E7ABFA /* Design Extras */,
 				2FE4D4231AABAC4800574542 /* Images */,
 				2F9E38761AA92DA400ADA3CD /* Supporting Files */,
 			);
