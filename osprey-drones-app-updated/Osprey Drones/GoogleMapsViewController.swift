@@ -135,7 +135,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             // 1) myLocatioNEnabled draws a light blue dot where the user is located.
             // 2) myLocationButton adds a button to the map that centers the user's location when tapped.
             mapView.myLocationEnabled = true
-            mapView.settings.myLocationButton = true
+//            mapView.settings.myLocationButton = true
         }
     }
     
