@@ -244,10 +244,10 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
             </objects>
             <point key="canvasLocation" x="725" y="1571"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="MN5-cA-IG2">
             <objects>
-                <viewController id="XPf-sE-iqX" sceneMemberID="viewController">
+                <viewController id="XPf-sE-iqX" customClass="SettingsViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wfr-KB-oBl"/>
                         <viewControllerLayoutGuide type="bottom" id="kJs-Pf-3Vr"/>
@@ -268,7 +268,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="35" y="150" width="330" height="47"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coming soon..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D68-9o-j1l">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Drone Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D68-9o-j1l">
                                 <rect key="frame" x="196" y="291" width="209" height="41"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,6 +277,25 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="97.5" y="297" width="205" height="35"/>
                                 </variation>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="125" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Pmm-Tg-Q5q">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="P1x-Pw-Xau"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="P1x-Pw-Xau"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="P1x-Pw-Xau"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="speedSliderChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="eF5-vw-mb5"/>
+                                </connections>
+                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
                                 <rect key="frame" x="202" y="381" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
@@ -285,7 +304,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="103.5" y="382" width="193" height="47"/>
+                                    <rect key="frame" x="104" y="450" width="193" height="47"/>
                                 </variation>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="oO4-OG-vDy"/>
@@ -296,16 +315,42 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <constraints>
                             <constraint firstItem="vn0-q6-WTH" firstAttribute="top" secondItem="4MM-EP-OWy" secondAttribute="topMargin" constant="150" id="2yD-m7-1ru"/>
                             <constraint firstAttribute="centerX" secondItem="Zan-7o-Wp7" secondAttribute="centerX" id="7fd-hp-b88"/>
+                            <constraint firstAttribute="centerX" secondItem="Pmm-Tg-Q5q" secondAttribute="centerX" id="MOZ-IJ-I4c"/>
+                            <constraint firstItem="Pmm-Tg-Q5q" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="45" id="Rdk-8V-6Lc"/>
                             <constraint firstAttribute="centerX" secondItem="vn0-q6-WTH" secondAttribute="centerX" id="Wit-4V-d11"/>
                             <constraint firstAttribute="centerX" secondItem="D68-9o-j1l" secondAttribute="centerX" id="aB0-Sd-NLM"/>
-                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="50" id="s9r-Oj-5xQ"/>
+                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="50" id="s9r-Oj-5xQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="118"/>
+                            </constraint>
                             <constraint firstItem="D68-9o-j1l" firstAttribute="top" secondItem="vn0-q6-WTH" secondAttribute="bottom" constant="100" id="vbU-tu-6if"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pmm-Tg-Q5q"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MOZ-IJ-I4c"/>
+                                <exclude reference="Rdk-8V-6Lc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pmm-Tg-Q5q"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MOZ-IJ-I4c"/>
+                                <include reference="Rdk-8V-6Lc"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="droneSpeedLabel" destination="D68-9o-j1l" id="88a-Mp-sne"/>
+                        <outlet property="speedSlider" destination="Pmm-Tg-Q5q" id="QDp-uM-mCB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="od4-LK-nO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="1571"/>
+            <point key="canvasLocation" x="1554" y="1570.5"/>
         </scene>
         <!--Video Results View Controller-->
         <scene sceneID="msL-hQ-4zB">
@@ -555,6 +600,6 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
     <inferredMetricsTieBreakers>
         <segue reference="OCl-Ru-beu"/>
         <segue reference="sZg-zs-zSq"/>
-        <segue reference="pdq-yt-x5y"/>
+        <segue reference="oO4-OG-vDy"/>
     </inferredMetricsTieBreakers>
 </document>
