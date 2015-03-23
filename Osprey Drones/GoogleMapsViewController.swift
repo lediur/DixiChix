@@ -33,19 +33,20 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     var animateDroneMarker: GMSMarker?
     
     // Speed of the animateDroneMarker
-    let animateDroneDistancePerSecond = CLLocationDistance(100.0)
+    // TODO: Define constant somewhere that specifies this 125 value. Otherwise, when we change the default value in the storyboard, this value also needs to be changed.
+    let animateDroneDistancePerSecond = CLLocationDistance(125.0)
     
-    func timeToAnimateToNextMarkerStartingFromIndex(i: Int) -> Double {
+    func timeToAnimateToNextMarkerStartingFromIndex(i: Int, withSpeed speed: CLLocationDistance) -> Double {
         var end = CLLocation(latitude: allMarkers[i+1].position.latitude, longitude: allMarkers[i+1].position.longitude)
         var start = CLLocation(latitude: allMarkers[i].position.latitude, longitude: allMarkers[i].position.longitude)
         var distance = end.distanceFromLocation(start)
         
-        var animationTimeForThisLeg = distance / animateDroneDistancePerSecond
+        var animationTimeForThisLeg = distance / speed
         
         return animationTimeForThisLeg
     }
     
-    func animateDroneStartingAtMarkerIndex(index: Int) {
+    func animateDroneStartingAtMarkerIndex(index: Int, withSpeed speed: CLLocationDistance) {
         // Stop animating when we are out of legs.
         if (index >= allMarkers.count - 1) {
             var alert = UIAlertController(title: "Drone Finished Recording", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
@@ -70,12 +71,12 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         
         // When this Core Animation Transaction is done, animate the next leg.
         CATransaction.setCompletionBlock({
-            self.animateDroneStartingAtMarkerIndex(index + 1)
+            self.animateDroneStartingAtMarkerIndex(index + 1, withSpeed: speed)
         })
         
         // Set the time for this leg of the journey so that each leg of the journey
         // is traveled at the same speed, giving the illusion of a drone with constant speed.
-        var animationTimeForThisLeg = timeToAnimateToNextMarkerStartingFromIndex(index)
+        var animationTimeForThisLeg = timeToAnimateToNextMarkerStartingFromIndex(index, withSpeed: speed)
         CATransaction.setAnimationDuration(animationTimeForThisLeg)
         
         // Code to be animated.
@@ -93,7 +94,17 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         animateDroneMarker = GMSMarker(position: allMarkers[0].position)
         animateDroneMarker!.icon = UIImage(named: "drone_icon-30.png")
         animateDroneMarker!.map = mapView
-        animateDroneStartingAtMarkerIndex(0)
+        
+        // Get the speed of the drone from what the user has set in settings, or just
+        // use the default value. TODO: Set constant for default speed rather than hardcoding value
+        // up top in this file (otherwise a change in the storyboard would require a change here too.
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if let droneSpeed = defaults.objectForKey("droneSpeedKey") as? Float {
+            animateDroneStartingAtMarkerIndex(0, withSpeed: CLLocationDistance(droneSpeed))
+        } else {
+            animateDroneStartingAtMarkerIndex(0, withSpeed: animateDroneDistancePerSecond)
+        }
+        
     }
         
     override func viewDidLoad() {
