@@ -18,4 +18,8 @@
     return [UIColor colorWithRed:255/255.0f green:64/255.0f blue:85/255.0f alpha:1];
 }
 
++ (UIColor *)dcYellow {
+    return [UIColor colorWithRed:225/255.0f green:225/255.0f blue:151/255.0f alpha:1];
+}
+
 @end

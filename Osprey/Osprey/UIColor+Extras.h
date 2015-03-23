@@ -12,5 +12,6 @@
 
 + (UIColor *)dcPink;
 + (UIColor *)dcRed;
++ (UIColor *)dcYellow;
 
 @end

@@ -94,9 +94,9 @@
     
     if ([pindrops count] == 0) {
         markerColor = [UIColor greenColor];
-        [self callDelay];
+        [self callDelay:DRONE_TIME];
     } else {
-        markerColor = [UIColor yellowColor];
+        markerColor = [UIColor dcPink];
     }
     
     marker.icon = [GMSMarker markerImageWithColor:markerColor];
@@ -117,14 +117,18 @@
     marker.map = nil;
     
     if ([pindrops count] > 0) {
-        ((GMSMarker *)[pindrops objectAtIndex:0]).icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
-        [self callDelay];
+        GMSMarker *nextMarker =[pindrops objectAtIndex:0];
+        nextMarker.icon = [GMSMarker markerImageWithColor:[UIColor greenColor]];
+        float lat = nextMarker.position.latitude - marker.position.latitude;
+        float lon = nextMarker.position.longitude - marker.position.longitude;
+        [self callDelay:DRONE_TIME * sqrtf((lat)*(lat) + (lon)*(lon)) * (map.camera.zoom)*(map.camera.zoom)];
     }
 }
 
-- (void)callDelay {
+- (void)callDelay:(float)delay {
+    NSLog(@"%f", delay);
     dispatch_async(droneDelay, ^{
-        [NSThread sleepForTimeInterval:DRONE_TIME];
+        [NSThread sleepForTimeInterval:delay];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self updateMarkers];
         });
