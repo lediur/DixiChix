@@ -12,6 +12,10 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBAction func doneButtonPressed(sender: AnyObject) {
+        if allMarkers.count == 0 {
+            performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+        }
+        
         if let droneMarker = animateDroneMarker {
             println("We are already animating the drone...")
         } else {
