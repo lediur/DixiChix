@@ -49,10 +49,19 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         // Stop animating when we are out of legs.
         if (index >= allMarkers.count - 1) {
             var alert = UIAlertController(title: "Drone Finished Recording", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
+
+            // Functionality to go to the page with recorded videos displayed in a table view.
             alert.addAction(UIAlertAction(title: "See Recorded Video", style: UIAlertActionStyle.Default) {
                 action in
-                self.performSegueWithIdentifier("showVideoResults", sender: self)
+                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
             })
+            
+            // Functionality to go back to the home page if the user chooses to not view the recorded videos.
+            alert.addAction(UIAlertAction(title: "Go Home", style: UIAlertActionStyle.Cancel) {
+                action in
+                self.performSegueWithIdentifier("showHomePageFromGoogleMaps", sender: self)
+            })
+            
             self.presentViewController(alert, animated: true, completion: nil)
             return
         }
@@ -82,6 +91,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         }
         
         animateDroneMarker = GMSMarker(position: allMarkers[0].position)
+        animateDroneMarker!.icon = UIImage(named: "drone_icon-30.png")
         animateDroneMarker!.map = mapView
         animateDroneStartingAtMarkerIndex(0)
     }
@@ -93,6 +103,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         
+        // Set the initial location to be looking at Stanford University
+        mapView.camera = GMSCameraPosition.cameraWithLatitude(37.427474, longitude: -122.169719, zoom: 15)
         mapView.delegate = self
     }
     

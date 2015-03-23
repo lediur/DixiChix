@@ -136,7 +136,7 @@
                                     <navigationItem title="Flight Path" id="aZA-0i-Hzu">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="x2B-6c-Rbl">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="pdq-yt-x5y"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="showHomePageFromGoogleMaps" id="pdq-yt-x5y"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="PeB-05-Vwe">
@@ -161,7 +161,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="GLE-VU-QAw" id="6rk-rP-cGc"/>
-                        <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResults" id="OCl-Ru-beu"/>
+                        <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResultsFromGoogleMaps" id="OCl-Ru-beu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>

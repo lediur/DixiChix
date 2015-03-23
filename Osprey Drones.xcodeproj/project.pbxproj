@@ -37,6 +37,8 @@
 		B9FD8BBF1AB2632A00BE88DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBE1AB2632A00BE88DE /* Images.xcassets */; };
 		B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BC01AB2632A00BE88DE /* LaunchScreen.xib */; };
 		B9FD8BCE1AB2632A00BE88DE /* Osprey_DronesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BCD1AB2632A00BE88DE /* Osprey_DronesTests.swift */; };
+		D1608C161ABF9F7300C172D8 /* quadcopter-30.png in Resources */ = {isa = PBXBuildFile; fileRef = D1608C151ABF9F7300C172D8 /* quadcopter-30.png */; };
+		D1608C181ABF9FE700C172D8 /* drone_icon-30.png in Resources */ = {isa = PBXBuildFile; fileRef = D1608C171ABF9FE700C172D8 /* drone_icon-30.png */; };
 		D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */; };
 		D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16882F21AB376A10085FCB1 /* GoogleMaps.framework */; };
 		D1C5BB951AB77C07001264DC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */; };
@@ -99,6 +101,8 @@
 		B9FD8BC71AB2632A00BE88DE /* Osprey DronesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Osprey DronesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BCC1AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BCD1AB2632A00BE88DE /* Osprey_DronesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Osprey_DronesTests.swift; sourceTree = "<group>"; };
+		D1608C151ABF9F7300C172D8 /* quadcopter-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quadcopter-30.png"; sourceTree = "<group>"; };
+		D1608C171ABF9FE700C172D8 /* drone_icon-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drone_icon-30.png"; sourceTree = "<group>"; };
 		D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 		D16882F21AB376A10085FCB1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
 		D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				D1FF74AF1AB7A1070088FA16 /* blur-wallpaper.jpg */,
 				D1C5BBA21AB79FC9001264DC /* phoenix_vector_white.png */,
 				D1C5BB9E1AB79D28001264DC /* sky-wallpaper.jpg */,
+				D1608C171ABF9FE700C172D8 /* drone_icon-30.png */,
+				D1608C151ABF9F7300C172D8 /* quadcopter-30.png */,
 				D1C5BB9C1AB79629001264DC /* twitter_circle_color-512.png */,
 				D1C5BB9A1AB79568001264DC /* facebook_circle_color-512.png */,
 				B9D040CF1AB2B45000BE2B5F /* BMW_Car_1.jpg */,
@@ -349,7 +355,9 @@
 				D1FF74B21AB7A17C0088FA16 /* mountain-wallpaper.jpg in Resources */,
 				B9D040DA1AB2B45000BE2B5F /* BMW_Car_6.jpg in Resources */,
 				D1FF74B41AB7A1BB0088FA16 /* horizon-wallpaper.jpg in Resources */,
+				D1608C181ABF9FE700C172D8 /* drone_icon-30.png in Resources */,
 				B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */,
+				D1608C161ABF9F7300C172D8 /* quadcopter-30.png in Resources */,
 				D1C5BBA31AB79FC9001264DC /* phoenix_vector_white.png in Resources */,
 				D1FF74B81AB7B08F0088FA16 /* BOLDfinger.ttf in Resources */,
 				B9FD8BC21AB2632A00BE88DE /* LaunchScreen.xib in Resources */,
