@@ -11,6 +11,13 @@ import Foundation
 class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     @IBOutlet weak var mapView: GMSMapView!
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        if let droneMarker = animateDroneMarker {
+            println("We are already animating the drone...")
+        } else {
+            animateDroneAlongDrawnPath()
+        }
+    }
     
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
@@ -21,6 +28,63 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     let markerTitleText = "Tap To Delete!"
     
     var drawnPath: GMSPolyline = GMSPolyline()
+    
+    // The marker we will use for animating our drone along the path. TODO: Could get rid of this and pass a GMSMarker by reference (inout param)
+    var animateDroneMarker: GMSMarker?
+    
+    // Speed of the animateDroneMarker
+    let animateDroneDistancePerSecond = CLLocationDistance(100.0)
+    
+    func timeToAnimateToNextMarkerStartingFromIndex(i: Int) -> Double {
+        var end = CLLocation(latitude: allMarkers[i+1].position.latitude, longitude: allMarkers[i+1].position.longitude)
+        var start = CLLocation(latitude: allMarkers[i].position.latitude, longitude: allMarkers[i].position.longitude)
+        var distance = end.distanceFromLocation(start)
+        
+        var animationTimeForThisLeg = distance / animateDroneDistancePerSecond
+        
+        return animationTimeForThisLeg
+    }
+    
+    func animateDroneStartingAtMarkerIndex(index: Int) {
+        // Stop animating when we are out of legs.
+        if (index >= allMarkers.count - 1) {
+            var alert = UIAlertController(title: "Drone Finished Recording", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "See Recorded Video", style: UIAlertActionStyle.Default) {
+                action in
+                self.performSegueWithIdentifier("showVideoResults", sender: self)
+            })
+            self.presentViewController(alert, animated: true, completion: nil)
+            return
+        }
+        
+        CATransaction.begin()
+        
+        // When this Core Animation Transaction is done, animate the next leg.
+        CATransaction.setCompletionBlock({
+            self.animateDroneStartingAtMarkerIndex(index + 1)
+        })
+        
+        // Set the time for this leg of the journey so that each leg of the journey
+        // is traveled at the same speed, giving the illusion of a drone with constant speed.
+        var animationTimeForThisLeg = timeToAnimateToNextMarkerStartingFromIndex(index)
+        CATransaction.setAnimationDuration(animationTimeForThisLeg)
+        
+        // Code to be animated.
+        animateDroneMarker!.position = CLLocationCoordinate2D(latitude: allMarkers[index+1].position.latitude, longitude: allMarkers[index+1].position.longitude)
+        
+        CATransaction.commit()
+    }
+    
+    
+    func animateDroneAlongDrawnPath() {
+        if allMarkers.count == 0 {
+            return
+        }
+        
+        animateDroneMarker = GMSMarker(position: allMarkers[0].position)
+        animateDroneMarker!.map = mapView
+        animateDroneStartingAtMarkerIndex(0)
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
