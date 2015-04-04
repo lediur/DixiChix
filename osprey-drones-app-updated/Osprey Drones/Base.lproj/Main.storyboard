@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="BOLDfinger.ttf">
+            <string>BOLDfinger</string>
+            <string>BOLDfinger</string>
             <string>BOLDfinger</string>
             <string>BOLDfinger</string>
             <string>BOLDfinger</string>
@@ -22,13 +24,268 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Vsw-Xi-3d6">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="IGN-J0-bij" customClass="NavigationController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sGv-Ve-lH8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uOt-LY-eSD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-262" y="-53"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="62B-Dv-7q2">
+            <objects>
+                <viewController storyboardIdentifier="signUpViewController" id="Hiw-Qh-Ikw" customClass="SignUpViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hs3-gE-y8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="pAx-YI-BpN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vic-9P-yHG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCA-Lh-8jV">
+                                <rect key="frame" x="135" y="160" width="330" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="88G-Au-ovA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BOLDfinger" family="BOLDfinger" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="35" y="170" width="330" height="55"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="log-bY-66E">
+                                <rect key="frame" x="200" y="313" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="boy-mr-6Wj"/>
+                                    <constraint firstAttribute="width" constant="200" id="mne-BC-ldv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-Iu-IG0">
+                                <rect key="frame" x="252" y="275" width="97" height="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itk-SP-H34">
+                                <rect key="frame" x="200" y="400" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3Oo-bb-ODu"/>
+                                    <constraint firstAttribute="height" constant="30" id="TNP-bY-Exi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBz-4v-eao">
+                                <rect key="frame" x="255" y="363" width="90" height="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH0-Xh-zKc">
+                                <rect key="frame" x="230" y="460" width="140" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Xys-QJ-K0C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="Hiw-Qh-Ikw" eventType="touchUpInside" id="5pO-nG-u8a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-yI-zIA">
+                                <rect key="frame" x="168" y="528" width="265" height="34"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="ryO-fs-FsG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="Already have an account? Log in!">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TKD-jx-2To" kind="show" id="Jrr-5Y-Ahw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eCA-Lh-8jV" secondAttribute="centerX" id="2h0-mC-jXa"/>
+                            <constraint firstAttribute="centerX" secondItem="ScS-Iu-IG0" secondAttribute="centerX" id="6ZL-Em-pBt"/>
+                            <constraint firstItem="ScS-Iu-IG0" firstAttribute="top" secondItem="eCA-Lh-8jV" secondAttribute="bottom" constant="20" id="7qr-Br-JsX"/>
+                            <constraint firstAttribute="centerX" secondItem="log-bY-66E" secondAttribute="centerX" id="FJC-iM-VwA"/>
+                            <constraint firstItem="wBz-4v-eao" firstAttribute="top" secondItem="log-bY-66E" secondAttribute="bottom" constant="20" id="J56-9R-AI3"/>
+                            <constraint firstItem="itk-SP-H34" firstAttribute="top" secondItem="wBz-4v-eao" secondAttribute="bottom" constant="10" id="JKk-Hq-1Rb"/>
+                            <constraint firstAttribute="centerX" secondItem="SH0-Xh-zKc" secondAttribute="centerX" id="L9g-yI-mv1"/>
+                            <constraint firstItem="SH0-Xh-zKc" firstAttribute="top" secondItem="itk-SP-H34" secondAttribute="bottom" constant="30" id="LrK-Yd-Jt5"/>
+                            <constraint firstItem="uhx-yI-zIA" firstAttribute="top" secondItem="SH0-Xh-zKc" secondAttribute="bottom" constant="15" id="MJQ-xC-PrU"/>
+                            <constraint firstAttribute="centerX" secondItem="wBz-4v-eao" secondAttribute="centerX" id="THz-ka-GXK"/>
+                            <constraint firstAttribute="centerX" secondItem="SH0-Xh-zKc" secondAttribute="centerX" id="b3U-Kc-HdK"/>
+                            <constraint firstItem="eCA-Lh-8jV" firstAttribute="top" secondItem="hs3-gE-y8U" secondAttribute="bottom" constant="140" id="c9Z-Ah-NcH"/>
+                            <constraint firstAttribute="centerX" secondItem="itk-SP-H34" secondAttribute="centerX" id="jn2-BO-NCp"/>
+                            <constraint firstAttribute="centerX" secondItem="uhx-yI-zIA" secondAttribute="centerX" id="koW-tz-BOV"/>
+                            <constraint firstItem="log-bY-66E" firstAttribute="top" secondItem="ScS-Iu-IG0" secondAttribute="bottom" constant="10" id="yxK-66-DXG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="uhx-yI-zIA" id="oQ4-2C-lfA"/>
+                        <outlet property="passwordTextField" destination="itk-SP-H34" id="pKO-2Q-A2w"/>
+                        <outlet property="signUpButton" destination="SH0-Xh-zKc" id="vX2-i0-4T5"/>
+                        <outlet property="usernameTextField" destination="log-bY-66E" id="1Np-eZ-DLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSl-nh-81G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="-835"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="TPY-8n-eG1">
+            <objects>
+                <viewController storyboardIdentifier="loginViewController" id="TKD-jx-2To" customClass="LoginViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9zQ-1F-p2O"/>
+                        <viewControllerLayoutGuide type="bottom" id="aCD-Rb-bYl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uke-9r-062">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfd-Yg-a0n">
+                                <rect key="frame" x="135" y="160" width="330" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="9Jc-Fm-ssc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BOLDfinger" family="BOLDfinger" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="35" y="170" width="330" height="55"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hrd-9f-9kG">
+                                <rect key="frame" x="200" y="313" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="22N-Rw-IzH"/>
+                                    <constraint firstAttribute="width" constant="200" id="rkP-iD-1gE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lq0-kf-X5b">
+                                <rect key="frame" x="252" y="275" width="97" height="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-JT-vf9">
+                                <rect key="frame" x="200" y="400" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Aad-qr-KNg"/>
+                                    <constraint firstAttribute="width" constant="200" id="H8h-ZN-RiH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hes-qY-zic">
+                                <rect key="frame" x="255" y="363" width="90" height="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaf-fd-3Vf">
+                                <rect key="frame" x="240" y="460" width="120" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="RvR-BC-s8O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="TKD-jx-2To" eventType="touchUpInside" id="bkc-LO-41x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hr-i6S">
+                                <rect key="frame" x="170" y="528" width="260" height="34"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="E2l-7E-444"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <state key="normal" title="Don't have an account? Sign up!">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Hiw-Qh-Ikw" kind="show" id="8Ir-2D-knE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hes-qY-zic" firstAttribute="top" secondItem="Hrd-9f-9kG" secondAttribute="bottom" constant="20" id="5r8-NU-y83"/>
+                            <constraint firstAttribute="centerX" secondItem="yaf-fd-3Vf" secondAttribute="centerX" id="6mO-jL-xaO"/>
+                            <constraint firstItem="Hrd-9f-9kG" firstAttribute="top" secondItem="lq0-kf-X5b" secondAttribute="bottom" constant="10" id="8cx-IX-ha0"/>
+                            <constraint firstItem="yaf-fd-3Vf" firstAttribute="top" secondItem="PWN-JT-vf9" secondAttribute="bottom" constant="30" id="Hbb-P6-5xl"/>
+                            <constraint firstAttribute="centerX" secondItem="Lfd-Yg-a0n" secondAttribute="centerX" id="ONz-2O-3Hs"/>
+                            <constraint firstItem="PWN-JT-vf9" firstAttribute="top" secondItem="Hes-qY-zic" secondAttribute="bottom" constant="10" id="TQH-gl-L9x"/>
+                            <constraint firstItem="RgL-hr-i6S" firstAttribute="top" secondItem="yaf-fd-3Vf" secondAttribute="bottom" constant="15" id="WiJ-6p-wVz"/>
+                            <constraint firstAttribute="centerX" secondItem="Hes-qY-zic" secondAttribute="centerX" id="aDx-0n-Prl"/>
+                            <constraint firstAttribute="centerX" secondItem="PWN-JT-vf9" secondAttribute="centerX" id="ceN-R4-dUh"/>
+                            <constraint firstAttribute="centerX" secondItem="yaf-fd-3Vf" secondAttribute="centerX" id="hdX-rf-HPX"/>
+                            <constraint firstAttribute="centerX" secondItem="lq0-kf-X5b" secondAttribute="centerX" id="q2W-tI-BLT"/>
+                            <constraint firstItem="Lfd-Yg-a0n" firstAttribute="top" secondItem="9zQ-1F-p2O" secondAttribute="bottom" constant="140" id="q5s-7Z-jtK"/>
+                            <constraint firstAttribute="centerX" secondItem="RgL-hr-i6S" secondAttribute="centerX" id="qAu-rX-oCz"/>
+                            <constraint firstItem="lq0-kf-X5b" firstAttribute="top" secondItem="Lfd-Yg-a0n" secondAttribute="bottom" constant="20" id="rWA-cc-K8E"/>
+                            <constraint firstAttribute="centerX" secondItem="Hrd-9f-9kG" secondAttribute="centerX" id="t7L-ch-dfg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="yaf-fd-3Vf" id="MUl-zQ-9aE"/>
+                        <outlet property="passwordTextField" destination="PWN-JT-vf9" id="EPd-as-C2X"/>
+                        <outlet property="signUpButton" destination="RgL-hr-i6S" id="wuU-Kx-1YF"/>
+                        <outlet property="usernameTextField" destination="Hrd-9f-9kG" id="CAT-SQ-VHI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-na-JAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="-89"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainMenuViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -37,7 +294,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
                                 <rect key="frame" x="268" y="310" width="65" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="start">
@@ -51,7 +308,7 @@
                                     <segue destination="vj6-kr-2bR" kind="show" id="sZg-zs-zSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
                                 <rect key="frame" x="245" y="383" width="110" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="settings">
@@ -65,7 +322,7 @@
                                     <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
                                 <rect key="frame" x="259" y="456" width="83" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="about">
@@ -79,7 +336,7 @@
                                     <segue destination="Skc-zK-dTU" kind="show" id="Je8-hI-ADD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
                                 <rect key="frame" x="135" y="170" width="330" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5b3-iE-Cm1"/>
@@ -180,7 +437,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="about" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-df-CyQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjn-df-CyQ">
                                 <rect key="frame" x="135" y="170" width="330" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5wp-bd-7ze"/>
@@ -192,7 +449,7 @@
                                     <rect key="frame" x="35" y="170" width="330" height="47"/>
                                 </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CGG-H1-9dP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CGG-H1-9dP">
                                 <rect key="frame" x="140" y="231" width="320" height="255"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -214,7 +471,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="40" y="237" width="320" height="255"/>
                                 </variation>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-cB-hYi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-cB-hYi">
                                 <rect key="frame" x="202" y="506" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="Back to Home">
@@ -256,7 +513,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-q6-WTH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-q6-WTH">
                                 <rect key="frame" x="135" y="150" width="330" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="VgD-GV-RFX"/>
@@ -296,7 +553,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="speedSliderChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="eF5-vw-mb5"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
                                 <rect key="frame" x="202" y="381" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="Back to Home">
@@ -515,7 +772,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Share!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-O2-WC8">
-                                <rect key="frame" x="275" y="506" width="50" height="23.5"/>
+                                <rect key="frame" x="275" y="506" width="50" height="24"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -531,7 +788,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
-                                <rect key="frame" x="190" y="432" width="220" height="69.5"/>
+                                <rect key="frame" x="190" y="432" width="220" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="rCa-xG-hjX"/>
                                 </constraints>

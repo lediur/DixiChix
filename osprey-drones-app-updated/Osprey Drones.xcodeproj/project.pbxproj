@@ -31,6 +31,9 @@
 		B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D21AB2B45000BE2B5F /* BMW_Car_4.jpg */; };
 		B9D040D91AB2B45000BE2B5F /* BMW_Car_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D31AB2B45000BE2B5F /* BMW_Car_5.jpg */; };
 		B9D040DA1AB2B45000BE2B5F /* BMW_Car_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D040D41AB2B45000BE2B5F /* BMW_Car_6.jpg */; };
+		B9D8BF741ACF738A0084BDA8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */; };
+		B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */; };
+		B9D8BF781ACF77070084BDA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */; };
 		B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */; };
 		B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB91AB2632A00BE88DE /* ViewController.swift */; };
 		B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */; };
@@ -92,6 +95,9 @@
 		B9D040D21AB2B45000BE2B5F /* BMW_Car_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_4.jpg; sourceTree = "<group>"; };
 		B9D040D31AB2B45000BE2B5F /* BMW_Car_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_5.jpg; sourceTree = "<group>"; };
 		B9D040D41AB2B45000BE2B5F /* BMW_Car_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BMW_Car_6.jpg; sourceTree = "<group>"; };
+		B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B9FD8BB21AB2632A00BE88DE /* Osprey Drones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Osprey Drones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BB61AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +235,9 @@
 				B9FD8BB91AB2632A00BE88DE /* ViewController.swift */,
 				B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */,
 				B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */,
+				B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */,
+				B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */,
+				B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */,
 				D1608C191ABFA34A00C172D8 /* SettingsViewController.swift */,
 				B9D040CC1AB2AE2F00BE2B5F /* VideoResultCell.swift */,
 				B9D040CA1AB2AC3200BE2B5F /* VideoResultsViewController.swift */,
@@ -387,13 +396,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D8BF781ACF77070084BDA8 /* SignUpViewController.swift in Sources */,
 				B9D040CD1AB2AE2F00BE2B5F /* VideoResultCell.swift in Sources */,
 				B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */,
 				B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */,
 				B9D040CB1AB2AC3200BE2B5F /* VideoResultsViewController.swift in Sources */,
+				B9D8BF741ACF738A0084BDA8 /* NavigationController.swift in Sources */,
 				B9D040C51AB2A82E00BE2B5F /* VideoPlayerViewController.swift in Sources */,
 				B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */,
 				B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */,
+				B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */,
 				D1608C1A1ABFA34A00C172D8 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

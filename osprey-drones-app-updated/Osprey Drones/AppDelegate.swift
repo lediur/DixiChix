@@ -8,6 +8,9 @@
 
 import UIKit
 
+// CONSTANTS
+let kLoggedInUsernameKey = "loggedInUsername"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
