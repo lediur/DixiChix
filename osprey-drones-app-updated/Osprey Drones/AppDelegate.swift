@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 // CONSTANTS
 let kLoggedInUsernameKey = "loggedInUsername"
@@ -22,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
         // Make sure Google Maps has an API key too use
         GMSServices.provideAPIKey(googleMapsApiKey)
+        
+        // Initialize Parse.
+        Parse.setApplicationId("artI8N3mXYFbdiKS1Rl0oMpYgIDQ7YGJJefaevee", clientKey: "dCK914aozWYInkqGr50MiSNLOPcxQ3tpclIcJYRW")
+        
+        // Track statistics around application opens
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
         return true
     }

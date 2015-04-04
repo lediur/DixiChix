@@ -34,6 +34,17 @@
 		B9D8BF741ACF738A0084BDA8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */; };
 		B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */; };
 		B9D8BF781ACF77070084BDA8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */; };
+		B9D8BF7B1ACF81160084BDA8 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF791ACF81160084BDA8 /* Bolts.framework */; };
+		B9D8BF7C1ACF81160084BDA8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF7A1ACF81160084BDA8 /* Parse.framework */; };
+		B9D8BF841ACF814C0084BDA8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF7D1ACF814C0084BDA8 /* AudioToolbox.framework */; };
+		B9D8BF851ACF814C0084BDA8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF7E1ACF814C0084BDA8 /* CFNetwork.framework */; };
+		B9D8BF861ACF814C0084BDA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF7F1ACF814C0084BDA8 /* CoreGraphics.framework */; };
+		B9D8BF871ACF814C0084BDA8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF801ACF814C0084BDA8 /* libsqlite3.dylib */; };
+		B9D8BF881ACF814C0084BDA8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF811ACF814C0084BDA8 /* MobileCoreServices.framework */; };
+		B9D8BF891ACF814C0084BDA8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF821ACF814C0084BDA8 /* Security.framework */; };
+		B9D8BF8A1ACF814C0084BDA8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF831ACF814C0084BDA8 /* StoreKit.framework */; };
+		B9D8BF8D1ACF825F0084BDA8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */; };
+		B9D8BF8E1ACF825F0084BDA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF8C1ACF825F0084BDA8 /* Social.framework */; };
 		B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */; };
 		B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB91AB2632A00BE88DE /* ViewController.swift */; };
 		B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */; };
@@ -98,6 +109,17 @@
 		B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B9D8BF791ACF81160084BDA8 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B9D8BF7A1ACF81160084BDA8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		B9D8BF7D1ACF814C0084BDA8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B9D8BF7E1ACF814C0084BDA8 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B9D8BF7F1ACF814C0084BDA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B9D8BF801ACF814C0084BDA8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B9D8BF811ACF814C0084BDA8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B9D8BF821ACF814C0084BDA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9D8BF831ACF814C0084BDA8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B9D8BF8C1ACF825F0084BDA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B9FD8BB21AB2632A00BE88DE /* Osprey Drones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Osprey Drones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BB61AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,19 +153,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D8BF8D1ACF825F0084BDA8 /* Accounts.framework in Frameworks */,
+				B9D8BF8E1ACF825F0084BDA8 /* Social.framework in Frameworks */,
+				B9D8BF841ACF814C0084BDA8 /* AudioToolbox.framework in Frameworks */,
+				B9D8BF851ACF814C0084BDA8 /* CFNetwork.framework in Frameworks */,
+				B9D8BF861ACF814C0084BDA8 /* CoreGraphics.framework in Frameworks */,
+				B9D8BF871ACF814C0084BDA8 /* libsqlite3.dylib in Frameworks */,
+				B9D8BF881ACF814C0084BDA8 /* MobileCoreServices.framework in Frameworks */,
+				B9D8BF891ACF814C0084BDA8 /* Security.framework in Frameworks */,
+				B9D8BF8A1ACF814C0084BDA8 /* StoreKit.framework in Frameworks */,
+				B91CFB7D1AB26AA800731961 /* CoreLocation.framework in Frameworks */,
 				B91CFB871AB26ACF00731961 /* libz.dylib in Frameworks */,
-				B91CFB881AB26ACF00731961 /* OpenGLES.framework in Frameworks */,
 				B91CFB891AB26ACF00731961 /* QuartzCore.framework in Frameworks */,
 				B91CFB8A1AB26ACF00731961 /* SystemConfiguration.framework in Frameworks */,
+				B91CFB881AB26ACF00731961 /* OpenGLES.framework in Frameworks */,
+				B9D8BF7C1ACF81160084BDA8 /* Parse.framework in Frameworks */,
 				B91CFB7B1AB26AA800731961 /* AVFoundation.framework in Frameworks */,
 				B91CFB7C1AB26AA800731961 /* CoreData.framework in Frameworks */,
-				B91CFB7D1AB26AA800731961 /* CoreLocation.framework in Frameworks */,
 				B91CFB7E1AB26AA800731961 /* CoreText.framework in Frameworks */,
 				B91CFB7F1AB26AA800731961 /* GLKit.framework in Frameworks */,
 				D16882F31AB376A10085FCB1 /* GoogleMaps.framework in Frameworks */,
 				B91CFB801AB26AA800731961 /* ImageIO.framework in Frameworks */,
 				B91CFB811AB26AA800731961 /* libc++.dylib in Frameworks */,
 				B91CFB821AB26AA800731961 /* libicucore.dylib in Frameworks */,
+				B9D8BF7B1ACF81160084BDA8 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +193,17 @@
 		B91CFB8B1AB26AED00731961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */,
+				B9D8BF8C1ACF825F0084BDA8 /* Social.framework */,
+				B9D8BF7D1ACF814C0084BDA8 /* AudioToolbox.framework */,
+				B9D8BF7E1ACF814C0084BDA8 /* CFNetwork.framework */,
+				B9D8BF7F1ACF814C0084BDA8 /* CoreGraphics.framework */,
+				B9D8BF801ACF814C0084BDA8 /* libsqlite3.dylib */,
+				B9D8BF811ACF814C0084BDA8 /* MobileCoreServices.framework */,
+				B9D8BF821ACF814C0084BDA8 /* Security.framework */,
+				B9D8BF831ACF814C0084BDA8 /* StoreKit.framework */,
+				B9D8BF791ACF81160084BDA8 /* Bolts.framework */,
+				B9D8BF7A1ACF81160084BDA8 /* Parse.framework */,
 				D16882F21AB376A10085FCB1 /* GoogleMaps.framework */,
 				D16882F01AB3769A0085FCB1 /* GoogleMaps.bundle */,
 				B91CFB841AB26ACF00731961 /* OpenGLES.framework */,
