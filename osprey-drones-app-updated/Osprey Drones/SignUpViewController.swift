@@ -16,8 +16,29 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBAction func signUpButtonPressed(sender: AnyObject) {
-    	let mainMenuVC = storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
-        navigationController?.pushViewController(mainMenuVC, animated: true)
+		var user = PFUser()
+        let enteredUsername = usernameTextField.text
+        let enteredPassword = passwordTextField.text
+		user.username = enteredUsername
+		user.password = enteredPassword
+
+		user.signUpInBackgroundWithBlock {
+			(succeeded, error) in
+			
+			if error == nil {
+				println("Hooray! You've signed up!")
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setObject(enteredUsername, forKey: kLoggedInUsernameKey)
+                
+                // Bring user to the main menu now that they are logged in.
+                let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
+                self.navigationController?.pushViewController(mainMenuVC, animated: true)
+			} else {
+				println("Boo! There was an error signing up")
+				println(error)
+			}
+        }
+
     }
     
     override func viewDidLoad() {
