@@ -31,9 +31,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
                 self.navigationController?.pushViewController(mainMenuVC, animated: true)
             } else {
-                let errorAlert = GeneralUtils.createAlertWithMessage("There was an error logging in.", title: "Login Error", buttonTitle: "OK")
+                var errorMessage = "There was an error logging in."
+                
+                // If we can get something more specific from the NSError, set the error message to that message instead.
+                if let errorUserInfo = error.userInfo {
+                    if let errorUserInfoString = errorUserInfo["error"] as? String {
+                        errorMessage = errorUserInfoString.properlyCapitalizedSentence
+                    }
+                }
+                
+                let errorAlert = GeneralUtils.createAlertWithMessage(errorMessage, title: "Login Error", buttonTitle: "OK")
                 self.presentViewController(errorAlert, animated: true, completion: nil)
-                println(error.userInfo)
             }
         }
     }

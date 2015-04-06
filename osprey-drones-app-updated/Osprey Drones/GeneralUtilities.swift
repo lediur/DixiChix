@@ -31,3 +31,14 @@ class GeneralUtils {
     }
     
 }
+
+
+extension String {
+
+    var properlyCapitalizedSentence:String {
+        var result = self
+        result.replaceRange(result.startIndex...result.startIndex, with: String(result[result.startIndex]).capitalizedString)
+        return result
+    }
+
+}
