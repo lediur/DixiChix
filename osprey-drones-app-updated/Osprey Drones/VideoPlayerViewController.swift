@@ -21,8 +21,7 @@ class VideoPlayerViewController: UIViewController {
             facebookSheet.setInitialText("Check out my driving at http://www.youtube.com/watch?v=\(videoIDToDisplay)")
             self.presentViewController(facebookSheet, animated: true, completion: nil)
         } else {
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = GeneralUtils.createAlertWithMessage("Please login to a Facebook account in your iPhone Settings to share.", title: "Accounts", buttonTitle: "OK")
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
@@ -33,8 +32,7 @@ class VideoPlayerViewController: UIViewController {
             twitterSheet.setInitialText("Check out my driving at http://www.youtube.com/watch?v=\(videoIDToDisplay)")
             self.presentViewController(twitterSheet, animated: true, completion: nil)
         } else {
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a Twitter account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            let alert = GeneralUtils.createAlertWithMessage("Please login to a Twitter account in your iPhone Settings to share.", title: "Accounts", buttonTitle: "OK")
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }

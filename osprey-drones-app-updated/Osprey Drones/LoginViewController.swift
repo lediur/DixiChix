@@ -21,9 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         PFUser.logInWithUsernameInBackground(enteredUsername, password: enteredPassword) {
             (user, error) in
+            
             if user != nil {
                 // Login was successful
-                println("Hooray! You logged in successfully!")
                 let defaults = NSUserDefaults.standardUserDefaults()
                 defaults.setObject(enteredUsername, forKey: kLoggedInUsernameKey)
                 
@@ -31,7 +31,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
                 self.navigationController?.pushViewController(mainMenuVC, animated: true)
             } else {
-                println("Boo! There was an error logging in!")
+                let errorAlert = GeneralUtils.createAlertWithMessage("There was an error logging in.", title: "Login Error", buttonTitle: "OK")
+                self.presentViewController(errorAlert, animated: true, completion: nil)
                 println(error.userInfo)
             }
         }

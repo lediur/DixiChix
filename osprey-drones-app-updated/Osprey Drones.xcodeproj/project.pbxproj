@@ -20,6 +20,7 @@
 		B91CFB891AB26ACF00731961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB851AB26ACF00731961 /* QuartzCore.framework */; };
 		B91CFB8A1AB26ACF00731961 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */; };
 		B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */; };
+		B99457831AD1D57D00CB534E /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99457821AD1D57D00CB534E /* GeneralUtilities.swift */; };
 		B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */; };
 		B9D040C51AB2A82E00BE2B5F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */; };
 		B9D040C91AB2AAB900BE2B5F /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = B9D040C81AB2AAB900BE2B5F /* Assets */; };
@@ -94,6 +95,7 @@
 		B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B91CFB8C1AB26B4F00731961 /* Osprey Drones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Osprey Drones-Bridging-Header.h"; sourceTree = "<group>"; };
 		B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		B99457821AD1D57D00CB534E /* GeneralUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralUtilities.swift; sourceTree = "<group>"; };
 		B9D040C11AB2A7B100BE2B5F /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */,
 				B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */,
 				B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */,
+				B99457821AD1D57D00CB534E /* GeneralUtilities.swift */,
 				B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */,
 				B9D8BF731ACF738A0084BDA8 /* NavigationController.swift */,
 				D1608C191ABFA34A00C172D8 /* SettingsViewController.swift */,
@@ -451,6 +454,7 @@
 				B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */,
 				B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */,
 				D1608C1A1ABFA34A00C172D8 /* SettingsViewController.swift in Sources */,
+				B99457831AD1D57D00CB534E /* GeneralUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,9 +16,22 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var signUpButton: UIButton!
     
     @IBAction func signUpButtonPressed(sender: AnyObject) {
-		var user = PFUser()
         let enteredUsername = usernameTextField.text
         let enteredPassword = passwordTextField.text
+        
+        // Do not let user sign up with an empty username or an empty password field.
+        // Also do not let the user sign up if the username contains whitespace.
+        if (enteredUsername.isEmpty || enteredPassword.isEmpty) {
+            let errorAlert = GeneralUtils.createAlertWithMessage("Username and password must not be empty!", title: "Login Error", buttonTitle: "OK")
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+            return
+        } else if (GeneralUtils.stringContainsWhitespace(enteredUsername)) {
+            let errorAlert = GeneralUtils.createAlertWithMessage("Your proposed username cannot contain whitespace!", title: "Username Error", buttonTitle: "OK")
+            self.presentViewController(errorAlert, animated: true, completion: nil)
+            return
+        }
+        
+        var user = PFUser()
 		user.username = enteredUsername
 		user.password = enteredPassword
 
@@ -26,7 +39,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 			(succeeded, error) in
 			
 			if error == nil {
-				println("Hooray! You've signed up!")
+                // Sign up was successful
                 let defaults = NSUserDefaults.standardUserDefaults()
                 defaults.setObject(enteredUsername, forKey: kLoggedInUsernameKey)
                 
@@ -34,8 +47,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
                 self.navigationController?.pushViewController(mainMenuVC, animated: true)
 			} else {
-				println("Boo! There was an error signing up")
-				println(error)
+                let errorAlert = GeneralUtils.createAlertWithMessage("There was an error signing up.", title: "Sign Up Error", buttonTitle: "OK")
+                self.presentViewController(errorAlert, animated: true, completion: nil)
+                println(error)
 			}
         }
 
