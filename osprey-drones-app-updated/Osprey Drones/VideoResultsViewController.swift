@@ -71,7 +71,6 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
                 let size = thumbnailImage.size
                 let scaledHeight = cellImageHeight
                 let scaledWidth = scaledHeight * Double(size.width) / Double(size.height)
-                println("The scaled width is: \(scaledWidth)")
                 let scaledSize = CGSizeMake(CGFloat(scaledHeight), CGFloat(scaledWidth))
                 
                 cell.thumbnail!.image = imageResize(thumbnailImage, sizeChange: scaledSize)
