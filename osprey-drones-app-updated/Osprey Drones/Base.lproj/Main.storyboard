@@ -438,7 +438,7 @@
                                     <navigationItem title="Flight Path" id="aZA-0i-Hzu">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="x2B-6c-Rbl">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="showHomePageFromGoogleMaps" id="pdq-yt-x5y"/>
+                                                <action selector="cancelButtonPressed:" destination="vj6-kr-2bR" id="RDD-Wb-mG9"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="PeB-05-Vwe">
@@ -474,10 +474,10 @@
             </objects>
             <point key="canvasLocation" x="1554" y="720"/>
         </scene>
-        <!--View Controller-->
+        <!--About View Controller-->
         <scene sceneID="fHh-fI-8Oh">
             <objects>
-                <viewController id="Skc-zK-dTU" sceneMemberID="viewController">
+                <viewController id="Skc-zK-dTU" customClass="AboutViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gc1-t8-A9J"/>
                         <viewControllerLayoutGuide type="bottom" id="4fZ-oc-iAJ"/>
@@ -531,7 +531,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="103.5" y="512" width="193" height="47"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="QnX-wA-SGb"/>
+                                    <action selector="homeButtonPressed:" destination="Skc-zK-dTU" eventType="touchUpInside" id="lmG-Ec-aHd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -613,7 +613,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="104" y="450" width="193" height="47"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="oO4-OG-vDy"/>
+                                    <action selector="homeButtonPressed:" destination="XPf-sE-iqX" eventType="touchUpInside" id="qNl-XY-ywx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -720,9 +720,9 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Recorded Videos" id="XFI-EG-bbx">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Z5W-rE-Ohf">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="Z5W-rE-Ohf">
                                             <connections>
-                                                <segue destination="vj6-kr-2bR" kind="show" id="XH9-0i-ZXD"/>
+                                                <action selector="doneButtonPressed:" destination="BS4-Tc-pTP" id="Qqt-oN-CsZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -813,7 +813,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BS4-Tc-pTP" kind="show" id="AWF-DT-MpL"/>
+                                                    <action selector="doneButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="gSP-3H-iIP"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -903,9 +903,4 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="XH9-0i-ZXD"/>
-        <segue reference="OCl-Ru-beu"/>
-        <segue reference="pdq-yt-x5y"/>
-    </inferredMetricsTieBreakers>
 </document>

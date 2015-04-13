@@ -10,6 +10,10 @@ import Foundation
 
 class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
+    @IBAction func cancelButtonPressed(sender: AnyObject) {
+    	navigationController?.popViewControllerAnimated(true)
+    }
+    
     @IBOutlet weak var mapView: GMSMapView!
     @IBAction func doneButtonPressed(sender: AnyObject) {
         if allMarkers.count == 0 {

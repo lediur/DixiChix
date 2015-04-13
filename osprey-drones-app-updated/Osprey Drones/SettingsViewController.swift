@@ -20,6 +20,10 @@ class SettingsViewController: UIViewController {
         droneSpeedLabel.text = "Drone Speed: \(droneSpeed) m/s"
     }
 
+    @IBAction func homeButtonPressed(sender: AnyObject) {
+    	navigationController?.popViewControllerAnimated(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

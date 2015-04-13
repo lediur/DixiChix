@@ -46,6 +46,7 @@
 		B9D8BF8A1ACF814C0084BDA8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF831ACF814C0084BDA8 /* StoreKit.framework */; };
 		B9D8BF8D1ACF825F0084BDA8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */; };
 		B9D8BF8E1ACF825F0084BDA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9D8BF8C1ACF825F0084BDA8 /* Social.framework */; };
+		B9E76DFE1ADC8D36009FE137 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E76DFD1ADC8D36009FE137 /* AboutViewController.swift */; };
 		B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */; };
 		B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD8BB91AB2632A00BE88DE /* ViewController.swift */; };
 		B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */; };
@@ -122,6 +123,7 @@
 		B9D8BF831ACF814C0084BDA8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B9D8BF8C1ACF825F0084BDA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B9E76DFD1ADC8D36009FE137 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		B9FD8BB21AB2632A00BE88DE /* Osprey Drones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Osprey Drones.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD8BB61AB2632A00BE88DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				B9FD8BB91AB2632A00BE88DE /* ViewController.swift */,
 				B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */,
 				B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */,
+				B9E76DFD1ADC8D36009FE137 /* AboutViewController.swift */,
 				B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */,
 				B99457821AD1D57D00CB534E /* GeneralUtilities.swift */,
 				B9D8BF751ACF75280084BDA8 /* LoginViewController.swift */,
@@ -454,6 +457,7 @@
 				B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */,
 				B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */,
 				D1608C1A1ABFA34A00C172D8 /* SettingsViewController.swift in Sources */,
+				B9E76DFE1ADC8D36009FE137 /* AboutViewController.swift in Sources */,
 				B99457831AD1D57D00CB534E /* GeneralUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

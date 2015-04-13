@@ -10,6 +10,19 @@ import Foundation
 
 class VideoResultsViewController: UIViewController, UITableViewDelegate {
     
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        if let allViewControllers = navigationController?.viewControllers as? [UIViewController] {
+            // Attempt to go back to the main menu, skipping the Google Maps VC
+            for vc in allViewControllers {
+                if vc.isKindOfClass(ViewController) {
+                    navigationController?.popToViewController(vc, animated: true)
+                }
+            }
+        } else {
+            navigationController?.popToRootViewControllerAnimated(true)
+        }
+    }
+    
     let cellReuseIdentifier = "VideoResultCell"
     
     // TODO: Remove these hardcoded cell images. Thumbnails for actual videos, maybe?

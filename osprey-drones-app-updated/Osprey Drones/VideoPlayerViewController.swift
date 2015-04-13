@@ -14,6 +14,10 @@ class VideoPlayerViewController: UIViewController {
     @IBOutlet weak var videoPlayerView: YTPlayerView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+    	navigationController?.popViewControllerAnimated(true)
+    }
 
     @IBAction func shareOnFacebookButtonPressed(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
