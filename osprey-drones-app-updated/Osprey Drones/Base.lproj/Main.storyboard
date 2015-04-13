@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -93,7 +93,7 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itk-SP-H34">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itk-SP-H34">
                                 <rect key="frame" x="200" y="400" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="3Oo-bb-ODu"/>
@@ -108,7 +108,7 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH0-Xh-zKc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH0-Xh-zKc">
                                 <rect key="frame" x="230" y="460" width="140" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -123,7 +123,7 @@
                                     <action selector="signUpButtonPressed:" destination="Hiw-Qh-Ikw" eventType="touchUpInside" id="5pO-nG-u8a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-yI-zIA">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-yI-zIA">
                                 <rect key="frame" x="168" y="528" width="265" height="34"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -208,7 +208,7 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-JT-vf9">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-JT-vf9">
                                 <rect key="frame" x="200" y="400" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Aad-qr-KNg"/>
@@ -223,7 +223,7 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaf-fd-3Vf">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaf-fd-3Vf">
                                 <rect key="frame" x="240" y="460" width="120" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -238,7 +238,7 @@
                                     <action selector="loginButtonPressed:" destination="TKD-jx-2To" eventType="touchUpInside" id="bkc-LO-41x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hr-i6S">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hr-i6S">
                                 <rect key="frame" x="170" y="528" width="260" height="34"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -602,7 +602,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="speedSliderChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="eF5-vw-mb5"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
                                 <rect key="frame" x="202" y="381" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="Back to Home">
@@ -682,22 +682,22 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="02C-Pc-WK4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="133"/>
+                                                    <rect key="frame" x="-8" y="0.0" width="616" height="132"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-vP-vpv">
-                                                    <rect key="frame" x="15" y="97" width="42" height="21"/>
+                                                    <rect key="frame" x="15" y="96" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="02C-Pc-WK4" firstAttribute="leading" secondItem="9q6-7J-6fZ" secondAttribute="leadingMargin" constant="-8" id="LGY-9e-E65"/>
+                                                <constraint firstItem="02C-Pc-WK4" firstAttribute="leading" secondItem="9q6-7J-6fZ" secondAttribute="leadingMargin" constant="-16" id="LGY-9e-E65"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="E4J-vP-vpv" secondAttribute="bottom" constant="7" id="MB2-tc-ppp"/>
                                                 <constraint firstItem="02C-Pc-WK4" firstAttribute="top" secondItem="9q6-7J-6fZ" secondAttribute="topMargin" constant="-8" id="ade-5G-JCq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="02C-Pc-WK4" secondAttribute="bottom" constant="-8" id="opR-gu-XS4"/>
                                                 <constraint firstItem="E4J-vP-vpv" firstAttribute="leading" secondItem="9q6-7J-6fZ" secondAttribute="leadingMargin" constant="7" id="pb9-H2-cb1"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="02C-Pc-WK4" secondAttribute="trailing" constant="-8" id="r4M-kN-hPM"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="02C-Pc-WK4" secondAttribute="trailing" constant="-16" id="r4M-kN-hPM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -904,8 +904,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pdq-yt-x5y"/>
-        <segue reference="sZg-zs-zSq"/>
+        <segue reference="XH9-0i-ZXD"/>
         <segue reference="OCl-Ru-beu"/>
+        <segue reference="pdq-yt-x5y"/>
     </inferredMetricsTieBreakers>
 </document>

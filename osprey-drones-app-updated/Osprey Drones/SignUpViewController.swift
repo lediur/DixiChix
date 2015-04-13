@@ -44,16 +44,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 defaults.setObject(enteredUsername, forKey: kLoggedInUsernameKey)
                 
                 // Bring user to the main menu now that they are logged in.
-                let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
-                self.navigationController?.pushViewController(mainMenuVC, animated: true)
+                if let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as? UIViewController {
+                    self.navigationController?.pushViewController(mainMenuVC, animated: true)
+                }
 			} else {
                 var errorMessage = "There was an error signing up."
                 
                 // If we can get something more specific from the NSError, set the error message to that message instead.
-                if let errorUserInfo = error.userInfo {
-                    if let errorUserInfoString = errorUserInfo["error"] as? String {
-                        errorMessage = errorUserInfoString.properlyCapitalizedSentence
-                    }
+                if let errorUserInfo = error?.userInfo, let errorUserInfoString = errorUserInfo["error"] as? String {
+                    errorMessage = errorUserInfoString.properlyCapitalizedSentence
                 }
                 
                 let errorAlert = GeneralUtils.createAlertWithMessage(errorMessage, title: "Sign Up Error", buttonTitle: "OK")

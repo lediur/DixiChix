@@ -22,7 +22,8 @@ class ViewController: UIViewController {
     @IBAction func logoutButtonPressed(sender: AnyObject) {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.removeObjectForKey(kLoggedInUsernameKey)
-		navigationController?.popViewControllerAnimated(true)
+        
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     override func viewDidLoad() {

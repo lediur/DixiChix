@@ -49,24 +49,30 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier, forIndexPath: indexPath) as VideoResultCell
-        
-		cell.title!.text = todoRemoveThisLabels[indexPath.row]
-	
-        if let thumbnailImage = UIImage(named: todoRemoveThisImages[indexPath.row]) {
-			// Preserve the width/height ratio when scaling, so calculate the appropriate scaled CGSize
-            let size = thumbnailImage.size
-            let scaledHeight = cellImageHeight
-            let scaledWidth = scaledHeight * Double(size.height) / Double(size.width)
-            let scaledSize = CGSizeMake(CGFloat(scaledHeight), CGFloat(scaledWidth))
+        if let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseIdentifier, forIndexPath: indexPath) as? VideoResultCell {
             
-            cell.thumbnail!.image = imageResize(thumbnailImage, sizeChange: scaledSize)
+            cell.title!.text = todoRemoveThisLabels[indexPath.row]
+        
+            if let thumbnailImage = UIImage(named: todoRemoveThisImages[indexPath.row]) {
+                // Preserve the width/height ratio when scaling, so calculate the appropriate scaled CGSize
+                let size = thumbnailImage.size
+                let scaledHeight = cellImageHeight
+                let scaledWidth = scaledHeight * Double(size.width) / Double(size.height)
+                println("The scaled width is: \(scaledWidth)")
+                let scaledSize = CGSizeMake(CGFloat(scaledHeight), CGFloat(scaledWidth))
+                
+                cell.thumbnail!.image = imageResize(thumbnailImage, sizeChange: scaledSize)
+            }
+            
+            // Add a disclosure indicator to the table view cells to show that they can be selected!
+    //        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+            
+            return cell
         }
         
-        // Add a disclosure indicator to the table view cells to show that they can be selected!
-//        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
-        return cell
+        // Shouldn't get here
+        println("Error, we shouldn't be unable to create a VideoResultCell")
+        return UITableViewCell()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -80,8 +86,7 @@ class VideoResultsViewController: UIViewController, UITableViewDelegate {
 
         // This segue is called when the user clicks on a table row. The sender is the index path of the selected row.
         if segue.identifier == "toVideoPlayerViewController" {
-            if let indexPathOfSender = sender as? NSIndexPath {
-                var destinationVC = segue.destinationViewController as VideoPlayerViewController
+            if let indexPathOfSender = sender as? NSIndexPath, var destinationVC = segue.destinationViewController as? VideoPlayerViewController {
                 destinationVC.titleToDisplay = todoRemoveThisLabels[indexPathOfSender.row]
                 destinationVC.videoIDToDisplay = todoRemoveThisVideoIDsToDisplay[indexPathOfSender.row]
             }

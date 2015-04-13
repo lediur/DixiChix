@@ -15,11 +15,13 @@ class NavigationController: UINavigationController {
         
         
         if (userIsLoggedIn()) {
-            let mainMenuVC = storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as UIViewController
-            pushViewController(mainMenuVC, animated: true)
+            if let mainMenuVC = storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as? UIViewController {
+                pushViewController(mainMenuVC, animated: true)
+            }
         } else {
-            let loginVC = storyboard?.instantiateViewControllerWithIdentifier("loginViewController") as UIViewController
-            pushViewController(loginVC, animated: true)
+            if let loginVC = storyboard?.instantiateViewControllerWithIdentifier("loginViewController") as? UIViewController {
+                pushViewController(loginVC, animated: true)
+            }
         }
         
     }
