@@ -15,7 +15,8 @@ class NavigationController: UINavigationController {
         
         
         if (userIsLoggedIn()) {
-            if let mainMenuVC = storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as? UIViewController {
+            if let mainMenuVC = storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as? UIViewController, let loginVC = storyboard?.instantiateViewControllerWithIdentifier("loginViewController") as? UIViewController {
+                pushViewController(loginVC, animated: true)
                 pushViewController(mainMenuVC, animated: true)
             }
         } else {
