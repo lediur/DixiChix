@@ -29,6 +29,9 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
+    var orderedPath: [GMSMarker] = []
+    var distances = [[Double]]()
+    var currentLocation = CLLocation(latitude: 37.427644499009219, longitude:-122.16890349984169)
     let markerInnerCircleRadius = 12.0
     let markerInnerCircleColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
     let markerOuterCircleRadius = 14.0
@@ -150,6 +153,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             // This updates the map's camera to center around the user's current location. The GMSCameraPosition class
             // aggregates all camera position parameters and passes them to the map for display.
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            currentLocation = location
             
             // Tell locationManager we are no longer interested in updates. Initial location is enough to work with for now.
             locationManager.stopUpdatingLocation()
@@ -163,6 +167,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
      * the info window that clearly states "Tap to Delete!" */
     func mapView(mapView: GMSMapView!, didLongPressAtCoordinate coordinate: CLLocationCoordinate2D) {
 
+        calculateDistances(coordinate)
+        
         // Draw the marker at the position
         var marker = GMSMarker(position: coordinate)
         marker.title = markerTitleText
@@ -178,6 +184,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         marker.map = mapView
         
         allMarkers.append(marker)
+        
+        findBestPath()
         
         drawPathBetweenMarkers()
     }
@@ -280,6 +288,37 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         
         // Return the outer circle that now contains all the necessary child views.
         return outer
+    }
+    
+    // MARK: Best Path functions
+    
+    func getDistance (loc1: CLLocation, loc2: CLLocation) -> Double {
+        return loc1.distanceFromLocation(loc2)
+    }
+    
+    func calculateDistances(coordinate: CLLocationCoordinate2D) {
+        var newPos = allMarkers.count
+        var distance = 0.0
+        distances.append([])
+        
+        var location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        distance = getDistance(currentLocation, loc2: location)
+        distances[0].append(distance)
+        distances[newPos].append(distance)
+        
+        
+        var i = 1
+        for marker in allMarkers {
+            var coord = marker.position
+            distance = getDistance(CLLocation(latitude: coord.latitude, longitude: coord.longitude), loc2: location)
+            distances[i].append(distance)
+            distances[newPos].append(distance)
+            i++
+        }
+    }
+    
+    func findBestPath() {
+        
     }
     
     // MARK: Generic Helpers
