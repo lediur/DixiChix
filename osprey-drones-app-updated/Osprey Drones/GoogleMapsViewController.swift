@@ -30,7 +30,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
     var orderedPath: [GMSMarker] = []
-    var distances = [[Double]]()
+    var distances = [CoordPair : Double]()
     var currentLocation = CLLocation(latitude: 37.427644499009219, longitude:-122.16890349984169)
     let markerInnerCircleRadius = 12.0
     let markerInnerCircleColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -299,21 +299,15 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     func calculateDistances(coordinate: CLLocationCoordinate2D) {
         var newPos = allMarkers.count
         var distance = 0.0
-        distances.append([])
         
         var location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         distance = getDistance(currentLocation, loc2: location)
-        distances[0].append(distance)
-        distances[newPos].append(distance)
+        distances[CoordPair(coord1: currentLocation.coordinate, coord2: coordinate)] = distance
         
-        
-        var i = 1
         for marker in allMarkers {
             var coord = marker.position
             distance = getDistance(CLLocation(latitude: coord.latitude, longitude: coord.longitude), loc2: location)
-            distances[i].append(distance)
-            distances[newPos].append(distance)
-            i++
+            distances[CoordPair(coord1: coord, coord2: coordinate)] = distance
         }
     }
     
