@@ -29,7 +29,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
-    var orderedPath: [GMSMarker] = []
+    var orderedPath = Array<CLLocation>()
     var distances = [CoordPair : Double]()
     var currentLocation = CLLocation(latitude: 37.427644499009219, longitude:-122.16890349984169)
     let markerInnerCircleRadius = 12.0
@@ -327,31 +327,44 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             markers.append(CLLocation(latitude:marker.position.latitude, longitude:marker.position.longitude))
         }
         
-        var minDistance = findTSP(markers, root : currentLocation)
+        var tsp = findTSP(markers, root : currentLocation)
         
-        println(minDistance)
+        println(tsp.minDistance)
+        orderedPath = tsp.minPath
+//        for point in tsp.minPath {
+//            for (index, marker) in enumerate(allMarkers) {
+//                if (getDistance(CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude), loc2: point) < 1) {
+//                    print("\(index + 1) ->")
+//                }
+//            }
+//        }
     }
     
-    func findTSP(markers : Array<CLLocation>, root : CLLocation) -> Double {
+    func findTSP(markers : Array<CLLocation>, root : CLLocation) -> (minDistance: Double, minPath : Array<CLLocation>) {
         if (markers.count == 1) {
             var coordP = CoordPair(coord1: root.coordinate, coord2: markers[0].coordinate)
-            return distances[coordP]!
+            return (distances[coordP]!, [root, markers[0]])
         }
         
         var minDistance = DBL_MAX
+        var minPath = Array<CLLocation>()
         
         for marker in markers {
             var markersSubset = Array<CLLocation>(markers)
             markersSubset.removeAtIndex(find(markersSubset, marker)!)
             
-            var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + findTSP(markersSubset, root : marker)
+            var tsp = findTSP(markersSubset, root : marker)
+            
+            var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + tsp.minDistance
             
             if (distance < minDistance) {
                 minDistance = distance
+                minPath = tsp.minPath
             }
         }
         
-        return minDistance
+        minPath.insert(root, atIndex: 0)
+        return (minDistance, minPath)
     }
     
     // MARK: Generic Helpers
