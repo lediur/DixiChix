@@ -29,8 +29,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
-    var orderedPath: [GMSMarker] = []
-    var distances = [[Double]]()
+    var orderedPath = Array<CLLocation>()
+    var distances = [CoordPair : Double]()
     var currentLocation = CLLocation(latitude: 37.427644499009219, longitude:-122.16890349984169)
     let markerInnerCircleRadius = 12.0
     let markerInnerCircleColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -166,8 +166,14 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
      * This numbered marker can be deleted by tapping the marker and then tapping
      * the info window that clearly states "Tap to Delete!" */
     func mapView(mapView: GMSMapView!, didLongPressAtCoordinate coordinate: CLLocationCoordinate2D) {
-
+        
+        //Calculate distances
         calculateDistances(coordinate)
+        
+        if (allMarkers.count == 0) {
+            var currMarker = GMSMarker(position: currentLocation.coordinate)
+            currMarker.map = mapView
+        }
         
         // Draw the marker at the position
         var marker = GMSMarker(position: coordinate)
@@ -185,6 +191,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         
         allMarkers.append(marker)
         
+        //Calculate best path
         findBestPath()
         
         drawPathBetweenMarkers()
@@ -299,26 +306,65 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     func calculateDistances(coordinate: CLLocationCoordinate2D) {
         var newPos = allMarkers.count
         var distance = 0.0
-        distances.append([])
         
         var location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         distance = getDistance(currentLocation, loc2: location)
-        distances[0].append(distance)
-        distances[newPos].append(distance)
+        distances[CoordPair(coord1: currentLocation.coordinate, coord2: coordinate)] = distance
         
-        
-        var i = 1
         for marker in allMarkers {
             var coord = marker.position
             distance = getDistance(CLLocation(latitude: coord.latitude, longitude: coord.longitude), loc2: location)
-            distances[i].append(distance)
-            distances[newPos].append(distance)
-            i++
+            distances[CoordPair(coord1: coord, coord2: coordinate)] = distance
         }
     }
     
+    //wrapper for TSP variant
     func findBestPath() {
         
+        var markers = Array<CLLocation>()
+        
+        for marker in allMarkers {
+            markers.append(CLLocation(latitude:marker.position.latitude, longitude:marker.position.longitude))
+        }
+        
+        var tsp = findTSP(markers, root : currentLocation)
+        
+        println(tsp.minDistance)
+        orderedPath = tsp.minPath
+//        for point in tsp.minPath {
+//            for (index, marker) in enumerate(allMarkers) {
+//                if (getDistance(CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude), loc2: point) < 1) {
+//                    print("\(index + 1) ->")
+//                }
+//            }
+//        }
+    }
+    
+    func findTSP(markers : Array<CLLocation>, root : CLLocation) -> (minDistance: Double, minPath : Array<CLLocation>) {
+        if (markers.count == 1) {
+            var coordP = CoordPair(coord1: root.coordinate, coord2: markers[0].coordinate)
+            return (distances[coordP]!, [root, markers[0]])
+        }
+        
+        var minDistance = DBL_MAX
+        var minPath = Array<CLLocation>()
+        
+        for marker in markers {
+            var markersSubset = Array<CLLocation>(markers)
+            markersSubset.removeAtIndex(find(markersSubset, marker)!)
+            
+            var tsp = findTSP(markersSubset, root : marker)
+            
+            var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + tsp.minDistance
+            
+            if (distance < minDistance) {
+                minDistance = distance
+                minPath = tsp.minPath
+            }
+        }
+        
+        minPath.insert(root, atIndex: 0)
+        return (minDistance, minPath)
     }
     
     // MARK: Generic Helpers
