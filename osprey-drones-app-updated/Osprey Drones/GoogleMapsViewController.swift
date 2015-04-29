@@ -166,8 +166,14 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
      * This numbered marker can be deleted by tapping the marker and then tapping
      * the info window that clearly states "Tap to Delete!" */
     func mapView(mapView: GMSMapView!, didLongPressAtCoordinate coordinate: CLLocationCoordinate2D) {
-
+        
+        //Calculate distances
         calculateDistances(coordinate)
+        
+        if (allMarkers.count == 0) {
+            var currMarker = GMSMarker(position: currentLocation.coordinate)
+            currMarker.map = mapView
+        }
         
         // Draw the marker at the position
         var marker = GMSMarker(position: coordinate)
@@ -185,6 +191,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         
         allMarkers.append(marker)
         
+        //Calculate best path
         findBestPath()
         
         drawPathBetweenMarkers()
@@ -311,8 +318,40 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         }
     }
     
+    //wrapper for TSP variant
     func findBestPath() {
         
+        var markers = Array<CLLocation>()
+        
+        for marker in allMarkers {
+            markers.append(CLLocation(latitude:marker.position.latitude, longitude:marker.position.longitude))
+        }
+        
+        var minDistance = findTSP(markers, root : currentLocation)
+        
+        println(minDistance)
+    }
+    
+    func findTSP(markers : Array<CLLocation>, root : CLLocation) -> Double {
+        if (markers.count == 1) {
+            var coordP = CoordPair(coord1: root.coordinate, coord2: markers[0].coordinate)
+            return distances[coordP]!
+        }
+        
+        var minDistance = DBL_MAX
+        
+        for marker in markers {
+            var markersSubset = Array<CLLocation>(markers)
+            markersSubset.removeAtIndex(find(markersSubset, marker)!)
+            
+            var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + findTSP(markersSubset, root : marker)
+            
+            if (distance < minDistance) {
+                minDistance = distance
+            }
+        }
+        
+        return minDistance
     }
     
     // MARK: Generic Helpers

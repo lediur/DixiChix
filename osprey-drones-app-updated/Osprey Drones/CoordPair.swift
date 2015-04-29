@@ -8,7 +8,7 @@
 
 import Foundation
 
-let comp = 1e-2
+let comp = 1e-5
 
 class CoordPair : Hashable {
     var coord1 : CLLocationCoordinate2D
@@ -36,8 +36,8 @@ func ==(lhs: CoordPair, rhs: CoordPair) -> Bool {
             helperCompare(lhs.coord1.longitude, rhs.coord1.longitude) &&
             helperCompare(lhs.coord2.latitude, rhs.coord2.latitude) &&
             helperCompare(lhs.coord2.longitude, rhs.coord2.longitude)) ||
-            (helperCompare(lhs.coord1.latitude, rhs.coord1.latitude) &&
-            helperCompare(lhs.coord1.longitude, rhs.coord1.longitude) &&
-            helperCompare(lhs.coord2.latitude, rhs.coord2.latitude) &&
-            helperCompare(lhs.coord2.longitude, rhs.coord2.longitude)))
+            (helperCompare(lhs.coord1.latitude, rhs.coord2.latitude) &&
+            helperCompare(lhs.coord1.longitude, rhs.coord2.longitude) &&
+            helperCompare(lhs.coord2.latitude, rhs.coord1.latitude) &&
+            helperCompare(lhs.coord2.longitude, rhs.coord1.longitude)))
 }
