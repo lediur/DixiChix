@@ -42,7 +42,7 @@ vehicle.flush()
 # sleep so we can see the change in map
 time.sleep(20)
 
-#print "Going to second point..."
-#destination     = Location(-35.3652610, 149.1652300, 20, is_relative=True)
-#vehicle.commands.goto(destination)
-#vehicle.flush()
+print "Going to second point..."
+destination     = Location(-35.3652610, 149.1652300, 20, is_relative=True)
+vehicle.commands.goto(destination)
+vehicle.flush()
