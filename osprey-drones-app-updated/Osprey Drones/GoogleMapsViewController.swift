@@ -27,6 +27,14 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "showCoordinatesFromGoogleMaps") {
+            if var coordinatesVC = segue.destinationViewController as? CoordinatesViewController {
+                coordinatesVC.allMarkers = self.allMarkers
+            }
+        }
+    }
+    
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
     var orderedPath = Array<CLLocation>()
@@ -63,9 +71,14 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             var alert = UIAlertController(title: "Drone Finished Recording", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
 
             // Functionality to go to the page with recorded videos displayed in a table view.
-            alert.addAction(UIAlertAction(title: "See Recorded Video", style: UIAlertActionStyle.Default) {
+            //TODO: Uncomment once we no longer need the Coordinates View Controller
+//            alert.addAction(UIAlertAction(title: "See Recorded Video", style: UIAlertActionStyle.Default) {
+//                action in
+//                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+//            })
+            alert.addAction(UIAlertAction(title: "See Coordinates", style: UIAlertActionStyle.Default) {
                 action in
-                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+                self.performSegueWithIdentifier("showCoordinatesFromGoogleMaps", sender: self)
             })
             
             // Functionality to go back to the home page if the user chooses to not view the recorded videos.

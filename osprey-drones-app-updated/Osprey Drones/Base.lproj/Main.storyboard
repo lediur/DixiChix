@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,6 +13,9 @@
             <string>BOLDfinger</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -468,6 +471,7 @@
                     <connections>
                         <outlet property="mapView" destination="GLE-VU-QAw" id="6rk-rP-cGc"/>
                         <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResultsFromGoogleMaps" id="OCl-Ru-beu"/>
+                        <segue destination="ArB-sG-T6X" kind="show" identifier="showCoordinatesFromGoogleMaps" id="Ah8-gu-fNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -898,9 +902,100 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
             </objects>
             <point key="canvasLocation" x="3106.5" y="717"/>
         </scene>
+        <!--Coordinates View Controller-->
+        <scene sceneID="4g6-oN-c8V">
+            <objects>
+                <viewController id="ArB-sG-T6X" customClass="CoordinatesViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="44U-TF-HJx"/>
+                        <viewControllerLayoutGuide type="bottom" id="DDr-rx-MbP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h6B-Ru-16E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Js9-Vi-RU3">
+                                <rect key="frame" x="200" y="465" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tMU-Y3-shN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="161" y="404" width="78" height="47"/>
+                                </variation>
+                                <connections>
+                                    <action selector="continueButtonPressed:" destination="ArB-sG-T6X" eventType="touchUpInside" id="5it-BR-9eX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW0-dr-GcS">
+                                <rect key="frame" x="200" y="538" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="nt2-9t-PBw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="161" y="404" width="78" height="47"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="ArB-sG-T6X" eventType="touchUpInside" id="4Nl-uT-xDf"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Derp" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vHn-Dl-prZ">
+                                <rect key="frame" x="140" y="50" width="320" height="375"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="9yq-MJ-Cf6"/>
+                                    <constraint firstAttribute="height" constant="375" id="j1T-f2-Nyh"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="40" y="237" width="320" height="255"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eW0-dr-GcS" secondAttribute="centerX" id="30O-Cu-GyI"/>
+                            <constraint firstItem="eW0-dr-GcS" firstAttribute="top" secondItem="Js9-Vi-RU3" secondAttribute="bottom" constant="20" id="SE3-5V-zx3"/>
+                            <constraint firstAttribute="centerX" secondItem="vHn-Dl-prZ" secondAttribute="centerX" id="bhi-nd-jjT"/>
+                            <constraint firstItem="eW0-dr-GcS" firstAttribute="top" secondItem="Js9-Vi-RU3" secondAttribute="bottom" constant="20" id="fkG-xW-F93"/>
+                            <constraint firstItem="Js9-Vi-RU3" firstAttribute="top" secondItem="vHn-Dl-prZ" secondAttribute="bottom" constant="40" id="ixD-AG-2tW"/>
+                            <constraint firstItem="vHn-Dl-prZ" firstAttribute="top" secondItem="h6B-Ru-16E" secondAttribute="topMargin" constant="50" id="uc8-O0-EOg"/>
+                            <constraint firstAttribute="centerX" secondItem="Js9-Vi-RU3" secondAttribute="centerX" id="vLl-fu-Ovh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SE3-5V-zx3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="vHn-Dl-prZ" id="WgN-aY-7yk"/>
+                        <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResultsFromCoordinates" id="LMM-8y-1fn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oka-B5-IA2" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="-124"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="LMM-8y-1fn"/>
+    </inferredMetricsTieBreakers>
 </document>
