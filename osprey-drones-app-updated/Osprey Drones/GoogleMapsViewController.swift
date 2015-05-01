@@ -183,11 +183,6 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         //Calculate distances
         calculateDistances(coordinate)
         
-        if (allMarkers.count == 0) {
-            var currMarker = GMSMarker(position: currentLocation.coordinate)
-            currMarker.map = mapView
-        }
-        
         // Draw the marker at the position
         var marker = GMSMarker(position: coordinate)
         marker.title = markerTitleText
