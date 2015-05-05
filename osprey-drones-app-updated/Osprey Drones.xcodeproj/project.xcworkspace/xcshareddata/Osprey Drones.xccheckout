@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AFCBAC3F-185F-468F-8B69-4D4A470F1A9E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Osprey Drones</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</key>
 		<string>github.com:cs210/DixiChix.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>osprey-drones-app-updated/Osprey Drones.xcodeproj/project.xcworkspace</string>
+	<string>osprey-drones-app-updated/Osprey Drones.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CE061C3C5B0BB292CA140E9435E0F7598E72FD2B</key>

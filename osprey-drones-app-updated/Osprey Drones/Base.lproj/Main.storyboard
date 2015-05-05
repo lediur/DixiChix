@@ -41,7 +41,6 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
-            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -792,8 +791,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-ll-7Nd">
-                                <rect key="frame" x="217" y="531" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-ll-7Nd">
+                                <rect key="frame" x="217" y="523" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BvB-M7-7eZ"/>
                                     <constraint firstAttribute="width" constant="50" id="F69-aG-zrz"/>
@@ -805,8 +804,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="shareOnFacebookButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="wrz-lG-zCD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-ya-Cnx">
-                                <rect key="frame" x="275" y="531" width="50" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-ya-Cnx">
+                                <rect key="frame" x="275" y="523" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1rc-oz-ava"/>
                                     <constraint firstAttribute="height" constant="50" id="rJy-o0-osT"/>
@@ -818,8 +817,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="shareOnTwitterButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="TAq-5x-qCW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-DY-Qa9">
-                                <rect key="frame" x="259" y="341" width="83" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Pn-DY-Qa9">
+                                <rect key="frame" x="259" y="309" width="83" height="24"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -852,24 +851,15 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Share!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAP-O2-WC8">
-                                <rect key="frame" x="275" y="506" width="50" height="24"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="17"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="176" y="660" width="48.5" height="20"/>
-                                </variation>
-                            </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-UB-wky" customClass="YTPlayerView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="270"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-UB-wky" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="225"/>
                                 <color key="backgroundColor" red="0.2901960784" green="0.6705882353" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="225" id="IXh-O9-A0z"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
-                                <rect key="frame" x="190" y="428" width="220" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
+                                <rect key="frame" x="190" y="433" width="220" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="rCa-xG-hjX"/>
                                 </constraints>
@@ -880,14 +870,21 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="90" y="540.5" width="220" height="59.5"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-HX-hSZ">
-                                <rect key="frame" x="333" y="531" width="50" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-HX-hSZ">
+                                <rect key="frame" x="334" y="523" width="48" height="48"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Vaw-ax-Ig7"/>
                                     <constraint firstAttribute="width" constant="50" id="bxF-88-8pk"/>
+                                    <constraint firstAttribute="width" constant="48" id="f4c-EI-fBh"/>
                                 </constraints>
                                 <state key="normal" image="link.png">
                                     <color key="titleShadowColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bxF-88-8pk"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="shareOnLinkButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="p8T-2E-5L3"/>
                                 </connections>
@@ -896,27 +893,33 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Ri3-ll-7Nd" secondAttribute="centerX" constant="31" id="0Mq-KH-srU"/>
-                            <constraint firstItem="fAP-O2-WC8" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="60" id="1Gj-on-5Yk"/>
                             <constraint firstAttribute="centerX" secondItem="2Pn-DY-Qa9" secondAttribute="centerX" id="2g4-8e-AXh"/>
                             <constraint firstItem="i2x-Db-uYX" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="7y1-yH-1E0"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="XrE-ya-Cnx" secondAttribute="top" id="APb-7a-ayc"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="29" id="Abn-CO-99P"/>
                             <constraint firstItem="2Pn-DY-Qa9" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" constant="30" id="Bpl-dT-PWF"/>
+                            <constraint firstItem="Ri3-ll-7Nd" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="20" id="ByU-zw-Jz2"/>
+                            <constraint firstItem="2Pn-DY-Qa9" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" constant="20" id="Ddf-gz-gri"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="Ri3-ll-7Nd" secondAttribute="bottom" constant="50" id="Edr-8P-4EW"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" constant="44" id="Ehj-qG-guE"/>
+                            <constraint firstItem="2Pn-DY-Qa9" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" constant="20" id="HSY-qD-3sg"/>
                             <constraint firstAttribute="centerX" secondItem="Ri3-ll-7Nd" secondAttribute="centerX" constant="31" id="Hkr-63-wpb"/>
                             <constraint firstAttribute="bottom" secondItem="lfa-HX-hSZ" secondAttribute="bottom" constant="20" symbolic="YES" id="I2u-fh-tlY"/>
                             <constraint firstAttribute="centerX" secondItem="WmM-58-0yI" secondAttribute="centerX" id="J0c-cF-SdM"/>
+                            <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="20" id="LMk-0M-QMG"/>
+                            <constraint firstItem="XrE-ya-Cnx" firstAttribute="leading" secondItem="Ri3-ll-7Nd" secondAttribute="trailing" constant="8" id="O26-Us-Eip"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i2x-Db-uYX" secondAttribute="trailing" constant="-16" id="Tvc-Y1-x2N"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="leading" secondItem="XrE-ya-Cnx" secondAttribute="trailing" constant="8" symbolic="YES" id="V7r-CK-D2O"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="bottom" secondItem="XrE-ya-Cnx" secondAttribute="bottom" id="c2o-EZ-7ie"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="i2x-Db-uYX" secondAttribute="bottom" id="cac-lJ-JUz"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="Ri3-ll-7Nd" secondAttribute="top" id="hm0-8e-r8K"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="leading" secondItem="XrE-ya-Cnx" secondAttribute="trailing" constant="9" id="iLe-0g-uZh"/>
                             <constraint firstItem="i2x-Db-uYX" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" id="lJV-P5-jUm"/>
-                            <constraint firstAttribute="centerX" secondItem="fAP-O2-WC8" secondAttribute="centerX" id="lNc-mf-1B5"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="20" id="mTa-dC-MIT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e5y-UB-wky" secondAttribute="trailing" constant="-16" id="pTs-Fo-ZJd"/>
                             <constraint firstAttribute="centerX" secondItem="XrE-ya-Cnx" secondAttribute="centerX" constant="-32" id="pdt-wq-uFP"/>
-                            <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="fAP-O2-WC8" secondAttribute="bottom" constant="20" id="wJq-ZF-a3D"/>
+                            <constraint firstAttribute="centerX" secondItem="XrE-ya-Cnx" secondAttribute="centerX" id="rAP-7H-CSj"/>
+                            <constraint firstItem="WmM-58-0yI" firstAttribute="top" secondItem="2Pn-DY-Qa9" secondAttribute="bottom" constant="100" id="suP-Ui-Gcq"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="XrE-ya-Cnx" secondAttribute="bottom" constant="50" id="wrD-gT-gD8"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="yFB-hR-qZv"/>
                             <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="i2x-Db-uYX" secondAttribute="bottom" constant="467" id="zia-oJ-nRB"/>
@@ -924,17 +927,24 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Bpl-dT-PWF"/>
-                                <exclude reference="1Gj-on-5Yk"/>
-                                <exclude reference="wJq-ZF-a3D"/>
+                                <exclude reference="Ddf-gz-gri"/>
+                                <exclude reference="0Mq-KH-srU"/>
+                                <exclude reference="Hkr-63-wpb"/>
+                                <exclude reference="pdt-wq-uFP"/>
                                 <exclude reference="Edr-8P-4EW"/>
                                 <exclude reference="wrD-gT-gD8"/>
+                                <exclude reference="APb-7a-ayc"/>
+                                <exclude reference="Abn-CO-99P"/>
+                                <exclude reference="I2u-fh-tlY"/>
+                                <exclude reference="V7r-CK-D2O"/>
+                                <exclude reference="c2o-EZ-7ie"/>
+                                <exclude reference="hm0-8e-r8K"/>
+                                <exclude reference="zia-oJ-nRB"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Bpl-dT-PWF"/>
-                                <include reference="1Gj-on-5Yk"/>
-                                <include reference="wJq-ZF-a3D"/>
                                 <include reference="Edr-8P-4EW"/>
                                 <include reference="wrD-gT-gD8"/>
                             </mask>
@@ -1040,11 +1050,11 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
     </scenes>
     <resources>
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
-        <image name="link.png" width="164" height="161"/>
+        <image name="link.png" width="1024" height="1024"/>
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3l8-Kb-yfV"/>
+        <segue reference="OCl-Ru-beu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
