@@ -17,6 +17,8 @@ def arm_and_disarm():
 
     while not vehicle.armed and not api.exit:
         print "Waiting for arming..."
+        vehicle.armed = True
+        vehicle.flush()
         time.sleep(1)
     
     print "Armed"
