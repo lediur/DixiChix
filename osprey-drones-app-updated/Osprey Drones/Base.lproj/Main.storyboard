@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -97,8 +97,8 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itk-SP-H34">
-                                <rect key="frame" x="200" y="400" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itk-SP-H34">
+                                <rect key="frame" x="200" y="401" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="3Oo-bb-ODu"/>
                                     <constraint firstAttribute="height" constant="30" id="TNP-bY-Exi"/>
@@ -112,8 +112,8 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH0-Xh-zKc">
-                                <rect key="frame" x="230" y="460" width="140" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SH0-Xh-zKc">
+                                <rect key="frame" x="230" y="461" width="140" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="Xys-QJ-K0C"/>
@@ -127,8 +127,8 @@
                                     <action selector="signUpButtonPressed:" destination="Hiw-Qh-Ikw" eventType="touchUpInside" id="5pO-nG-u8a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-yI-zIA">
-                                <rect key="frame" x="168" y="528" width="265" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhx-yI-zIA">
+                                <rect key="frame" x="168" y="529" width="265" height="34"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="ryO-fs-FsG"/>
@@ -212,8 +212,8 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-JT-vf9">
-                                <rect key="frame" x="200" y="400" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWN-JT-vf9">
+                                <rect key="frame" x="200" y="401" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Aad-qr-KNg"/>
                                     <constraint firstAttribute="width" constant="200" id="H8h-ZN-RiH"/>
@@ -227,8 +227,8 @@
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaf-fd-3Vf">
-                                <rect key="frame" x="240" y="460" width="120" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaf-fd-3Vf">
+                                <rect key="frame" x="240" y="461" width="120" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="RvR-BC-s8O"/>
@@ -242,8 +242,8 @@
                                     <action selector="loginButtonPressed:" destination="TKD-jx-2To" eventType="touchUpInside" id="bkc-LO-41x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hr-i6S">
-                                <rect key="frame" x="170" y="528" width="260" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgL-hr-i6S">
+                                <rect key="frame" x="170" y="529" width="260" height="34"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="E2l-7E-444"/>
@@ -300,8 +300,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
-                                <rect key="frame" x="200" y="250" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
+                                <rect key="frame" x="200" y="260" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="zBB-74-5vr"/>
@@ -318,8 +318,8 @@
                                     <segue destination="vj6-kr-2bR" kind="show" id="sZg-zs-zSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
-                                <rect key="frame" x="200" y="372" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
+                                <rect key="frame" x="200" y="406" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="81v-Hq-TdF"/>
@@ -336,8 +336,8 @@
                                     <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
-                                <rect key="frame" x="200" y="433" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
+                                <rect key="frame" x="200" y="479" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="zgi-jF-y96"/>
@@ -354,8 +354,8 @@
                                     <segue destination="Skc-zK-dTU" kind="show" id="Je8-hI-ADD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
-                                <rect key="frame" x="135" y="132" width="330" height="95"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
+                                <rect key="frame" x="135" y="140" width="330" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5b3-iE-Cm1"/>
                                 </constraints>
@@ -366,14 +366,14 @@
                                     <rect key="frame" x="35" y="170" width="330" height="55"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome, $USER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-XX-gbb">
-                                <rect key="frame" x="219" y="81" width="162" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, $USER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-XX-gbb">
+                                <rect key="frame" x="219" y="80" width="162" height="28"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                 <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okQ-cN-XkK">
-                                <rect key="frame" x="200" y="311" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okQ-cN-XkK">
+                                <rect key="frame" x="200" y="333" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="dPv-SZ-jXJ"/>
@@ -390,8 +390,8 @@
                                     <segue destination="BS4-Tc-pTP" kind="show" id="3l8-Kb-yfV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-iz-QMq">
-                                <rect key="frame" x="200" y="494" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-iz-QMq">
+                                <rect key="frame" x="200" y="552" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="er6-gl-81j"/>
@@ -416,14 +416,22 @@
                             <constraint firstItem="qWB-Qf-LD4" firstAttribute="top" secondItem="ugJ-2Q-c4b" secondAttribute="bottom" constant="20" id="AwU-WP-8mc"/>
                             <constraint firstAttribute="centerX" secondItem="eWk-XX-gbb" secondAttribute="centerX" id="FHP-gX-z6F"/>
                             <constraint firstAttribute="centerX" secondItem="N0z-wy-p2o" secondAttribute="centerX" id="HRg-G1-7ie"/>
+                            <constraint firstAttribute="centerX" secondItem="okQ-cN-XkK" secondAttribute="centerX" id="adB-cv-kbw"/>
                             <constraint firstItem="ugJ-2Q-c4b" firstAttribute="top" secondItem="9fY-JH-NG4" secondAttribute="bottom" constant="20" id="bLy-bm-B6y"/>
                             <constraint firstAttribute="centerX" secondItem="ugJ-2Q-c4b" secondAttribute="centerX" id="bmM-Zr-Ut7"/>
-                            <constraint firstItem="N0z-wy-p2o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="c8b-Hq-ZV8"/>
+                            <constraint firstItem="N0z-wy-p2o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="120" id="c8b-Hq-ZV8"/>
                             <constraint firstItem="hdy-iz-QMq" firstAttribute="top" secondItem="qWB-Qf-LD4" secondAttribute="bottom" constant="20" id="cGQ-WH-BK0"/>
-                            <constraint firstItem="eWk-XX-gbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="dvE-Jw-69w"/>
+                            <constraint firstItem="eWk-XX-gbb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="dvE-Jw-69w"/>
+                            <constraint firstItem="ugJ-2Q-c4b" firstAttribute="top" secondItem="okQ-cN-XkK" secondAttribute="bottom" constant="20" id="giY-Fm-rmo"/>
+                            <constraint firstItem="okQ-cN-XkK" firstAttribute="top" secondItem="9fY-JH-NG4" secondAttribute="bottom" constant="20" id="i5x-9E-Mga"/>
                             <constraint firstAttribute="centerX" secondItem="9fY-JH-NG4" secondAttribute="centerX" id="pJU-SN-q8C"/>
-                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="35" id="sRn-lp-nYj"/>
+                            <constraint firstItem="9fY-JH-NG4" firstAttribute="top" secondItem="N0z-wy-p2o" secondAttribute="bottom" constant="25" id="sRn-lp-nYj"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="bLy-bm-B6y"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="aboutButton" destination="qWB-Qf-LD4" id="26O-aO-t8R"/>
@@ -626,8 +634,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="speedSliderChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="eF5-vw-mb5"/>
                                 </connections>
                             </slider>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
-                                <rect key="frame" x="202" y="381" width="196" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
+                                <rect key="frame" x="202" y="382" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="Back to Home">
                                     <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
