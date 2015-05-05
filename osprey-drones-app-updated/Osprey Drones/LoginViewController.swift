@@ -19,8 +19,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let enteredUsername = usernameTextField.text
         let enteredPassword = passwordTextField.text
         
+        var loadingIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100))
+        loadingIndicator.center = view.center
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        loadingIndicator.layer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.6).CGColor
+        loadingIndicator.layer.cornerRadius = 0.2 * loadingIndicator.frame.size.width
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+        view.userInteractionEnabled = false
+        
         PFUser.logInWithUsernameInBackground(enteredUsername, password: enteredPassword) {
             (user, error) in
+            
+            loadingIndicator.stopAnimating()
             
             if user != nil {
                 // Login was successful
@@ -29,19 +41,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 // Bring user to the main menu now that they are logged in.
                 if let mainMenuVC = self.storyboard?.instantiateViewControllerWithIdentifier("mainMenuViewController") as? UIViewController {
+                    self.view.userInteractionEnabled = true
                     self.navigationController?.pushViewController(mainMenuVC, animated: true)
+                    return
                 }
-            } else {
-                var errorMessage = "There was an error logging in."
-                
-                // If we can get something more specific from the NSError, set the error message to that message instead.
-                if let errorUserInfo = error?.userInfo, let errorUserInfoString = errorUserInfo["error"] as? String {
-                    errorMessage = errorUserInfoString.properlyCapitalizedSentence
-                }
-                
-                let errorAlert = GeneralUtils.createAlertWithMessage(errorMessage, title: "Login Error", buttonTitle: "OK")
-                self.presentViewController(errorAlert, animated: true, completion: nil)
             }
+            
+            self.view.userInteractionEnabled = true
+            var errorMessage = "There was an error logging in."
+            
+            // If we can get something more specific from the NSError, set the error message to that message instead.
+            if let errorUserInfo = error?.userInfo, let errorUserInfoString = errorUserInfo["error"] as? String {
+                errorMessage = errorUserInfoString.properlyCapitalizedSentence
+            }
+            
+            let errorAlert = GeneralUtils.createAlertWithMessage(errorMessage, title: "Login Error", buttonTitle: "OK")
+            self.presentViewController(errorAlert, animated: true, completion: nil)
         }
     }
     

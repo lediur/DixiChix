@@ -317,24 +317,6 @@
                                     <segue destination="vj6-kr-2bR" kind="show" id="sZg-zs-zSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
-                                <rect key="frame" x="200" y="406" width="200" height="53"/>
-                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="81v-Hq-TdF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
-                                <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.51764705882352946" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="147" y="337" width="106" height="47"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
                                 <rect key="frame" x="200" y="479" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -405,6 +387,24 @@
                                 </variation>
                                 <connections>
                                     <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDs-h3-kqg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
+                                <rect key="frame" x="200" y="406" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="81v-Hq-TdF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.51764705882352946" green="0.69803921568627447" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="147" y="337" width="106" height="47"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1054,7 +1054,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OCl-Ru-beu"/>
+        <segue reference="3l8-Kb-yfV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>
