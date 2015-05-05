@@ -45,6 +45,10 @@ class VideoPlayerViewController: UIViewController {
         UIPasteboard.generalPasteboard().string = "http://www.youtube.com/watch?v=\(videoIDToDisplay)"
     }
     
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.All.rawValue)
+    }
+    
     var titleToDisplay = ""
     var videoIDToDisplay = "uDP7Pty8Qnw"
 
