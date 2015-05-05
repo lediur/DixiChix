@@ -84,7 +84,7 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             // Functionality to go back to the home page if the user chooses to not view the recorded videos.
             alert.addAction(UIAlertAction(title: "Go Home", style: UIAlertActionStyle.Cancel) {
                 action in
-                self.performSegueWithIdentifier("showHomePageFromGoogleMaps", sender: self)
+                self.navigationController?.popViewControllerAnimated(true)
             })
             
             self.presentViewController(alert, animated: true, completion: nil)
