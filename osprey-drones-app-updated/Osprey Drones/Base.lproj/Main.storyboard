@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IGN-J0-bij">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,6 +13,7 @@
             <string>BOLDfinger</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -299,8 +300,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
-                                <rect key="frame" x="200" y="290" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-JH-NG4">
+                                <rect key="frame" x="200" y="250" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="zBB-74-5vr"/>
@@ -317,8 +318,8 @@
                                     <segue destination="vj6-kr-2bR" kind="show" id="sZg-zs-zSq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
-                                <rect key="frame" x="200" y="363" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugJ-2Q-c4b">
+                                <rect key="frame" x="200" y="372" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="81v-Hq-TdF"/>
@@ -335,8 +336,8 @@
                                     <segue destination="XPf-sE-iqX" kind="show" id="GhD-NU-K4z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
-                                <rect key="frame" x="200" y="436" width="200" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWB-Qf-LD4">
+                                <rect key="frame" x="200" y="433" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="zgi-jF-y96"/>
@@ -353,8 +354,8 @@
                                     <segue destination="Skc-zK-dTU" kind="show" id="Je8-hI-ADD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
-                                <rect key="frame" x="135" y="160" width="330" height="95"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="osprey drones" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0z-wy-p2o">
+                                <rect key="frame" x="135" y="132" width="330" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="5b3-iE-Cm1"/>
                                 </constraints>
@@ -365,8 +366,32 @@
                                     <rect key="frame" x="35" y="170" width="330" height="55"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-iz-QMq">
-                                <rect key="frame" x="200" y="509" width="200" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome, $USER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-XX-gbb">
+                                <rect key="frame" x="219" y="81" width="162" height="28"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okQ-cN-XkK">
+                                <rect key="frame" x="200" y="311" width="200" height="53"/>
+                                <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="dPv-SZ-jXJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Videos">
+                                    <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="170" y="270" width="60" height="47"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BS4-Tc-pTP" kind="show" id="3l8-Kb-yfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-iz-QMq">
+                                <rect key="frame" x="200" y="494" width="200" height="53"/>
                                 <color key="backgroundColor" red="0.3411764706" green="0.56470588239999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="er6-gl-81j"/>
@@ -383,12 +408,6 @@
                                     <action selector="logoutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDs-h3-kqg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, $USER!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-XX-gbb">
-                                <rect key="frame" x="219" y="100" width="162" height="28"/>
-                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
-                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.21568627450980393" green="0.45882352941176469" blue="0.6588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -411,6 +430,7 @@
                         <outlet property="logoutButton" destination="hdy-iz-QMq" id="yJX-2u-hWY"/>
                         <outlet property="settingsButton" destination="ugJ-2Q-c4b" id="Pzs-UN-IXq"/>
                         <outlet property="startButton" destination="9fY-JH-NG4" id="yeQ-ZP-eP5"/>
+                        <outlet property="videosButton" destination="okQ-cN-XkK" id="hm3-QE-pyg"/>
                         <outlet property="welcomeUserLabel" destination="eWk-XX-gbb" id="F6f-JW-e5H"/>
                     </connections>
                 </viewController>
@@ -764,8 +784,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-ll-7Nd">
-                                <rect key="frame" x="244" y="531" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-ll-7Nd">
+                                <rect key="frame" x="217" y="531" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BvB-M7-7eZ"/>
                                     <constraint firstAttribute="width" constant="50" id="F69-aG-zrz"/>
@@ -777,8 +797,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <action selector="shareOnFacebookButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="wrz-lG-zCD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-ya-Cnx">
-                                <rect key="frame" x="307" y="531" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrE-ya-Cnx">
+                                <rect key="frame" x="275" y="531" width="50" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="1rc-oz-ava"/>
                                     <constraint firstAttribute="height" constant="50" id="rJy-o0-osT"/>
@@ -840,8 +860,8 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <constraint firstAttribute="height" constant="225" id="IXh-O9-A0z"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
-                                <rect key="frame" x="190" y="432" width="220" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A race for the ages! This will be a description for the video above." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmM-58-0yI">
+                                <rect key="frame" x="190" y="428" width="220" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="rCa-xG-hjX"/>
                                 </constraints>
@@ -852,6 +872,18 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                     <rect key="frame" x="90" y="540.5" width="220" height="59.5"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-HX-hSZ">
+                                <rect key="frame" x="333" y="531" width="50" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="bxF-88-8pk"/>
+                                </constraints>
+                                <state key="normal" image="link.png">
+                                    <color key="titleShadowColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnLinkButtonPressed:" destination="5Ao-GQ-YY5" eventType="touchUpInside" id="p8T-2E-5L3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -859,13 +891,19 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                             <constraint firstItem="fAP-O2-WC8" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="60" id="1Gj-on-5Yk"/>
                             <constraint firstAttribute="centerX" secondItem="2Pn-DY-Qa9" secondAttribute="centerX" id="2g4-8e-AXh"/>
                             <constraint firstItem="i2x-Db-uYX" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="7y1-yH-1E0"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="XrE-ya-Cnx" secondAttribute="top" id="APb-7a-ayc"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="WmM-58-0yI" secondAttribute="bottom" constant="29" id="Abn-CO-99P"/>
                             <constraint firstItem="2Pn-DY-Qa9" firstAttribute="top" secondItem="e5y-UB-wky" secondAttribute="bottom" constant="30" id="Bpl-dT-PWF"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="Ri3-ll-7Nd" secondAttribute="bottom" constant="50" id="Edr-8P-4EW"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" constant="44" id="Ehj-qG-guE"/>
                             <constraint firstAttribute="centerX" secondItem="Ri3-ll-7Nd" secondAttribute="centerX" constant="31" id="Hkr-63-wpb"/>
+                            <constraint firstAttribute="bottom" secondItem="lfa-HX-hSZ" secondAttribute="bottom" constant="20" symbolic="YES" id="I2u-fh-tlY"/>
                             <constraint firstAttribute="centerX" secondItem="WmM-58-0yI" secondAttribute="centerX" id="J0c-cF-SdM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i2x-Db-uYX" secondAttribute="trailing" constant="-16" id="Tvc-Y1-x2N"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="leading" secondItem="XrE-ya-Cnx" secondAttribute="trailing" constant="8" symbolic="YES" id="V7r-CK-D2O"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="bottom" secondItem="XrE-ya-Cnx" secondAttribute="bottom" id="c2o-EZ-7ie"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="top" secondItem="i2x-Db-uYX" secondAttribute="bottom" id="cac-lJ-JUz"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="Ri3-ll-7Nd" secondAttribute="top" id="hm0-8e-r8K"/>
                             <constraint firstItem="i2x-Db-uYX" firstAttribute="top" secondItem="Doj-DB-Qe0" secondAttribute="bottom" id="lJV-P5-jUm"/>
                             <constraint firstAttribute="centerX" secondItem="fAP-O2-WC8" secondAttribute="centerX" id="lNc-mf-1B5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="e5y-UB-wky" secondAttribute="trailing" constant="-16" id="pTs-Fo-ZJd"/>
@@ -873,23 +911,24 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                             <constraint firstItem="XrE-ya-Cnx" firstAttribute="top" secondItem="fAP-O2-WC8" secondAttribute="bottom" constant="20" id="wJq-ZF-a3D"/>
                             <constraint firstItem="324-V9-zSZ" firstAttribute="top" secondItem="XrE-ya-Cnx" secondAttribute="bottom" constant="50" id="wrD-gT-gD8"/>
                             <constraint firstItem="e5y-UB-wky" firstAttribute="leading" secondItem="SbF-AQ-C23" secondAttribute="leadingMargin" constant="-16" id="yFB-hR-qZv"/>
+                            <constraint firstItem="lfa-HX-hSZ" firstAttribute="top" secondItem="i2x-Db-uYX" secondAttribute="bottom" constant="467" id="zia-oJ-nRB"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Bpl-dT-PWF"/>
                                 <exclude reference="1Gj-on-5Yk"/>
+                                <exclude reference="wJq-ZF-a3D"/>
                                 <exclude reference="Edr-8P-4EW"/>
                                 <exclude reference="wrD-gT-gD8"/>
-                                <exclude reference="wJq-ZF-a3D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Bpl-dT-PWF"/>
                                 <include reference="1Gj-on-5Yk"/>
+                                <include reference="wJq-ZF-a3D"/>
                                 <include reference="Edr-8P-4EW"/>
                                 <include reference="wrD-gT-gD8"/>
-                                <include reference="wJq-ZF-a3D"/>
                             </mask>
                         </variation>
                     </view>
@@ -900,7 +939,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqM-HL-qAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3106.5" y="717"/>
+            <point key="canvasLocation" x="3106" y="717"/>
         </scene>
         <!--Coordinates View Controller-->
         <scene sceneID="4g6-oN-c8V">
@@ -993,9 +1032,11 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
     </scenes>
     <resources>
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
+        <image name="link.png" width="164" height="161"/>
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LMM-8y-1fn"/>
+        <segue reference="3l8-Kb-yfV"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

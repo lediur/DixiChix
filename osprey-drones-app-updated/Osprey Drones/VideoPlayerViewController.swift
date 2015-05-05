@@ -41,6 +41,10 @@ class VideoPlayerViewController: UIViewController {
         }
     }
     
+    @IBAction func shareOnLinkButtonPressed(sender: AnyObject) {
+        UIPasteboard.generalPasteboard().string = "http://www.youtube.com/watch?v=\(videoIDToDisplay)"
+    }
+    
     var titleToDisplay = ""
     var videoIDToDisplay = "uDP7Pty8Qnw"
 
