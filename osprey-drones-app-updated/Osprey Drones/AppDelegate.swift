@@ -11,6 +11,7 @@ import Parse
 
 // CONSTANTS
 let kLoggedInUsernameKey = "loggedInUsername"
+let kShowMapPlottingInstructionsKey = "showMapPlottingInstructions"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

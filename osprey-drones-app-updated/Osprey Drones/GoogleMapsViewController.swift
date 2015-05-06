@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
+class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UIPopoverPresentationControllerDelegate {
     
     @IBAction func cancelButtonPressed(sender: AnyObject) {
     	navigationController?.popViewControllerAnimated(true)
@@ -130,7 +130,85 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         }
         
     }
+    
+    // UIPopoverPresentationControllerDelegate method to specify popover view presentation style
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+        numTimesPopoversDismissed++
         
+        if (numTimesPopoversDismissed < instructionsTexts.count) {
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.3, target: self, selector: "showInstructionUsingTimer:", userInfo: numTimesPopoversDismissed, repeats: false)
+        } else {
+            var alert = UIAlertController(title: "Finished Showing Instructions", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Don't Show This Again!", style: UIAlertActionStyle.Default) {
+                action in
+                
+                // Note down in User Defaults that this user does not want to be shown the instructions again
+                let defaults = NSUserDefaults.standardUserDefaults()
+                defaults.setBool(false, forKey: kShowMapPlottingInstructionsKey)
+            })
+            
+            alert.addAction(UIAlertAction(title: "Instructions Again Please!", style: UIAlertActionStyle.Default) {
+                action in
+				
+                // Give them another run-through of the instructions
+                self.numTimesPopoversDismissed = 0
+                self.showInstructionAtIndex(0)
+            })
+            
+            alert.addAction(UIAlertAction(title: "I'm Good, For Now!", style: UIAlertActionStyle.Cancel) {
+                action in
+                // Dismiss the alert, but show them instructions next time.
+            })
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    // Not a safe function - before using must make sure that you pass in a valid integer index into the timer's userInfo variable.
+    // Need to make sure that this index is valid.
+    func showInstructionUsingTimer(timer: NSTimer) {
+        let index = timer.userInfo as! Int
+        showInstructionAtIndex(index)
+    }
+    
+    func showInstructionAtIndex(index: Int) {
+        let instructionText = instructionsTexts[index]
+        let popoverHeight = instructionsHeights[index]
+        
+        if let instructionVC = storyboard?.instantiateViewControllerWithIdentifier("instructionViewController") as? InstructionViewController {
+            instructionVC.textToBeSet = instructionText
+            instructionVC.modalPresentationStyle = .Popover
+            instructionVC.preferredContentSize = CGSizeMake(view.frame.width, popoverHeight)
+            
+            let popoverVC = instructionVC.popoverPresentationController
+            popoverVC?.permittedArrowDirections = UIPopoverArrowDirection.allZeros
+            popoverVC?.delegate = self
+            popoverVC?.sourceView = view
+            popoverVC?.sourceRect = CGRect(x: 0, y: 0, width: 100, height: 250)
+            self.presentViewController(instructionVC, animated: true, completion: nil)
+        }
+    }
+    
+    var numTimesPopoversDismissed = 0
+    let instructionsTexts = [
+		"This screen is for you to plot points where you want the drone to visit and record your driving.",
+        "In order to plot a point for the drone to visit, simply hold a long press anywhere on the map.",
+        "To remove a point, simply tap on it, and a button will appear asking you to \"Tap to Delete\"",
+        "When you are satisfied with your placements, hit \"Done\" in the top right corner!"
+        
+    ]
+    let instructionsHeights: [CGFloat] = [
+        100,
+        100,
+        100,
+        100
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -141,6 +219,13 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         // Set the initial location to be looking at Stanford University
         mapView.camera = GMSCameraPosition.cameraWithLatitude(37.427474, longitude: -122.169719, zoom: 15)
         mapView.delegate = self
+        
+        numTimesPopoversDismissed = 0
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if (defaults.objectForKey(kShowMapPlottingInstructionsKey) == nil || defaults.boolForKey(kShowMapPlottingInstructionsKey) == true) {
+            showInstructionAtIndex(0)
+        }
     }
     
     // MARK: CLLocationManagerDelegate methods

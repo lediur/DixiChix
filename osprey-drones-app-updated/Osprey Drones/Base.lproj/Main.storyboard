@@ -57,6 +57,42 @@
             </objects>
             <point key="canvasLocation" x="-262" y="-53"/>
         </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="5aq-oW-jW8">
+            <objects>
+                <viewController storyboardIdentifier="instructionViewController" id="2pi-Vr-uWD" customClass="InstructionViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xqy-ZP-DcP"/>
+                        <viewControllerLayoutGuide type="bottom" id="bIR-Fp-YJS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VOZ-5e-4eG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="This screen is for you to plot points for the drone to visit as it records your driving." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZEb-Hm-Q9x">
+                                <rect key="frame" x="150" y="125" width="300" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="gej-7f-SRr"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ZEb-Hm-Q9x" secondAttribute="centerX" id="5lF-9G-Ikw"/>
+                            <constraint firstAttribute="centerY" secondItem="ZEb-Hm-Q9x" secondAttribute="centerY" id="lUd-mu-s8y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="ZEb-Hm-Q9x" id="vbS-Fh-CLk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbM-5e-PbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="1105"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="62B-Dv-7q2">
             <objects>
