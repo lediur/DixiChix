@@ -42,7 +42,17 @@ class VideoPlayerViewController: UIViewController {
     }
     
     @IBAction func shareOnLinkButtonPressed(sender: AnyObject) {
-        UIPasteboard.generalPasteboard().string = "http://www.youtube.com/watch?v=\(videoIDToDisplay)"
+        let textToShare = "Check out my driving on YouTube!"
+        
+        if let videoLinkToShare = NSURL(string: "http://www.youtube.com/watch?v=\(videoIDToDisplay)")
+        {
+            let objectsToShare = [textToShare, videoLinkToShare]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            activityVC.excludedActivityTypes = [
+            	UIActivityTypeAddToReadingList
+            ]
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
     }
     
     override func supportedInterfaceOrientations() -> Int {
