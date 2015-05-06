@@ -41,6 +41,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -642,7 +643,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drone Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D68-9o-j1l">
-                                <rect key="frame" x="209" y="291" width="182" height="41"/>
+                                <rect key="frame" x="209" y="241" width="182" height="41"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -651,26 +652,38 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                                 </variation>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="125" minValue="50" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Pmm-Tg-Q5q">
-                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <rect key="frame" x="198" y="290" width="204" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="P1x-Pw-Xau"/>
+                                    <constraint firstAttribute="width" constant="200" id="ybv-KA-kpt"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="P1x-Pw-Xau"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="P1x-Pw-Xau"/>
-                                    </mask>
-                                </variation>
                                 <connections>
                                     <action selector="speedSliderChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="eF5-vw-mb5"/>
                                 </connections>
                             </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CDW-Eu-9fV">
+                                <rect key="frame" x="268" y="430" width="65" height="29"/>
+                                <segments>
+                                    <segment title="On"/>
+                                    <segment title="Off"/>
+                                </segments>
+                                <connections>
+                                    <action selector="instructionsSegmentedControlIndexChanged:" destination="XPf-sE-iqX" eventType="valueChanged" id="8aN-im-WfB"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Map Plotting Instructions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4v-to-VOU">
+                                <rect key="frame" x="168" y="340" width="265" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Qko-uf-J10"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="97.5" y="297" width="205" height="35"/>
+                                </variation>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zan-7o-Wp7">
-                                <rect key="frame" x="202" y="382" width="196" height="53"/>
+                                <rect key="frame" x="202" y="488" width="196" height="53"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
                                 <state key="normal" title="Back to Home">
                                     <color key="titleColor" red="0.51764705879999995" green="0.69803921570000005" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -687,29 +700,33 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                         <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vn0-q6-WTH" firstAttribute="top" secondItem="4MM-EP-OWy" secondAttribute="topMargin" constant="150" id="2yD-m7-1ru"/>
+                            <constraint firstItem="Pmm-Tg-Q5q" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="8" id="7QI-W0-f12"/>
                             <constraint firstAttribute="centerX" secondItem="Zan-7o-Wp7" secondAttribute="centerX" id="7fd-hp-b88"/>
+                            <constraint firstItem="j4v-to-VOU" firstAttribute="top" secondItem="Pmm-Tg-Q5q" secondAttribute="bottom" constant="20" id="Ied-b8-lGt"/>
                             <constraint firstAttribute="centerX" secondItem="Pmm-Tg-Q5q" secondAttribute="centerX" id="MOZ-IJ-I4c"/>
                             <constraint firstItem="Pmm-Tg-Q5q" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="45" id="Rdk-8V-6Lc"/>
                             <constraint firstAttribute="centerX" secondItem="vn0-q6-WTH" secondAttribute="centerX" id="Wit-4V-d11"/>
+                            <constraint firstItem="CDW-Eu-9fV" firstAttribute="top" secondItem="j4v-to-VOU" secondAttribute="bottom" constant="8" id="Xgs-bS-QwT"/>
+                            <constraint firstAttribute="centerX" secondItem="CDW-Eu-9fV" secondAttribute="centerX" id="a4F-YW-Z8c"/>
                             <constraint firstAttribute="centerX" secondItem="D68-9o-j1l" secondAttribute="centerX" id="aB0-Sd-NLM"/>
-                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="50" id="s9r-Oj-5xQ">
+                            <constraint firstItem="j4v-to-VOU" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="50" id="b8K-Nh-SVs"/>
+                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="CDW-Eu-9fV" secondAttribute="bottom" constant="30" id="jDy-Bi-53E"/>
+                            <constraint firstAttribute="centerX" secondItem="j4v-to-VOU" secondAttribute="centerX" id="lou-uz-nTs"/>
+                            <constraint firstAttribute="centerX" secondItem="Pmm-Tg-Q5q" secondAttribute="centerX" id="q2O-Rv-jKs"/>
+                            <constraint firstItem="Zan-7o-Wp7" firstAttribute="top" secondItem="D68-9o-j1l" secondAttribute="bottom" constant="170" id="s9r-Oj-5xQ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="118"/>
                             </constraint>
-                            <constraint firstItem="D68-9o-j1l" firstAttribute="top" secondItem="vn0-q6-WTH" secondAttribute="bottom" constant="100" id="vbU-tu-6if"/>
+                            <constraint firstItem="D68-9o-j1l" firstAttribute="top" secondItem="vn0-q6-WTH" secondAttribute="bottom" constant="50" id="vbU-tu-6if"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Pmm-Tg-Q5q"/>
-                            </mask>
                             <mask key="constraints">
                                 <exclude reference="MOZ-IJ-I4c"/>
                                 <exclude reference="Rdk-8V-6Lc"/>
+                                <exclude reference="b8K-Nh-SVs"/>
+                                <exclude reference="s9r-Oj-5xQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Pmm-Tg-Q5q"/>
-                            </mask>
                             <mask key="constraints">
                                 <include reference="MOZ-IJ-I4c"/>
                                 <include reference="Rdk-8V-6Lc"/>
@@ -718,12 +735,13 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                     </view>
                     <connections>
                         <outlet property="droneSpeedLabel" destination="D68-9o-j1l" id="88a-Mp-sne"/>
+                        <outlet property="instructionsSegmentedControl" destination="CDW-Eu-9fV" id="63N-KK-Cyn"/>
                         <outlet property="speedSlider" destination="Pmm-Tg-Q5q" id="QDp-uM-mCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="od4-LK-nO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="1570.5"/>
+            <point key="canvasLocation" x="1554" y="1571"/>
         </scene>
         <!--Video Results View Controller-->
         <scene sceneID="msL-hQ-4zB">
