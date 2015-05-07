@@ -16,6 +16,8 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBAction func doneButtonPressed(sender: AnyObject) {
+        PFAnalytics.trackEventInBackground("FlightPathDrawn", dimensions: ["numPoints":"\(self.allMarkers.count)"]) { (success, error) in }
+        
         if allMarkers.count == 0 {
             performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
         }
