@@ -24,6 +24,19 @@ class SettingsViewController: UIViewController {
     	navigationController?.popViewControllerAnimated(true)
     }
     
+    @IBOutlet weak var instructionsSegmentedControl: UISegmentedControl!
+    @IBAction func instructionsSegmentedControlIndexChanged(sender: AnyObject) {
+		let defaults = NSUserDefaults.standardUserDefaults()
+        switch instructionsSegmentedControl.selectedSegmentIndex
+        {
+        case 0:
+        	defaults.setBool(true, forKey: kShowMapPlottingInstructionsKey)
+        case 1:
+        	defaults.setBool(false, forKey: kShowMapPlottingInstructionsKey)
+        default:
+            break
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +50,12 @@ class SettingsViewController: UIViewController {
         } else {
             let droneSpeed = NSString(format:"%.1f", speedSlider.value)
             droneSpeedLabel.text = "Drone Speed: \(droneSpeed) m/s"
+        }
+        
+        if let showInstructions = defaults.objectForKey(kShowMapPlottingInstructionsKey) as? Bool where showInstructions == false {
+			instructionsSegmentedControl.selectedSegmentIndex = 1
+        } else {
+            instructionsSegmentedControl.selectedSegmentIndex = 0
         }
     }
     

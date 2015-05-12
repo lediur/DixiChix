@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     // Main Menu Buttons
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var videosButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var aboutButton: UIButton!
     @IBOutlet weak var logoutButton: UIButton!
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
 
         // Make the main menu buttons have rounded corners!
         startButton.layer.cornerRadius = startButton.frame.size.height / 4
+        videosButton.layer.cornerRadius = videosButton.frame.size.height / 4
         settingsButton.layer.cornerRadius = settingsButton.frame.size.height / 4
         aboutButton.layer.cornerRadius = aboutButton.frame.size.height / 4
         logoutButton.layer.cornerRadius = logoutButton.frame.size.height / 4

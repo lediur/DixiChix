@@ -20,6 +20,10 @@
 		B91CFB891AB26ACF00731961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB851AB26ACF00731961 /* QuartzCore.framework */; };
 		B91CFB8A1AB26ACF00731961 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */; };
 		B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */; };
+		B9677F281AF1E673005B3278 /* CoordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9677F271AF1E673005B3278 /* CoordPair.swift */; };
+		B9677F2A1AF1F7F3005B3278 /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9677F291AF1F7F3005B3278 /* CoordinatesViewController.swift */; };
+		B96A99691AF97801000A22E4 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = B96A99681AF97801000A22E4 /* link.png */; };
+		B96A996B1AF9D029000A22E4 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A996A1AF9D029000A22E4 /* InstructionViewController.swift */; };
 		B99457831AD1D57D00CB534E /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99457821AD1D57D00CB534E /* GeneralUtilities.swift */; };
 		B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */; };
 		B9D040C51AB2A82E00BE2B5F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D040C41AB2A82E00BE2B5F /* VideoPlayerViewController.swift */; };
@@ -96,6 +100,10 @@
 		B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B91CFB8C1AB26B4F00731961 /* Osprey Drones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Osprey Drones-Bridging-Header.h"; sourceTree = "<group>"; };
 		B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		B9677F271AF1E673005B3278 /* CoordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordPair.swift; sourceTree = "<group>"; };
+		B9677F291AF1F7F3005B3278 /* CoordinatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
+		B96A99681AF97801000A22E4 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
+		B96A996A1AF9D029000A22E4 /* InstructionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		B99457821AD1D57D00CB534E /* GeneralUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralUtilities.swift; sourceTree = "<group>"; };
 		B9D040C11AB2A7B100BE2B5F /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		B9D040C21AB2A7B100BE2B5F /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
@@ -228,6 +236,7 @@
 		B9D040DB1AB2B45700BE2B5F /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B96A99681AF97801000A22E4 /* link.png */,
 				D1FF74B91AB7B3AA0088FA16 /* blue-background.png */,
 				D1FF74B51AB7AE5C0088FA16 /* starry-night-background.jpg */,
 				D1FF74B31AB7A1BB0088FA16 /* horizon-wallpaper.jpg */,
@@ -279,10 +288,13 @@
 			children = (
 				D1FF74B71AB7B08F0088FA16 /* BOLDfinger.ttf */,
 				D1C5BB941AB77C07001264DC /* OpenSans-Regular.ttf */,
+				B9677F271AF1E673005B3278 /* CoordPair.swift */,
 				B9FD8BB71AB2632A00BE88DE /* AppDelegate.swift */,
 				B9FD8BB91AB2632A00BE88DE /* ViewController.swift */,
 				B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */,
 				B9FD8BBB1AB2632A00BE88DE /* Main.storyboard */,
+				B96A996A1AF9D029000A22E4 /* InstructionViewController.swift */,
+				B9677F291AF1F7F3005B3278 /* CoordinatesViewController.swift */,
 				B9E76DFD1ADC8D36009FE137 /* AboutViewController.swift */,
 				B9D8BF771ACF77070084BDA8 /* SignUpViewController.swift */,
 				B99457821AD1D57D00CB534E /* GeneralUtilities.swift */,
@@ -406,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D040D61AB2B45000BE2B5F /* BMW_Car_2.jpg in Resources */,
+				B96A99691AF97801000A22E4 /* link.png in Resources */,
 				D1FF74BA1AB7B3AA0088FA16 /* blue-background.png in Resources */,
 				D16882F11AB3769A0085FCB1 /* GoogleMaps.bundle in Resources */,
 				D1FF74B01AB7A1070088FA16 /* blur-wallpaper.jpg in Resources */,
@@ -447,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9D8BF781ACF77070084BDA8 /* SignUpViewController.swift in Sources */,
+				B9677F2A1AF1F7F3005B3278 /* CoordinatesViewController.swift in Sources */,
 				B9D040CD1AB2AE2F00BE2B5F /* VideoResultCell.swift in Sources */,
 				B9FD8BBA1AB2632A00BE88DE /* ViewController.swift in Sources */,
 				B9FD8BB81AB2632A00BE88DE /* AppDelegate.swift in Sources */,
@@ -456,7 +470,9 @@
 				B9D040C31AB2A7B100BE2B5F /* YTPlayerView.m in Sources */,
 				B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */,
 				B9D8BF761ACF75280084BDA8 /* LoginViewController.swift in Sources */,
+				B96A996B1AF9D029000A22E4 /* InstructionViewController.swift in Sources */,
 				D1608C1A1ABFA34A00C172D8 /* SettingsViewController.swift in Sources */,
+				B9677F281AF1E673005B3278 /* CoordPair.swift in Sources */,
 				B9E76DFE1ADC8D36009FE137 /* AboutViewController.swift in Sources */,
 				B99457831AD1D57D00CB534E /* GeneralUtilities.swift in Sources */,
 			);

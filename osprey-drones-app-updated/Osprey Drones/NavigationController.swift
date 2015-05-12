@@ -27,6 +27,10 @@ class NavigationController: UINavigationController {
         
     }
     
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
+    
     private func userIsLoggedIn() -> Bool {
         let defaults = NSUserDefaults.standardUserDefaults()
         if let loggedInUsername = defaults.stringForKey(kLoggedInUsernameKey) {
