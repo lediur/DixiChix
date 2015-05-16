@@ -16,27 +16,37 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     
     @IBOutlet weak var mapView: GMSMapView!
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        PFAnalytics.trackEventInBackground("FlightPathDrawn", dimensions: ["numPoints":"\(self.allMarkers.count)"]) { (success, error) in }
-        var flightPath = PFObject(className: "FlightPath")
+        // Don't upload or do anything if the user hits Done before adding any waypoints
+        if allMarkers.count == 0 {
+            performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+            return
+        }
         
+        // Add a FlightPath PFObject to Parse that represents the waypoints this logged in user has drawn out.
+        var flightPath = PFObject(className: "FlightPath")
         var waypointsAsFloatPairs: [String] = []
         for point in orderedPath {
             waypointsAsFloatPairs.append("\(point.coordinate.latitude) \(point.coordinate.longitude)")
         }
         flightPath.addObjectsFromArray(waypointsAsFloatPairs, forKey: "waypoints")
         flightPath["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
-        self.view.userInteractionEnabled = false
+        
+        // Disable user interaction and start a loading indicator until the uploading of the FlightPath PFObject is complete
+        var loadingIndicator = GeneralUtils.createLargeLoadingIndicator()
+        loadingIndicator.center = view.center
+        view.addSubview(loadingIndicator)
+        loadingIndicator.startAnimating()
+        view.userInteractionEnabled = false
+        
         flightPath.saveInBackgroundWithBlock() { (success, error) in
-            if self.allMarkers.count == 0 {
-                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
-            }
-            
             if let droneMarker = self.animateDroneMarker {
-                println("We are already animating the drone...")
+                println("We are already animating the drone... Ignoring...")
             } else {
-                self.animateDroneAlongDrawnPath()
+                
+//                self.animateDroneAlongDrawnPath()
             }
 
+            loadingIndicator.stopAnimating()
             self.view.userInteractionEnabled = true
         }
     }
