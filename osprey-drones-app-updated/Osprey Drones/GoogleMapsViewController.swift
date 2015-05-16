@@ -17,15 +17,27 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     @IBOutlet weak var mapView: GMSMapView!
     @IBAction func doneButtonPressed(sender: AnyObject) {
         PFAnalytics.trackEventInBackground("FlightPathDrawn", dimensions: ["numPoints":"\(self.allMarkers.count)"]) { (success, error) in }
+        var flightPath = PFObject(className: "FlightPath")
         
-        if allMarkers.count == 0 {
-            performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+        var waypointsAsFloatPairs: [String] = []
+        for point in orderedPath {
+            waypointsAsFloatPairs.append("\(point.coordinate.latitude) \(point.coordinate.longitude)")
         }
-        
-        if let droneMarker = animateDroneMarker {
-            println("We are already animating the drone...")
-        } else {
-            animateDroneAlongDrawnPath()
+        flightPath.addObjectsFromArray(waypointsAsFloatPairs, forKey: "waypoints")
+        flightPath["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
+        self.view.userInteractionEnabled = false
+        flightPath.saveInBackgroundWithBlock() { (success, error) in
+            if self.allMarkers.count == 0 {
+                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
+            }
+            
+            if let droneMarker = self.animateDroneMarker {
+                println("We are already animating the drone...")
+            } else {
+                self.animateDroneAlongDrawnPath()
+            }
+
+            self.view.userInteractionEnabled = true
         }
     }
     
