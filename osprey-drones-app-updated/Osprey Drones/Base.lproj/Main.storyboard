@@ -42,6 +42,8 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -92,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbM-5e-PbH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="1105"/>
+            <point key="canvasLocation" x="-262" y="717"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="62B-Dv-7q2">
@@ -536,6 +538,7 @@
                         <outlet property="mapView" destination="GLE-VU-QAw" id="6rk-rP-cGc"/>
                         <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResultsFromGoogleMaps" id="OCl-Ru-beu"/>
                         <segue destination="ArB-sG-T6X" kind="show" identifier="showCoordinatesFromGoogleMaps" id="Ah8-gu-fNC"/>
+                        <segue destination="a7m-55-V2C" kind="show" identifier="showDrivingFromGoogleMaps" id="bai-74-ywO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-Av-M0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -616,7 +619,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVJ-6G-VaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="1571"/>
+            <point key="canvasLocation" x="-262" y="1539"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="MN5-cA-IG2">
@@ -741,7 +744,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="od4-LK-nO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1554" y="1571"/>
+            <point key="canvasLocation" x="725" y="1539"/>
         </scene>
         <!--Video Results View Controller-->
         <scene sceneID="msL-hQ-4zB">
@@ -1101,6 +1104,62 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
             </objects>
             <point key="canvasLocation" x="1951" y="-124"/>
         </scene>
+        <!--Driving View Controller-->
+        <scene sceneID="3h8-Zc-XwX">
+            <objects>
+                <viewController id="a7m-55-V2C" customClass="DrivingViewController" customModule="Osprey_Drones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxK-bJ-FaK"/>
+                        <viewControllerLayoutGuide type="bottom" id="UX2-Ay-vHT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-5e-4IQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhe-EY-XRD">
+                                <rect key="frame" x="175" y="273" width="250" height="53"/>
+                                <color key="backgroundColor" red="0.83137254901960789" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8gj-uf-7CT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="30"/>
+                                <state key="normal" title="Done Driving">
+                                    <color key="titleColor" red="1" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="161" y="404" width="78" height="47"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="BS4-Tc-pTP" kind="show" identifier="showVideoResultsFromDriving" id="NLW-mu-fD4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press this button when you are done driving." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrI-7V-473">
+                                <rect key="frame" x="180" y="203" width="240" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="zMI-wR-bLx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.82745098039999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2156862745" green="0.45882352939999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Rhe-EY-XRD" secondAttribute="centerX" id="QJ7-eN-K6B"/>
+                            <constraint firstAttribute="centerY" secondItem="Rhe-EY-XRD" secondAttribute="centerY" id="Ro0-x5-OST"/>
+                            <constraint firstItem="Rhe-EY-XRD" firstAttribute="top" secondItem="FrI-7V-473" secondAttribute="bottom" constant="15" id="V74-JB-NRH"/>
+                            <constraint firstAttribute="centerX" secondItem="FrI-7V-473" secondAttribute="centerX" id="oE9-Qq-Ijq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneDrivingButton" destination="Rhe-EY-XRD" id="snt-lA-G2u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s35-9Q-eCn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="1539"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook_circle_color-512.png" width="512" height="512"/>
@@ -1108,7 +1167,7 @@ Check out our work at www.dixichix.herokuapp.com to learn more about our process
         <image name="twitter_circle_color-512.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LMM-8y-1fn"/>
+        <segue reference="OCl-Ru-beu"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

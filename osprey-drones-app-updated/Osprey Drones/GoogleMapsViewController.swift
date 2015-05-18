@@ -39,15 +39,24 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         view.userInteractionEnabled = false
         
         flightPath.saveInBackgroundWithBlock() { (success, error) in
-            if let droneMarker = self.animateDroneMarker {
-                println("We are already animating the drone... Ignoring...")
-            } else {
-                
-//                self.animateDroneAlongDrawnPath()
-            }
-
             loadingIndicator.stopAnimating()
             self.view.userInteractionEnabled = true
+            
+            // THe user can either start driving from here and have the drone start recording, or go back home in case it was an accident and he/she wishes to cancel.
+            var alert = UIAlertController(title: "Waypoints Set Successfully", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Start Driving!", style: UIAlertActionStyle.Default) {
+                action in
+                self.performSegueWithIdentifier("showDrivingFromGoogleMaps", sender: self)
+                })
+            
+            // Functionality to go back to the home page if the user chooses to not view the recorded videos.
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+                action in
+                self.navigationController?.popViewControllerAnimated(true)
+                })
+            
+            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
@@ -71,89 +80,6 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
     let markerTitleText = "Tap To Delete!"
     
     var drawnPath: GMSPolyline = GMSPolyline()
-    
-    // The marker we will use for animating our drone along the path. TODO: Could get rid of this and pass a GMSMarker by reference (inout param)
-    var animateDroneMarker: GMSMarker?
-    
-    // Speed of the animateDroneMarker
-    // TODO: Define constant somewhere that specifies this 125 value. Otherwise, when we change the default value in the storyboard, this value also needs to be changed.
-    let animateDroneDistancePerSecond = CLLocationDistance(125.0)
-    
-    func timeToAnimateToNextMarkerStartingFromIndex(i: Int, withSpeed speed: CLLocationDistance) -> Double {
-        var end = CLLocation(latitude: allMarkers[i+1].position.latitude, longitude: allMarkers[i+1].position.longitude)
-        var start = CLLocation(latitude: allMarkers[i].position.latitude, longitude: allMarkers[i].position.longitude)
-        var distance = end.distanceFromLocation(start)
-        
-        var animationTimeForThisLeg = distance / speed
-        
-        return animationTimeForThisLeg
-    }
-    
-    func animateDroneStartingAtMarkerIndex(index: Int, withSpeed speed: CLLocationDistance) {
-        // Stop animating when we are out of legs.
-        if (index >= allMarkers.count - 1) {
-            var alert = UIAlertController(title: "Drone Finished Recording", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
-
-            // Functionality to go to the page with recorded videos displayed in a table view.
-            //TODO: Uncomment once we no longer need the Coordinates View Controller
-//            alert.addAction(UIAlertAction(title: "See Recorded Video", style: UIAlertActionStyle.Default) {
-//                action in
-//                self.performSegueWithIdentifier("showVideoResultsFromGoogleMaps", sender: self)
-//            })
-            alert.addAction(UIAlertAction(title: "See Coordinates", style: UIAlertActionStyle.Default) {
-                action in
-                self.performSegueWithIdentifier("showCoordinatesFromGoogleMaps", sender: self)
-            })
-            
-            // Functionality to go back to the home page if the user chooses to not view the recorded videos.
-            alert.addAction(UIAlertAction(title: "Go Home", style: UIAlertActionStyle.Cancel) {
-                action in
-                self.navigationController?.popViewControllerAnimated(true)
-            })
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-            return
-        }
-        
-        CATransaction.begin()
-        
-        // When this Core Animation Transaction is done, animate the next leg.
-        CATransaction.setCompletionBlock({
-            self.animateDroneStartingAtMarkerIndex(index + 1, withSpeed: speed)
-        })
-        
-        // Set the time for this leg of the journey so that each leg of the journey
-        // is traveled at the same speed, giving the illusion of a drone with constant speed.
-        var animationTimeForThisLeg = timeToAnimateToNextMarkerStartingFromIndex(index, withSpeed: speed)
-        CATransaction.setAnimationDuration(animationTimeForThisLeg)
-        
-        // Code to be animated.
-        animateDroneMarker!.position = CLLocationCoordinate2D(latitude: allMarkers[index+1].position.latitude, longitude: allMarkers[index+1].position.longitude)
-        
-        CATransaction.commit()
-    }
-    
-    
-    func animateDroneAlongDrawnPath() {
-        if allMarkers.count == 0 {
-            return
-        }
-        
-        animateDroneMarker = GMSMarker(position: allMarkers[0].position)
-        animateDroneMarker!.icon = UIImage(named: "drone_icon-30.png")
-        animateDroneMarker!.map = mapView
-        
-        // Get the speed of the drone from what the user has set in settings, or just
-        // use the default value. TODO: Set constant for default speed rather than hardcoding value
-        // up top in this file (otherwise a change in the storyboard would require a change here too.
-        let defaults = NSUserDefaults.standardUserDefaults()
-        if let droneSpeed = defaults.objectForKey("droneSpeedKey") as? Float {
-            animateDroneStartingAtMarkerIndex(0, withSpeed: CLLocationDistance(droneSpeed))
-        } else {
-            animateDroneStartingAtMarkerIndex(0, withSpeed: animateDroneDistancePerSecond)
-        }
-        
-    }
     
     // UIPopoverPresentationControllerDelegate method to specify popover view presentation style
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
