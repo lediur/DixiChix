@@ -30,6 +30,15 @@ class GeneralUtils {
         }
     }
     
+    class func createLargeLoadingIndicator() -> UIActivityIndicatorView {
+        var loadingIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 100, 100))
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        loadingIndicator.layer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.6).CGColor
+        loadingIndicator.layer.cornerRadius = 0.2 * loadingIndicator.frame.size.width
+        return loadingIndicator
+    }
+    
 }
 
 
