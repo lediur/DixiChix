@@ -42,11 +42,25 @@ class DrivingViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
-            var drivingLocation = PFObject(className: "DrivingLocation")
-            drivingLocation["latitude"] = location.coordinate.latitude
-            drivingLocation["longitude"] = location.coordinate.longitude
-            drivingLocation["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
-            drivingLocation.saveInBackgroundWithBlock() { (success, error) in }
+            var drivingLocationQuery = PFQuery(className: "DrivingLocation")
+            drivingLocationQuery.whereKey("username", equalTo: NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)!)
+            drivingLocationQuery.addDescendingOrder("updatedAt")
+            drivingLocationQuery.getFirstObjectInBackgroundWithBlock() {
+                (object, error) in
+                
+                if (error != nil || object == nil) {
+                    // The user doesn't already have a DrivingLocation PFObject up in the Parse cloud, so create one for him/
+                    var drivingLocation = PFObject(className: "DrivingLocation")
+                    drivingLocation["latitude"] = location.coordinate.latitude
+                    drivingLocation["longitude"] = location.coordinate.longitude
+                    drivingLocation["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
+                    drivingLocation.saveInBackgroundWithBlock() { (success, error) in }
+                } else {
+                	object?["latitude"] = location.coordinate.latitude
+                    object?["longitude"] = location.coordinate.longitude
+                    object?.saveInBackgroundWithBlock() { (success, error) in }
+                }
+            }
         }
     }
 
