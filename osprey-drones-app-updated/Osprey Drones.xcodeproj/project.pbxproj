@@ -20,6 +20,11 @@
 		B91CFB891AB26ACF00731961 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB851AB26ACF00731961 /* QuartzCore.framework */; };
 		B91CFB8A1AB26ACF00731961 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */; };
 		B91CFB901AB26C6A00731961 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */; };
+		B957AE041B150C9A0027E6F9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B957AE031B150C9A0027E6F9 /* AssetsLibrary.framework */; };
+		B957AE061B150CA00027E6F9 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B957AE051B150CA00027E6F9 /* QuickLook.framework */; };
+		B957AE0E1B150D2B0027E6F9 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B957AE0A1B150D2B0027E6F9 /* HockeySDK.framework */; };
+		B957AE0F1B150D2B0027E6F9 /* HockeySDK.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = B957AE0C1B150D2B0027E6F9 /* HockeySDK.xcconfig */; };
+		B957AE101B150D2B0027E6F9 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B957AE0D1B150D2B0027E6F9 /* HockeySDKResources.bundle */; };
 		B9677F281AF1E673005B3278 /* CoordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9677F271AF1E673005B3278 /* CoordPair.swift */; };
 		B9677F2A1AF1F7F3005B3278 /* CoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9677F291AF1F7F3005B3278 /* CoordinatesViewController.swift */; };
 		B96A99691AF97801000A22E4 /* link.png in Resources */ = {isa = PBXBuildFile; fileRef = B96A99681AF97801000A22E4 /* link.png */; };
@@ -101,6 +106,11 @@
 		B91CFB861AB26ACF00731961 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B91CFB8C1AB26B4F00731961 /* Osprey Drones-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Osprey Drones-Bridging-Header.h"; sourceTree = "<group>"; };
 		B91CFB8F1AB26C6A00731961 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		B957AE031B150C9A0027E6F9 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B957AE051B150CA00027E6F9 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		B957AE0A1B150D2B0027E6F9 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		B957AE0C1B150D2B0027E6F9 /* HockeySDK.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = HockeySDK.xcconfig; sourceTree = "<group>"; };
+		B957AE0D1B150D2B0027E6F9 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		B9677F271AF1E673005B3278 /* CoordPair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordPair.swift; sourceTree = "<group>"; };
 		B9677F291AF1F7F3005B3278 /* CoordinatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatesViewController.swift; sourceTree = "<group>"; };
 		B96A99681AF97801000A22E4 /* link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = link.png; sourceTree = "<group>"; };
@@ -167,6 +177,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B957AE061B150CA00027E6F9 /* QuickLook.framework in Frameworks */,
+				B957AE041B150C9A0027E6F9 /* AssetsLibrary.framework in Frameworks */,
 				B9D8BF8D1ACF825F0084BDA8 /* Accounts.framework in Frameworks */,
 				B9D8BF8E1ACF825F0084BDA8 /* Social.framework in Frameworks */,
 				B9D8BF841ACF814C0084BDA8 /* AudioToolbox.framework in Frameworks */,
@@ -179,6 +191,7 @@
 				B91CFB7D1AB26AA800731961 /* CoreLocation.framework in Frameworks */,
 				B91CFB871AB26ACF00731961 /* libz.dylib in Frameworks */,
 				B91CFB891AB26ACF00731961 /* QuartzCore.framework in Frameworks */,
+				B957AE0E1B150D2B0027E6F9 /* HockeySDK.framework in Frameworks */,
 				B91CFB8A1AB26ACF00731961 /* SystemConfiguration.framework in Frameworks */,
 				B91CFB881AB26ACF00731961 /* OpenGLES.framework in Frameworks */,
 				B9D8BF7C1ACF81160084BDA8 /* Parse.framework in Frameworks */,
@@ -207,6 +220,9 @@
 		B91CFB8B1AB26AED00731961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B957AE091B150D2B0027E6F9 /* HockeySDK.embeddedframework */,
+				B957AE051B150CA00027E6F9 /* QuickLook.framework */,
+				B957AE031B150C9A0027E6F9 /* AssetsLibrary.framework */,
 				B9D8BF8B1ACF825F0084BDA8 /* Accounts.framework */,
 				B9D8BF8C1ACF825F0084BDA8 /* Social.framework */,
 				B9D8BF7D1ACF814C0084BDA8 /* AudioToolbox.framework */,
@@ -233,6 +249,25 @@
 				B91CFB7A1AB26AA800731961 /* libicucore.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B957AE091B150D2B0027E6F9 /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				B957AE0A1B150D2B0027E6F9 /* HockeySDK.framework */,
+				B957AE0B1B150D2B0027E6F9 /* Resources */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
+			sourceTree = "<group>";
+		};
+		B957AE0B1B150D2B0027E6F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B957AE0C1B150D2B0027E6F9 /* HockeySDK.xcconfig */,
+				B957AE0D1B150D2B0027E6F9 /* HockeySDKResources.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		B9D040DB1AB2B45700BE2B5F /* Pictures */ = {
@@ -349,6 +384,7 @@
 				B9FD8BAE1AB2632A00BE88DE /* Sources */,
 				B9FD8BAF1AB2632A00BE88DE /* Frameworks */,
 				B9FD8BB01AB2632A00BE88DE /* Resources */,
+				B957AE021B150C570027E6F9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -430,6 +466,7 @@
 				B9D040C91AB2AAB900BE2B5F /* Assets in Resources */,
 				B9D040D51AB2B45000BE2B5F /* BMW_Car_1.jpg in Resources */,
 				B9FD8BBD1AB2632A00BE88DE /* Main.storyboard in Resources */,
+				B957AE0F1B150D2B0027E6F9 /* HockeySDK.xcconfig in Resources */,
 				D1FF74B21AB7A17C0088FA16 /* mountain-wallpaper.jpg in Resources */,
 				B9D040DA1AB2B45000BE2B5F /* BMW_Car_6.jpg in Resources */,
 				D1FF74B41AB7A1BB0088FA16 /* horizon-wallpaper.jpg in Resources */,
@@ -445,6 +482,7 @@
 				D1C5BB951AB77C07001264DC /* OpenSans-Regular.ttf in Resources */,
 				B9D040D81AB2B45000BE2B5F /* BMW_Car_4.jpg in Resources */,
 				D1C5BB9B1AB79568001264DC /* facebook_circle_color-512.png in Resources */,
+				B957AE101B150D2B0027E6F9 /* HockeySDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +494,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B957AE021B150C570027E6F9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "FILE=\"${SRCROOT}/HockeySDK-iOS/BuildAgent\"\nif [ -f \"$FILE\" ]; then\n\"$FILE\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9FD8BAE1AB2632A00BE88DE /* Sources */ = {
@@ -610,6 +664,7 @@
 					"$(inherited)",
 					"/Users/raymondchan1994/Downloads/GoogleMaps-iOS-1.9.2",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
 				);
 				INFOPLIST_FILE = "Osprey Drones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -632,6 +687,7 @@
 					"$(inherited)",
 					"/Users/raymondchan1994/Downloads/GoogleMaps-iOS-1.9.2",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
 				);
 				INFOPLIST_FILE = "Osprey Drones/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

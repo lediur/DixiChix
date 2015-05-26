@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import HockeySDK
 
 // CONSTANTS
 let kLoggedInUsernameKey = "loggedInUsername"
@@ -30,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Track statistics around application opens
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        
+        // Integrate with HockeyApp
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("bbaee79da212add941fa70a1c67fbca7")
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+
         
         return true
     }
