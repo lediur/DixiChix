@@ -53,6 +53,7 @@ class DrivingViewController: UIViewController, CLLocationManagerDelegate {
                     var drivingLocation = PFObject(className: "DrivingLocation")
                     drivingLocation["latitude"] = location.coordinate.latitude
                     drivingLocation["longitude"] = location.coordinate.longitude
+                    drivingLocation["altitude"] = location.altitude
                     drivingLocation["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
                     drivingLocation.saveInBackgroundWithBlock() { (success, error) in }
                 } else {

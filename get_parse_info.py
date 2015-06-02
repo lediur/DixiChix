@@ -59,8 +59,9 @@ def get_location_for_user(username):
     driving_location_object = json_results[len(json_results) - 1]
     latitude = driving_location_object["latitude"]
     longitude = driving_location_object["longitude"]
+    altitude = driving_location_object["altitude"]
 
-    return (latitude, longitude)
+    return (latitude, longitude, altitude)
 
 # get_location_for_user
 # ============================================================================
@@ -94,7 +95,7 @@ def get_waypoints_for_user(username):
     return result
 
 def main():
-    username = "baymax"
+    username = "a"
 
     # Get most recently uploaded waypoints for the user
     print get_waypoints_for_user(username)
