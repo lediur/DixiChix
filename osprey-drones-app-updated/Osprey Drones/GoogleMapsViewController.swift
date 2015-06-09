@@ -22,11 +22,16 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             return
         }
         
+        var toSend = Dictionary<String, AnyObject>()
+        toSend["allMarkers"] = allMarkers
+        toSend["distances"] = distances
+        toSend["startLocation"] = currentLocation
+        
         var alert = UIAlertController(title: "Waypoints Set Successfully", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Start Driving!", style: UIAlertActionStyle.Default) {
             action in
-            self.performSegueWithIdentifier("showDrivingFromGoogleMaps", sender: self)
+            self.performSegueWithIdentifier("showDrivingFromGoogleMaps", sender: toSend)
             })
         
         // Functionality to go back to the home page if the user chooses to not view the recorded videos.

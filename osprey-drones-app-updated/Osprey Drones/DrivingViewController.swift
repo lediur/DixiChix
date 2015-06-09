@@ -9,13 +9,17 @@
 import UIKit
 
 class DrivingViewController: UIViewController, CLLocationManagerDelegate {
-    var dataBundle : Dictionary<String, AnyObject>?
+    var dataBundle : Dictionary<String, AnyObject>? //passed in from GoogleMapsVC
+    
+    let DRONE_SPEED = 11.0  //from research online, in m/s
     
     var locationManager: CLLocationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
     var orderedPath = Array<CLLocation>()
     var distances = [CoordPair : Double]()
     var startLocation = CLLocation()
+    var startTime = false
+    var laptime = [CoordPair : Double]()
     
     @IBOutlet weak var doneDrivingButton: UIButton!
     
@@ -71,6 +75,24 @@ class DrivingViewController: UIViewController, CLLocationManagerDelegate {
                     object?.saveInBackgroundWithBlock() { (success, error) in }
                 }
             }
+            
+            if(!startTime) {
+                startTime = true
+                laptime[CoordPair(coord1: startLocation.coordinate, coord2: CLLocationCoordinate2D(latitude: 0, longitude: 0))] = CACurrentMediaTime()
+            } else {
+                for marker in allMarkers {
+                    var coord = CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude)
+                    if (location.distanceFromLocation(coord) < 100) {
+                        laptime[CoordPair(coord1: coord.coordinate, coord2: CLLocationCoordinate2D(latitude: 0, longitude: 0))] = CACurrentMediaTime()
+                        
+                        if(allMarkers.count == laptime.count) {
+                            findBestPath()
+                        }
+                        
+                        break;
+                    }
+                }
+            }
         }
     }
     
@@ -108,7 +130,7 @@ class DrivingViewController: UIViewController, CLLocationManagerDelegate {
             
             var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + tsp.minDistance
             
-            if (distance < minDistance) {
+            if (distance < minDistance && withinBounds(distance, marker1: root, marker2: marker)) {
                 minDistance = distance
                 minPath = tsp.minPath
             }
@@ -116,6 +138,13 @@ class DrivingViewController: UIViewController, CLLocationManagerDelegate {
         
         minPath.insert(root, atIndex: 0)
         return (minDistance, minPath)
+    }
+    
+    func withinBounds(distance: Double, marker1: CLLocation, marker2: CLLocation) -> Bool {
+        var one = laptime[CoordPair(coord1: marker1.coordinate, coord2: CLLocationCoordinate2D(latitude: 0, longitude: 0))]
+        var two = laptime[CoordPair(coord1: marker2.coordinate, coord2: CLLocationCoordinate2D(latitude: 0, longitude: 0))]
+        
+        return (distance * DRONE_SPEED < fabs (one! - two!) ? true : false)
     }
 
     
