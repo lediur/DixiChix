@@ -22,42 +22,20 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             return
         }
         
-        // Add a FlightPath PFObject to Parse that represents the waypoints this logged in user has drawn out.
-        var flightPath = PFObject(className: "FlightPath")
-        var waypointsAsFloatPairs: [String] = []
-        for point in orderedPath {
-            waypointsAsFloatPairs.append("\(point.coordinate.latitude) \(point.coordinate.longitude)")
-        }
-        flightPath.addObjectsFromArray(waypointsAsFloatPairs, forKey: "waypoints")
-        flightPath["username"] = NSUserDefaults.standardUserDefaults().stringForKey(kLoggedInUsernameKey)
+        var alert = UIAlertController(title: "Waypoints Set Successfully", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
         
-        // Disable user interaction and start a loading indicator until the uploading of the FlightPath PFObject is complete
-        var loadingIndicator = GeneralUtils.createLargeLoadingIndicator()
-        loadingIndicator.center = view.center
-        view.addSubview(loadingIndicator)
-        loadingIndicator.startAnimating()
-        view.userInteractionEnabled = false
+        alert.addAction(UIAlertAction(title: "Start Driving!", style: UIAlertActionStyle.Default) {
+            action in
+            self.performSegueWithIdentifier("showDrivingFromGoogleMaps", sender: self)
+            })
         
-        flightPath.saveInBackgroundWithBlock() { (success, error) in
-            loadingIndicator.stopAnimating()
-            self.view.userInteractionEnabled = true
-            
-            // THe user can either start driving from here and have the drone start recording, or go back home in case it was an accident and he/she wishes to cancel.
-            var alert = UIAlertController(title: "Waypoints Set Successfully", message: "What would you like to do from here?", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction(UIAlertAction(title: "Start Driving!", style: UIAlertActionStyle.Default) {
-                action in
-                self.performSegueWithIdentifier("showDrivingFromGoogleMaps", sender: self)
-                })
-            
-            // Functionality to go back to the home page if the user chooses to not view the recorded videos.
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
-                action in
-                self.navigationController?.popViewControllerAnimated(true)
-                })
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        // Functionality to go back to the home page if the user chooses to not view the recorded videos.
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
+            action in
+            self.navigationController?.popViewControllerAnimated(true)
+            })
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -65,12 +43,15 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
             if var coordinatesVC = segue.destinationViewController as? CoordinatesViewController {
                 coordinatesVC.allMarkers = self.allMarkers
             }
+        } else if (segue.identifier == "showDrivingFromGoogleMaps") {
+            let nextViewController = segue.destinationViewController as! DrivingViewController
+            let dataBundle = sender as! Dictionary<String, AnyObject>
+            nextViewController.dataBundle = dataBundle
         }
     }
     
     let locationManager = CLLocationManager()
     var allMarkers: [GMSMarker] = []
-    var orderedPath = Array<CLLocation>()
     var distances = [CoordPair : Double]()
     var currentLocation = CLLocation(latitude: 37.427644499009219, longitude:-122.16890349984169)
     let markerInnerCircleRadius = 12.0
@@ -234,9 +215,6 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         
         allMarkers.append(marker)
         
-        //Calculate best path
-        findBestPath()
-        
         drawPathBetweenMarkers()
     }
 
@@ -361,54 +339,6 @@ class GoogleMapsViewController: UIViewController, CLLocationManagerDelegate, GMS
         }
     }
     
-    //wrapper for TSP variant
-    func findBestPath() {
-        
-        var markers = Array<CLLocation>()
-        
-        for marker in allMarkers {
-            markers.append(CLLocation(latitude:marker.position.latitude, longitude:marker.position.longitude))
-        }
-        
-        var tsp = findTSP(markers, root : currentLocation)
-        
-        println(tsp.minDistance)
-        orderedPath = tsp.minPath
-//        for point in tsp.minPath {
-//            for (index, marker) in enumerate(allMarkers) {
-//                if (getDistance(CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude), loc2: point) < 1) {
-//                    print("\(index + 1) ->")
-//                }
-//            }
-//        }
-    }
-    
-    func findTSP(markers : Array<CLLocation>, root : CLLocation) -> (minDistance: Double, minPath : Array<CLLocation>) {
-        if (markers.count == 1) {
-            var coordP = CoordPair(coord1: root.coordinate, coord2: markers[0].coordinate)
-            return (distances[coordP]!, [root, markers[0]])
-        }
-        
-        var minDistance = DBL_MAX
-        var minPath = Array<CLLocation>()
-        
-        for marker in markers {
-            var markersSubset = Array<CLLocation>(markers)
-            markersSubset.removeAtIndex(find(markersSubset, marker)!)
-            
-            var tsp = findTSP(markersSubset, root : marker)
-            
-            var distance = distances[CoordPair(coord1: root.coordinate, coord2: marker.coordinate)]! + tsp.minDistance
-            
-            if (distance < minDistance) {
-                minDistance = distance
-                minPath = tsp.minPath
-            }
-        }
-        
-        minPath.insert(root, atIndex: 0)
-        return (minDistance, minPath)
-    }
     
     // MARK: Generic Helpers
     
